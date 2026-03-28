@@ -39,7 +39,15 @@ export default function Home() {
         >
           You were never supposed to be a user.
           <br />
-          OMARO builds for people.
+          OMARO builds for people.<span style={{
+            display: "inline-block",
+            width: "3px",
+            height: "1em",
+            background: "#1A1A1A",
+            marginLeft: "4px",
+            verticalAlign: "text-bottom",
+            animation: "blink 1.2s step-end infinite"
+          }}></span>
         </h1>
         <p
           className="text-lg md:text-xl mx-auto max-w-2xl"
