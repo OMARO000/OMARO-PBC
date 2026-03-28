@@ -23,8 +23,8 @@ export const metadata: Metadata = {
     default: "OMARO PBC",
     template: "%s | OMARO PBC",
   },
-  description: "Building tools for human evolution. OMARO PBC is a Public Benefit Corporation.",
-  metadataBase: new URL("https://omaro-pbc.org"),
+  description: "Infrastructure that keeps humans in every room that matters. OMARO PBC is a Public Benefit Corporation.",
+  metadataBase: new URL("https://omaro.xyz"),
 };
 
 export default function RootLayout({

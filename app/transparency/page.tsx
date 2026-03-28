@@ -100,7 +100,7 @@ export default function TransparencyPage() {
       </section>
 
       {/* Enforcement Actions */}
-      <section>
+      <section className="mb-16">
         <h2
           className="text-xs font-semibold tracking-widest uppercase mb-8"
           style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
@@ -118,6 +118,38 @@ export default function TransparencyPage() {
         >
           All corrections are public. Nothing is silently removed.
         </p>
+      </section>
+
+      {/* RESCUE AI Audit Framework */}
+      <section>
+        <h2
+          className="text-xs font-semibold tracking-widest uppercase mb-8"
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
+        >
+          RESCUE AI Audit Framework
+        </h2>
+        <div className="max-w-2xl space-y-4">
+          <p
+            className="text-base leading-relaxed"
+            style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
+          >
+            OMARO products are evaluated against the RESCUE AI standard —
+            eight pillars covering human override, training transparency,
+            consent architecture, accountability chain, bias documentation,
+            failure mode registry, data sovereignty, and independent audit.
+          </p>
+          <p
+            className="text-base leading-relaxed"
+            style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
+          >
+            All audit results are pinned to IPFS. Dual links: hosted +
+            immutable. OMARO holds itself to the same standard it publishes.
+          </p>
+          <div className="max-w-2xl" style={{ borderTop: "1px solid #4A4A4A" }}>
+            <MetricRow label="RESCUE AI audits completed" value="Pending" />
+            <MetricRow label="RESCUE AI audits pinned to IPFS" value="Pending" />
+          </div>
+        </div>
       </section>
     </div>
   );

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Mission",
   description:
-    "OMARO PBC exists to build the accountability infrastructure that should have been built alongside the internet.",
+    "OMARO exists because power has always moved faster than accountability. We are pro-human, pro-trust, pro-accountability.",
 };
 
 export default function MissionPage() {
@@ -21,30 +21,34 @@ export default function MissionPage() {
           className="text-base md:text-lg leading-relaxed"
           style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
         >
-          The accountability infrastructure that should have been built alongside
-          the internet wasn&apos;t. OMARO exists to build it now.
+          OMARO exists because power has always moved faster than
+          accountability.
         </p>
         <p
           className="text-base md:text-lg leading-relaxed"
           style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
         >
-          We start with corporations. We document violations using primary
-          sources only — court records, regulatory decisions, SEC filings.
-          No secondhand accounts. No social media. No speculation.
+          We are a Public Benefit Corporation. That means our obligation is to
+          the public, not to shareholders. Every product we build, every
+          standard we publish, every record we pin to IPFS is in service of one
+          idea: people deserve infrastructure that works for them.
         </p>
         <p
           className="text-base md:text-lg leading-relaxed"
           style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
         >
-          Every block in the ledger is sourced, dual-toned (formal legal
-          language and plain English), and permanently pinned to IPFS.
-          The record does not change. It only grows.
+          We are pro-human. Pro-trust. Pro-accountability. We are not
+          anti-technology — we are anti-extraction. There is a difference, and
+          it matters.
         </p>
         <p
           className="text-base md:text-lg leading-relaxed"
           style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
         >
-          We document Anthropic too. Independence is non-negotiable.
+          The game we are playing is not beating AI. It is not stopping
+          progress. It is making sure that no matter what the future brings,
+          humans remain in it — informed, connected, and in control of what
+          matters.
         </p>
       </div>
 
@@ -64,7 +68,7 @@ export default function MissionPage() {
           ].map((principle, i) => (
             <li key={i} className="flex items-start gap-5">
               <span
-                className="text-xs mt-1 tabular-nums"
+                className="text-xs mt-1 tabular-nums shrink-0"
                 style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
               >
                 {String(i + 1).padStart(2, "0")}.

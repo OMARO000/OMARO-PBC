@@ -5,12 +5,12 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const navLinks = [
-  { href: "/mission", label: "Mission" },
-  { href: "/products", label: "Products" },
-  { href: "/transparency", label: "Transparency" },
-  { href: "/team", label: "Team" },
-  { href: "/press", label: "Press" },
-  { href: "/contact", label: "Contact" },
+  { href: "/mission", label: "Mission", external: false },
+  { href: "/products", label: "Products", external: false },
+  { href: "/rescue-ai", label: "Rescue AI", external: false },
+  { href: "/transparency", label: "Transparency", external: false },
+  { href: "/press", label: "Press", external: false },
+  { href: "/contact", label: "Contact", external: false },
 ];
 
 export default function Nav() {
@@ -32,14 +32,14 @@ export default function Nav() {
         <Link
           href="/"
           style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}
-          className="text-xl font-semibold tracking-widest uppercase hover:opacity-80 transition-opacity"
+          className="text-xl font-semibold tracking-widest uppercase hover:opacity-70 transition-opacity"
           aria-label="OMARO PBC home"
         >
           OMARO
         </Link>
 
         {/* Desktop nav */}
-        <ul className="hidden md:flex items-center gap-8 list-none m-0 p-0">
+        <ul className="hidden md:flex items-center gap-7 list-none m-0 p-0">
           {navLinks.map(({ href, label }) => {
             const isActive = pathname === href;
             return (
@@ -60,6 +60,22 @@ export default function Nav() {
               </li>
             );
           })}
+
+          {/* Founder — external, destination TBA */}
+          <li>
+            <span
+              style={{
+                fontFamily: "var(--font-ibm-plex-mono)",
+                color: "#4A4A4A",
+                cursor: "default",
+              }}
+              className="text-sm tracking-wide"
+              title="Founder site — coming soon"
+              aria-label="Founder (link coming soon)"
+            >
+              Founder&nbsp;↗
+            </span>
+          </li>
         </ul>
 
         {/* Mobile hamburger */}
@@ -69,7 +85,6 @@ export default function Nav() {
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
           aria-label={menuOpen ? "Close menu" : "Open menu"}
-          style={{ color: "#1A1A1A" }}
         >
           <span
             className="block w-5 h-px transition-transform"
@@ -123,6 +138,17 @@ export default function Nav() {
                 </li>
               );
             })}
+            <li>
+              <span
+                style={{
+                  fontFamily: "var(--font-ibm-plex-mono)",
+                  color: "#4A4A4A",
+                }}
+                className="text-sm tracking-wide"
+              >
+                Founder&nbsp;↗
+              </span>
+            </li>
           </ul>
         </div>
       )}
