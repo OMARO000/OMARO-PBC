@@ -34,11 +34,12 @@ export default function Nav() {
           style={{
             fontFamily: "var(--font-ibm-plex-mono)",
             fontWeight: 500,
+            fontSize: "40px",
             color: "#1A1A1A",
             textDecoration: "none",
             letterSpacing: "0.15em",
           }}
-          className="shrink-0 text-2xl uppercase hover:opacity-70 transition-opacity"
+          className="shrink-0 uppercase hover:opacity-70 transition-opacity"
           aria-label="OMARO PBC home"
         >
           OMARO
