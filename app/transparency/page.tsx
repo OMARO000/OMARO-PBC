@@ -13,13 +13,13 @@ function MetricRow({ label, value }: { label: string; value: string }) {
       style={{ borderBottom: "1px solid #4A4A4A" }}
     >
       <span
-        className="text-sm"
+        className="text-sm text-left"
         style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#4A4A4A" }}
       >
         {label}
       </span>
       <span
-        className="text-sm font-semibold tabular-nums"
+        className="text-sm font-semibold tabular-nums text-right"
         style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}
       >
         {value}
@@ -30,7 +30,7 @@ function MetricRow({ label, value }: { label: string; value: string }) {
 
 export default function TransparencyPage() {
   return (
-    <div className="max-w-6xl mx-auto px-6 py-16 md:py-24">
+    <div className="max-w-3xl mx-auto px-6 py-16 md:py-24 text-center">
       <h1
         className="text-3xl md:text-5xl font-semibold mb-10"
         style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}
@@ -39,7 +39,7 @@ export default function TransparencyPage() {
       </h1>
 
       <p
-        className="text-base md:text-lg leading-relaxed max-w-2xl mb-16"
+        className="text-base md:text-lg leading-relaxed mb-16"
         style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
       >
         OMARO PBC publishes annual benefit reports, platform metrics, and
@@ -55,19 +55,19 @@ export default function TransparencyPage() {
         >
           Annual Benefit Reports
         </h2>
-        <div className="max-w-2xl">
+        <div className="mx-auto">
           <div
             className="flex justify-between items-baseline py-4"
             style={{ borderBottom: "1px solid #4A4A4A" }}
           >
             <span
-              className="text-sm"
+              className="text-sm text-left"
               style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
             >
               2026
             </span>
             <span
-              className="text-sm"
+              className="text-sm text-right"
               style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
             >
               Publishing Q4 2026
@@ -90,7 +90,7 @@ export default function TransparencyPage() {
         >
           Platform Metrics
         </h2>
-        <div className="max-w-2xl" style={{ borderTop: "1px solid #4A4A4A" }}>
+        <div style={{ borderTop: "1px solid #4A4A4A" }}>
           <MetricRow label="Companies monitored" value="646" />
           <MetricRow label="Violations documented" value="Pending agent run" />
           <MetricRow label="IPFS-pinned blocks" value="Pending" />
@@ -107,13 +107,13 @@ export default function TransparencyPage() {
         >
           Enforcement Actions
         </h2>
-        <div className="max-w-2xl" style={{ borderTop: "1px solid #4A4A4A" }}>
+        <div style={{ borderTop: "1px solid #4A4A4A" }}>
           <MetricRow label="API clients terminated" value="0" />
           <MetricRow label="Correction requests received" value="0" />
           <MetricRow label="Corrections issued" value="0" />
         </div>
         <p
-          className="text-xs mt-6 max-w-2xl"
+          className="text-xs mt-6"
           style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
         >
           All corrections are public. Nothing is silently removed.
@@ -128,7 +128,7 @@ export default function TransparencyPage() {
         >
           RESCUE AI Audit Framework
         </h2>
-        <div className="max-w-2xl space-y-4">
+        <div className="space-y-4">
           <p
             className="text-base leading-relaxed"
             style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
@@ -145,7 +145,7 @@ export default function TransparencyPage() {
             All audit results are pinned to IPFS. Dual links: hosted +
             immutable. OMARO holds itself to the same standard it publishes.
           </p>
-          <div className="max-w-2xl" style={{ borderTop: "1px solid #4A4A4A" }}>
+          <div style={{ borderTop: "1px solid #4A4A4A" }}>
             <MetricRow label="RESCUE AI audits completed" value="Pending" />
             <MetricRow label="RESCUE AI audits pinned to IPFS" value="Pending" />
           </div>

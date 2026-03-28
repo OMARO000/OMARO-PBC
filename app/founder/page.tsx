@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function FounderPage() {
   return (
-    <div className="max-w-6xl mx-auto px-6 py-16 md:py-24">
+    <div className="max-w-3xl mx-auto px-6 py-16 md:py-24 text-center">
       <p
         className="text-xs font-semibold tracking-widest uppercase mb-6"
         style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
@@ -29,7 +29,7 @@ export default function FounderPage() {
 
       <div style={{ borderTop: "1px solid #4A4A4A" }} className="pt-12">
         <p
-          className="text-base md:text-lg leading-relaxed max-w-xl"
+          className="text-base md:text-lg leading-relaxed"
           style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#4A4A4A" }}
         >
           Personal site — coming soon.

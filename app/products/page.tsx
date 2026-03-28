@@ -17,7 +17,7 @@ interface ProductCardProps {
 function ProductCard({ status, name, description, url, urlLabel }: ProductCardProps) {
   const isLive = status === "LIVE";
   return (
-    <div className="border p-8" style={{ borderColor: "#4A4A4A" }}>
+    <div className="border p-8 text-center" style={{ borderColor: "#4A4A4A" }}>
       <div className="mb-4">
         <span
           className="text-xs font-semibold tracking-widest uppercase px-2 py-1 border"
@@ -63,7 +63,7 @@ function ProductCard({ status, name, description, url, urlLabel }: ProductCardPr
 
 export default function ProductsPage() {
   return (
-    <div className="max-w-6xl mx-auto px-6 py-16 md:py-24">
+    <div className="max-w-3xl mx-auto px-6 py-16 md:py-24 text-center">
       <h1
         className="text-3xl md:text-5xl font-semibold mb-16"
         style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}
@@ -71,7 +71,7 @@ export default function ProductsPage() {
         What we build.
       </h1>
 
-      <div className="space-y-6 max-w-2xl mb-20">
+      <div className="space-y-6 mb-20">
         <ProductCard
           status="LIVE"
           name="OMEN — Corporate Accountability Ledger"

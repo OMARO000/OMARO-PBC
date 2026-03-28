@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function PressPage() {
   return (
-    <div className="max-w-6xl mx-auto px-6 py-16 md:py-24">
+    <div className="max-w-3xl mx-auto px-6 py-16 md:py-24 text-center">
       <h1
         className="text-3xl md:text-5xl font-semibold mb-16"
         style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}
@@ -17,14 +17,14 @@ export default function PressPage() {
       </h1>
 
       {/* Press contact */}
-      <section className="mb-16 max-w-2xl">
+      <section className="mb-16">
         <h2
           className="text-xs font-semibold tracking-widest uppercase mb-8"
           style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
         >
           Press Contact
         </h2>
-        <div style={{ borderTop: "1px solid #4A4A4A" }} className="pt-8 space-y-4">
+        <div style={{ borderTop: "1px solid #4A4A4A" }} className="pt-8 space-y-3">
           <p
             className="text-sm"
             style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
@@ -54,7 +54,7 @@ export default function PressPage() {
       <div style={{ borderTop: "1px solid #4A4A4A" }} />
 
       {/* Brand assets */}
-      <section className="my-16 max-w-2xl">
+      <section className="my-16">
         <h2
           className="text-xs font-semibold tracking-widest uppercase mb-8"
           style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
@@ -81,7 +81,7 @@ export default function PressPage() {
       <div style={{ borderTop: "1px solid #4A4A4A" }} />
 
       {/* Coverage */}
-      <section className="my-16 max-w-2xl">
+      <section className="my-16">
         <h2
           className="text-xs font-semibold tracking-widest uppercase mb-8"
           style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
@@ -99,7 +99,7 @@ export default function PressPage() {
       <div style={{ borderTop: "1px solid #4A4A4A" }} />
 
       {/* Press releases */}
-      <section className="my-16 max-w-2xl">
+      <section className="my-16">
         <h2
           className="text-xs font-semibold tracking-widest uppercase mb-8"
           style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
@@ -117,7 +117,7 @@ export default function PressPage() {
       <div style={{ borderTop: "1px solid #4A4A4A" }} />
 
       {/* Note */}
-      <section className="mt-16 max-w-2xl">
+      <section className="mt-16">
         <p
           className="text-sm"
           style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}

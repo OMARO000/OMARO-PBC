@@ -71,10 +71,10 @@ function Divider() {
 
 export default function RescueAIPage() {
   return (
-    <div className="max-w-6xl mx-auto px-6 py-16 md:py-24">
+    <div className="max-w-3xl mx-auto px-6 py-16 md:py-24 text-center">
 
       {/* Header */}
-      <div className="max-w-2xl mb-16">
+      <div className="mb-16">
         <p
           className="text-xs font-semibold tracking-widest uppercase mb-6"
           style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
@@ -82,10 +82,11 @@ export default function RescueAIPage() {
           RESCUE AI
         </p>
         <h1
-          className="text-3xl md:text-5xl font-semibold leading-tight mb-8"
+          className="text-3xl md:text-5xl font-semibold leading-tight"
           style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}
         >
           Artificial intelligence is not the threat.
+          <br />
           Unaccountable artificial intelligence is.
         </h1>
       </div>
@@ -93,7 +94,7 @@ export default function RescueAIPage() {
       <Divider />
 
       {/* The argument */}
-      <section className="max-w-2xl py-16 space-y-8">
+      <section className="py-16 space-y-8">
         <p
           className="text-base md:text-lg leading-relaxed"
           style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
@@ -159,26 +160,24 @@ export default function RescueAIPage() {
           The Eight Pillars
         </h2>
 
-        <div className="space-y-0 max-w-3xl">
+        <div className="space-y-0">
           {pillars.map((pillar, i) => (
             <div key={pillar.number}>
-              <div className="py-10">
-                <div className="flex items-start gap-6 mb-6">
-                  <span
-                    className="text-xs tabular-nums shrink-0 mt-1"
-                    style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
-                  >
-                    Pillar {pillar.number}
-                  </span>
-                  <h3
-                    className="text-xl md:text-2xl font-semibold"
-                    style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}
-                  >
-                    {pillar.name}
-                  </h3>
-                </div>
+              <div className="py-10 text-center">
+                <p
+                  className="text-xs tabular-nums mb-2"
+                  style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
+                >
+                  Pillar {pillar.number}
+                </p>
+                <h3
+                  className="text-xl md:text-2xl font-semibold mb-6"
+                  style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}
+                >
+                  {pillar.name}
+                </h3>
 
-                <div className="pl-0 md:pl-20 space-y-4">
+                <div className="space-y-4">
                   <div>
                     <p
                       className="text-xs font-semibold tracking-widest uppercase mb-2"
@@ -220,7 +219,7 @@ export default function RescueAIPage() {
       <Divider />
 
       {/* Closing */}
-      <section className="py-16 max-w-2xl">
+      <section className="py-16">
         <p
           className="text-2xl md:text-3xl font-semibold"
           style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}

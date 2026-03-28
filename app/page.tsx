@@ -26,18 +26,17 @@ export default function Home() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="max-w-6xl mx-auto px-6 py-24 md:py-36">
+      <section className="max-w-6xl mx-auto px-6 py-24 md:py-36 text-center">
         <h1
-          className="text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-8"
+          className="text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-8 mx-auto"
           style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}
         >
-          You were never supposed
-          <br className="hidden sm:block" /> to be a user.
+          You were never supposed to be a user.
           <br />
           OMARO builds for people.
         </h1>
         <p
-          className="text-lg md:text-xl max-w-2xl"
+          className="text-lg md:text-xl mx-auto max-w-2xl"
           style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#4A4A4A" }}
         >
           Infrastructure that keeps humans in every room that matters.
@@ -47,9 +46,9 @@ export default function Home() {
       <Divider />
 
       {/* ── What We Build ── */}
-      <section className="max-w-6xl mx-auto px-6 py-16 md:py-20">
+      <section className="max-w-3xl mx-auto px-6 py-16 md:py-20 text-center">
         <SectionLabel>What We Build</SectionLabel>
-        <div className="max-w-2xl space-y-6">
+        <div className="space-y-6">
           <p
             className="text-base md:text-lg leading-relaxed"
             style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
@@ -72,9 +71,9 @@ export default function Home() {
       <Divider />
 
       {/* ── RESCUE AI ── */}
-      <section className="max-w-6xl mx-auto px-6 py-16 md:py-20">
+      <section className="max-w-3xl mx-auto px-6 py-16 md:py-20 text-center">
         <SectionLabel>Rescue AI</SectionLabel>
-        <div className="max-w-2xl space-y-6">
+        <div className="space-y-6">
           <p
             className="text-base md:text-lg leading-relaxed"
             style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
@@ -116,9 +115,9 @@ export default function Home() {
       <Divider />
 
       {/* ── Products ── */}
-      <section className="max-w-6xl mx-auto px-6 py-16 md:py-20">
+      <section className="max-w-3xl mx-auto px-6 py-16 md:py-20 text-center">
         <SectionLabel>Products</SectionLabel>
-        <div className="grid gap-6 max-w-2xl">
+        <div className="grid gap-6">
 
           {/* OMEN */}
           <div className="border p-8" style={{ borderColor: "#4A4A4A" }}>
@@ -218,9 +217,9 @@ export default function Home() {
       <Divider />
 
       {/* ── The Data Covenant ── */}
-      <section className="max-w-6xl mx-auto px-6 py-16 md:py-20">
+      <section className="max-w-3xl mx-auto px-6 py-16 md:py-20 text-center">
         <SectionLabel>The Data Covenant</SectionLabel>
-        <div className="max-w-2xl space-y-6">
+        <div className="space-y-6">
           <h2
             className="text-2xl md:text-3xl font-semibold"
             style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}

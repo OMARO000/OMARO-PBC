@@ -12,11 +12,10 @@ function Divider() {
 
 export default function MissionPage() {
   return (
-    <div className="max-w-6xl mx-auto px-6 py-16 md:py-24">
+    <div className="max-w-3xl mx-auto px-6 py-16 md:py-24 text-center">
 
-      {/* Header */}
       <h1
-        className="text-3xl md:text-5xl font-semibold leading-tight mb-16 max-w-2xl"
+        className="text-3xl md:text-5xl font-semibold leading-tight mb-16"
         style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}
       >
         Every race needs a finish line.
@@ -24,8 +23,7 @@ export default function MissionPage() {
         This one doesn&apos;t have one.
       </h1>
 
-      {/* Body sections */}
-      <div className="max-w-2xl space-y-16">
+      <div className="space-y-16">
 
         {/* Section 1 */}
         <div className="space-y-6">
