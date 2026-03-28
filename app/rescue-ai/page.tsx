@@ -139,8 +139,8 @@ export default function RescueAIPage() {
           style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
         >
           You do not have to choose between using AI and remaining human.
-          Aviation runs on autopilot. The FAA still requires a pilot who can
-          override it. A system with human oversight degrades gracefully. A
+          Your phone&apos;s GPS knows every turn. You still decide where you&apos;re going.
+          A system with human oversight degrades gracefully. A
           fully automated system fails catastrophically. Oversight is not
           friction. It is the architecture of resilience.
         </p>
