@@ -16,6 +16,8 @@ export default function LogoHero() {
         width={180}
         height={180}
         priority
+        placeholder="empty"
+        unoptimized
       />
     </div>
   );
