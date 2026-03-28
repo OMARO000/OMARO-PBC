@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import LogoHero from "@/components/LogoHero";
 
 export const metadata: Metadata = {
   title: "RESCUE AI",
@@ -72,6 +73,8 @@ function Divider() {
 export default function RescueAIPage() {
   return (
     <div className="max-w-3xl mx-auto px-6 py-16 md:py-24 text-center">
+
+      <LogoHero />
 
       {/* Header */}
       <div className="mb-16">

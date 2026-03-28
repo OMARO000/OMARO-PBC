@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import LogoHero from "@/components/LogoHero";
 
 export const metadata: Metadata = {
   title: "Press",
@@ -9,6 +10,8 @@ export const metadata: Metadata = {
 export default function PressPage() {
   return (
     <div className="max-w-3xl mx-auto px-6 py-16 md:py-24 text-center">
+      <LogoHero />
+
       <h1
         className="text-3xl md:text-5xl font-semibold mb-16"
         style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}

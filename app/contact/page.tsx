@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import LogoHero from "@/components/LogoHero";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -44,6 +45,8 @@ function EmailRow({ label, address, note }: { label: string; address: string; no
 export default function ContactPage() {
   return (
     <div className="max-w-3xl mx-auto px-6 py-16 md:py-24 text-center">
+      <LogoHero />
+
       <h1
         className="text-3xl md:text-5xl font-semibold mb-16"
         style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}

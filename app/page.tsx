@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import LogoHero from "@/components/LogoHero";
 
 export const metadata: Metadata = {
   title: "OMARO PBC — You were never supposed to be a user.",
@@ -25,8 +26,13 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 export default function Home() {
   return (
     <>
+      {/* ── Logo Hero ── */}
+      <div className="max-w-3xl mx-auto px-6 pt-16">
+        <LogoHero />
+      </div>
+
       {/* ── Hero ── */}
-      <section className="max-w-6xl mx-auto px-6 py-24 md:py-36 text-center">
+      <section className="max-w-6xl mx-auto px-6 pb-24 md:pb-36 text-center">
         <h1
           className="text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-8 mx-auto"
           style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}

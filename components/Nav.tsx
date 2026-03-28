@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -26,23 +25,23 @@ export default function Nav() {
       }}
     >
       <nav
-        className="max-w-6xl mx-auto px-6 py-3 flex items-center"
+        className="max-w-6xl mx-auto px-6 py-4 flex items-center"
         aria-label="Main navigation"
       >
-        {/* Logo — left anchor */}
+        {/* Wordmark — text only */}
         <Link
           href="/"
-          className="shrink-0 hover:opacity-75 transition-opacity"
+          style={{
+            fontFamily: "var(--font-ibm-plex-mono)",
+            fontWeight: 500,
+            color: "#1A1A1A",
+            textDecoration: "none",
+            letterSpacing: "0.15em",
+          }}
+          className="shrink-0 text-base uppercase hover:opacity-70 transition-opacity"
           aria-label="OMARO PBC home"
         >
-          <Image
-            src="/omaro-logo.png"
-            alt="OMARO"
-            width={44}
-            height={44}
-            priority
-            style={{ display: "block" }}
-          />
+          OMARO
         </Link>
 
         {/* Desktop links — horizontally centered */}
@@ -85,8 +84,8 @@ export default function Nav() {
           </li>
         </ul>
 
-        {/* Right side — spacer (desktop) / hamburger (mobile) */}
-        <div className="shrink-0 flex items-center justify-end" style={{ width: 44 }}>
+        {/* Right — spacer (desktop) / hamburger (mobile) */}
+        <div className="shrink-0 flex items-center justify-end" style={{ minWidth: 60 }}>
           <button
             className="md:hidden flex flex-col gap-1.5 p-1"
             onClick={() => setMenuOpen(!menuOpen)}
