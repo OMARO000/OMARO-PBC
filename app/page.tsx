@@ -84,9 +84,9 @@ export default function Home() {
 
       <Divider />
 
-      {/* ── RESCUE AI ── */}
+      {/* ── HAI STANDARD ── */}
       <section className="max-w-3xl mx-auto px-6 py-16 md:py-20 text-center">
-        <SectionLabel>Rescue AI</SectionLabel>
+        <SectionLabel>HAI Standard</SectionLabel>
         <div className="space-y-6">
           <p
             className="text-base md:text-lg leading-relaxed"
@@ -99,7 +99,7 @@ export default function Home() {
             className="text-base md:text-lg leading-relaxed"
             style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
           >
-            RESCUE AI is OMARO&apos;s grading standard and cultural contract for
+            The HAI Standard is OMARO&apos;s grading standard and cultural contract for
             how AI should be built, deployed, and governed. Eight pillars. A
             scoring matrix. A public audit trail pinned to IPFS. Any product,
             company, or system can submit. Scores are permanent. Accountability
@@ -113,7 +113,7 @@ export default function Home() {
             record.
           </p>
           <Link
-            href="/rescue-ai"
+            href="/hai-standard"
             className="inline-block text-sm underline hover:no-underline"
             style={{
               fontFamily: "var(--font-ibm-plex-mono)",

@@ -123,23 +123,23 @@ export default function TransparencyPage() {
         </p>
       </section>
 
-      {/* RESCUE AI Audit Framework */}
+      {/* HAI Standard Audit Framework */}
       <section>
         <h2
           className="text-xs font-semibold tracking-widest uppercase mb-8"
           style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
         >
-          RESCUE AI Audit Framework
+          HAI Standard Audit Framework
         </h2>
         <div className="space-y-4">
           <p
             className="text-base leading-relaxed"
             style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
           >
-            OMARO products are evaluated against the RESCUE AI standard —
-            eight pillars covering human override, training transparency,
-            consent architecture, accountability chain, bias documentation,
-            failure mode registry, data sovereignty, and independent audit.
+            OMARO products are evaluated against the HAI Standard —
+            eight pillars covering integrity &amp; transparency, accountability chain,
+            safety &amp; robustness, equality &amp; non-discrimination, human override &amp; control,
+            use limits &amp; proportionality, data sovereignty &amp; empowerment, and independent audit.
           </p>
           <p
             className="text-base leading-relaxed"
@@ -149,8 +149,8 @@ export default function TransparencyPage() {
             immutable. OMARO holds itself to the same standard it publishes.
           </p>
           <div style={{ borderTop: "1px solid #4A4A4A" }}>
-            <MetricRow label="RESCUE AI audits completed" value="Pending" />
-            <MetricRow label="RESCUE AI audits pinned to IPFS" value="Pending" />
+            <MetricRow label="HAI Standard audits completed" value="Pending" />
+            <MetricRow label="HAI Standard audits pinned to IPFS" value="Pending" />
           </div>
         </div>
       </section>

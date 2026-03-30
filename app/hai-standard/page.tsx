@@ -2,57 +2,57 @@ import type { Metadata } from "next";
 import LogoHero from "@/components/LogoHero";
 
 export const metadata: Metadata = {
-  title: "RESCUE AI",
+  title: "HAI Standard",
   description:
-    "RESCUE AI is OMARO's grading standard and cultural contract for how AI should be built, deployed, and governed. Eight pillars. A scoring matrix. A public audit trail.",
+    "The HAI Standard is OMARO's grading standard and cultural contract for how AI should be built, deployed, and governed. Eight pillars. A scoring matrix. A public audit trail.",
 };
 
 const pillars = [
   {
     number: "I",
-    name: "Human Override",
-    risk: "Automated decisions with no exit ramp.",
-    requirements:
-      "Every AI-assisted decision pathway affecting a human must include a documented, accessible, and functional human override mechanism. Overrides must be logged. Logs must be auditable. No system may be architected to make override prohibitively difficult.",
-  },
-  {
-    number: "II",
-    name: "Training Transparency",
+    name: "Integrity & Transparency",
     risk: "Opaque systems that cannot be examined or challenged.",
     requirements:
       "Disclosed training data sources, methods, known gaps, and known failure conditions. Minimum: public model card. Standard: IPFS-pinned disclosure document updated at each major version. Retroactive disclosure of changes required.",
   },
   {
-    number: "III",
-    name: "Consent Architecture",
-    risk: "Data extraction disguised as service delivery.",
-    requirements:
-      "Explicit opt-in for all data collection. Clear disclosure of what is collected and why. Functional opt-out that results in actual deletion within 30 days. No dark patterns. Consent must be re-obtained when purpose changes.",
-  },
-  {
-    number: "IV",
+    number: "II",
     name: "Accountability Chain",
     risk: "Diffuse responsibility enabling no one to be held liable.",
     requirements:
       "Named responsible parties for every deployment, publicly documented. When the system causes harm, there is a person. When that person is accountable, there is a record. Chain of accountability must include both the builder and the deployer.",
   },
   {
-    number: "V",
-    name: "Bias Documentation",
-    risk: "Systemic discrimination embedded in automated decisions.",
-    requirements:
-      "Known biases identified, tested, and disclosed prior to deployment. Testing methodology disclosed alongside results. Updates to bias documentation triggered within 30 days of any reported incident. Disparate impact testing required for systems affecting access to services.",
-  },
-  {
-    number: "VI",
-    name: "Failure Mode Registry",
+    number: "III",
+    name: "Safety & Robustness",
     risk: "Catastrophic failures with no warning and no record.",
     requirements:
       "Documented known failure modes before launch. Ongoing public incident log. Registry updated within 72 hours of any identified failure. Systems affecting health, finance, or legal status require formal failure mode analysis before deployment.",
   },
   {
+    number: "IV",
+    name: "Equality & Non-Discrimination",
+    risk: "Systemic discrimination embedded in automated decisions.",
+    requirements:
+      "Known biases identified, tested, and disclosed prior to deployment. Testing methodology disclosed alongside results. Updates to bias documentation triggered within 30 days of any reported incident. Disparate impact testing required for systems affecting access to services.",
+  },
+  {
+    number: "V",
+    name: "Human Override & Control",
+    risk: "Automated decisions with no exit ramp.",
+    requirements:
+      "Every AI-assisted decision pathway affecting a human must include a documented, accessible, and functional human override mechanism. Overrides must be logged. Logs must be auditable. No system may be architected to make override prohibitively difficult.",
+  },
+  {
+    number: "VI",
+    name: "Use Limits & Proportionality",
+    risk: "Data extraction disguised as service delivery.",
+    requirements:
+      "Explicit opt-in for all data collection. Clear disclosure of what is collected and why. Functional opt-out that results in actual deletion within 30 days. No dark patterns. Consent must be re-obtained when purpose changes.",
+  },
+  {
     number: "VII",
-    name: "Data Sovereignty",
+    name: "Data Sovereignty & Empowerment",
     risk: "Users treated as a resource, not a party.",
     requirements:
       "Users own their data. Export is functional, complete, and machine-readable. Deletion is real and verifiable, not archival. No data retained after deletion request beyond the legal minimum. Users may not be penalized for exercising data rights.",
@@ -82,7 +82,7 @@ export default function RescueAIPage() {
           className="text-xs font-semibold tracking-widest uppercase mb-6"
           style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
         >
-          RESCUE AI
+          HAI STANDARD
         </p>
         <h1
           className="text-3xl md:text-5xl font-semibold leading-tight"
@@ -148,7 +148,7 @@ export default function RescueAIPage() {
           className="text-base md:text-lg leading-relaxed font-medium"
           style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
         >
-          RESCUE AI is that architecture.
+          The HAI Standard is that architecture.
         </p>
       </section>
 
