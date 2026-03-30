@@ -7,6 +7,7 @@ import { useState } from "react";
 const navLinks = [
   { href: "/mission", label: "Mission" },
   { href: "/products", label: "Products" },
+  { href: "/data-coop", label: "Data Co-op" },
   { href: "/hai-standard", label: "HAI Standard" },
   { href: "/transparency", label: "Transparency" },
   { href: "/press", label: "Press" },
@@ -68,20 +69,19 @@ export default function Nav() {
             );
           })}
 
-          {/* Founder — destination TBA */}
           <li>
-            <span
+            <Link
+              href="http://localhost:3003"
+              target="_blank"
               style={{
                 fontFamily: "var(--font-ibm-plex-mono)",
                 color: "#4A4A4A",
-                cursor: "default",
+                textDecoration: "none",
               }}
-              className="text-sm tracking-wide"
-              title="Founder site — coming soon"
-              aria-label="Founder (link coming soon)"
+              className="text-sm tracking-wide hover:underline"
             >
               Founder&nbsp;↗
-            </span>
+            </Link>
           </li>
         </ul>
 
@@ -148,15 +148,18 @@ export default function Nav() {
               );
             })}
             <li>
-              <span
+              <Link
+                href="http://localhost:3003"
+                target="_blank"
                 style={{
                   fontFamily: "var(--font-ibm-plex-mono)",
                   color: "#4A4A4A",
+                  textDecoration: "none",
                 }}
-                className="text-sm tracking-wide"
+                className="text-sm tracking-wide hover:underline"
               >
                 Founder&nbsp;↗
-              </span>
+              </Link>
             </li>
           </ul>
         </div>
