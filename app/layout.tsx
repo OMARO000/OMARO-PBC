@@ -20,10 +20,10 @@ const ibmPlexSans = IBM_Plex_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "OMARO PBC",
-    template: "%s | OMARO PBC",
+    default: "OMARO",
+    template: "%s | OMARO",
   },
-  description: "Infrastructure that keeps humans in every room that matters. OMARO PBC is a Public Benefit Corporation.",
+  description: "Infrastructure that keeps humans in every room that matters.",
   metadataBase: new URL("https://omaro.xyz"),
 };
 

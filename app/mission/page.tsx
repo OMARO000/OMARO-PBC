@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import LogoHero from "@/components/LogoHero";
 
 export const metadata: Metadata = {
-  title: "Mission | OMARO",
+  title: "Mission",
   description:
     "Every race needs a finish line. This one doesn't have one. OMARO builds infrastructure for the humans who will live in the future.",
 };

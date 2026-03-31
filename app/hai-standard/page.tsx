@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import LogoHero from "@/components/LogoHero";
 
 export const metadata: Metadata = {
-  title: "HAI Standard | OMARO",
+  title: "HAI Standard",
   description:
     "The HAI Standard is OMARO's grading standard and cultural contract for how AI should be built, deployed, and governed. Eight pillars. A scoring matrix. A public audit trail.",
 };
