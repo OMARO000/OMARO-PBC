@@ -3,7 +3,7 @@ import Link from "next/link";
 import LogoHero from "@/components/LogoHero";
 
 export const metadata: Metadata = {
-  title: "OMARO PBC — You were never supposed to be a user.",
+  title: "Home | OMARO",
   description:
     "Infrastructure that keeps humans in every room that matters. OMARO PBC is a Public Benefit Corporation building open-source tools for people.",
 };

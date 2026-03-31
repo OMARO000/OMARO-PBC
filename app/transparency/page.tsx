@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import LogoHero from "@/components/LogoHero";
 
 export const metadata: Metadata = {
-  title: "Transparency",
+  title: "Transparency | OMARO",
   description:
     "OMARO PBC publishes annual benefit reports, platform metrics, and enforcement actions. The record includes us.",
 };

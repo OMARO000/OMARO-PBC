@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import LogoHero from "@/components/LogoHero";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact | OMARO",
   description:
     "Contact OMARO PBC. All addresses are Tuta encrypted. PGP available on request.",
 };

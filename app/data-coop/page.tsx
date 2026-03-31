@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import LogoHero from "@/components/LogoHero"
 
 export const metadata: Metadata = {
-  title: "Data Co-op — OMARO PBC",
+  title: "Data Co-op | OMARO",
   description: "You own what you bring. The OMARO Data Co-op returns value to the people whose data makes the research possible.",
 }
 
