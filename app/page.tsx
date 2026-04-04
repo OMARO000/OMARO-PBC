@@ -37,9 +37,9 @@ export default function Home() {
           className="text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-8 mx-auto"
           style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}
         >
-          You were never supposed to be a user.
+          Sovereign By Design.
           <br />
-          OMARO builds for people.<span style={{
+          OMARO builds for the people.<span style={{
             display: "inline-block",
             width: "3px",
             height: "1em",
