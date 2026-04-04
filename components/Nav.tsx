@@ -7,10 +7,11 @@ import { useState } from "react";
 const navLinks = [
   { href: "/mission", label: "Mission" },
   { href: "/products", label: "Products" },
-  { href: "/data-coop", label: "Data Co-op" },
-  { href: "/hai-standard", label: "HAI Standard" },
+  { href: "/rescue-ai", label: "Rescue AI" },
   { href: "/transparency", label: "Transparency" },
+  { href: "/founder", label: "Founder" },
   { href: "/press", label: "Press" },
+  { href: "/origins", label: "Origins" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -69,20 +70,6 @@ export default function Nav() {
             );
           })}
 
-          <li>
-            <Link
-              href="http://localhost:3003"
-              target="_blank"
-              style={{
-                fontFamily: "var(--font-ibm-plex-mono)",
-                color: "#4A4A4A",
-                textDecoration: "none",
-              }}
-              className="text-sm tracking-wide hover:underline"
-            >
-              Founder&nbsp;↗
-            </Link>
-          </li>
         </ul>
 
         {/* Right — spacer (desktop) / hamburger (mobile) */}
@@ -147,20 +134,6 @@ export default function Nav() {
                 </li>
               );
             })}
-            <li>
-              <Link
-                href="http://localhost:3003"
-                target="_blank"
-                style={{
-                  fontFamily: "var(--font-ibm-plex-mono)",
-                  color: "#4A4A4A",
-                  textDecoration: "none",
-                }}
-                className="text-sm tracking-wide hover:underline"
-              >
-                Founder&nbsp;↗
-              </Link>
-            </li>
           </ul>
         </div>
       )}
