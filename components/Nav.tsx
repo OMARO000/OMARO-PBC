@@ -7,9 +7,10 @@ import { useState } from "react";
 const navLinks = [
   { href: "/mission", label: "Mission" },
   { href: "/products", label: "Products" },
-  { href: "/rescue-ai", label: "Rescue AI" },
+  { href: "/data-coop", label: "Data Co-op" },
+  { href: "/hai-standard", label: "HAI Standard" },
   { href: "/transparency", label: "Transparency" },
-  { href: "/founder", label: "Founder" },
+  { href: "https://trentonwroberts.com", label: "Founder", external: true },
   { href: "/press", label: "Press" },
   { href: "/origins", label: "Origins" },
   { href: "/contact", label: "Contact" },
@@ -49,23 +50,36 @@ export default function Nav() {
 
         {/* Desktop links — horizontally centered */}
         <ul className="hidden md:flex flex-1 items-center justify-center gap-7 list-none m-0 p-0">
-          {navLinks.map(({ href, label }) => {
-            const isActive = pathname === href;
+          {navLinks.map(({ href, label, external }) => {
+            const isActive = !external && pathname === href;
+            const linkStyle = {
+              fontFamily: "var(--font-ibm-plex-mono)",
+              color: "#1A1A1A",
+              textDecoration: isActive ? "underline" : "none",
+              textUnderlineOffset: "4px",
+            };
             return (
               <li key={href}>
-                <Link
-                  href={href}
-                  style={{
-                    fontFamily: "var(--font-ibm-plex-mono)",
-                    color: "#1A1A1A",
-                    textDecoration: isActive ? "underline" : "none",
-                    textUnderlineOffset: "4px",
-                  }}
-                  className="text-sm tracking-wide hover:underline transition-all"
-                  aria-current={isActive ? "page" : undefined}
-                >
-                  {label}
-                </Link>
+                {external ? (
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={linkStyle}
+                    className="text-sm tracking-wide hover:underline transition-all"
+                  >
+                    {label}
+                  </a>
+                ) : (
+                  <Link
+                    href={href}
+                    style={linkStyle}
+                    className="text-sm tracking-wide hover:underline transition-all"
+                    aria-current={isActive ? "page" : undefined}
+                  >
+                    {label}
+                  </Link>
+                )}
               </li>
             );
           })}
@@ -113,24 +127,38 @@ export default function Nav() {
           style={{ borderTop: "1px solid #4A4A4A" }}
         >
           <ul className="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-4 list-none m-0 text-center">
-            {navLinks.map(({ href, label }) => {
-              const isActive = pathname === href;
+            {navLinks.map(({ href, label, external }) => {
+              const isActive = !external && pathname === href;
+              const linkStyle = {
+                fontFamily: "var(--font-ibm-plex-mono)",
+                color: "#1A1A1A",
+                textDecoration: isActive ? "underline" : "none",
+                textUnderlineOffset: "4px",
+              };
               return (
                 <li key={href}>
-                  <Link
-                    href={href}
-                    style={{
-                      fontFamily: "var(--font-ibm-plex-mono)",
-                      color: "#1A1A1A",
-                      textDecoration: isActive ? "underline" : "none",
-                      textUnderlineOffset: "4px",
-                    }}
-                    className="text-sm tracking-wide hover:underline"
-                    onClick={() => setMenuOpen(false)}
-                    aria-current={isActive ? "page" : undefined}
-                  >
-                    {label}
-                  </Link>
+                  {external ? (
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={linkStyle}
+                      className="text-sm tracking-wide hover:underline"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      {label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={href}
+                      style={linkStyle}
+                      className="text-sm tracking-wide hover:underline"
+                      onClick={() => setMenuOpen(false)}
+                      aria-current={isActive ? "page" : undefined}
+                    >
+                      {label}
+                    </Link>
+                  )}
                 </li>
               );
             })}
