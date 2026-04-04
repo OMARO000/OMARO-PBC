@@ -169,17 +169,9 @@ export default function Home() {
             </a>
           </div>
           <div className="border p-8" style={{ borderColor: "#4A4A4A" }}>
-            <h3 className="text-lg font-semibold mb-3" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}>
-              [us] — Authentic Human Connections
-            </h3>
-            <p className="text-base leading-relaxed mb-5" style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#4A4A4A" }}>
-              Not social media. Intake handled by [u]. A platform for genuine
-              platonic, romantic, and professional connection — built on
-              consent, designed for people.
+            <p style={{ fontFamily: "var(--font-ibm-plex-mono)", fontSize: "16px", fontWeight: 500, color: "#4A4A4A", textAlign: "center" }}>
+              TO BE ANNOUNCED
             </p>
-            <a href="https://uniteus.xyz" target="_blank" rel="noopener noreferrer" className="text-sm underline hover:no-underline" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A", textUnderlineOffset: "4px" }}>
-              uniteus.xyz&nbsp;&rarr;
-            </a>
           </div>
         </div>
       </section>
