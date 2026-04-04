@@ -54,16 +54,9 @@ export default function ProductsPage() {
 
       {/* [us] */}
       <div style={{ border: "1px solid #4A4A4A", padding: "32px", marginBottom: "24px", height: "auto" }}>
-        <h3 style={{ fontFamily: "var(--font-ibm-plex-mono)", fontSize: "16px", fontWeight: 500, color: "#1A1A1A", marginBottom: "20px" }}>
-          [us] — Authentic Human Connections
-        </h3>
-        <p style={{ fontFamily: "var(--font-ibm-plex-sans)", fontSize: "16px", lineHeight: 1.75, color: "#4A4A4A", marginBottom: "16px" }}>
-          Every major platform optimizes for engagement. Not connection. Engagement. The result is a generation of people who are more reachable than ever and more lonely than ever. The infrastructure of human connection has been quietly replaced with infrastructure for attention capture.
+        <p style={{ fontFamily: "var(--font-ibm-plex-mono)", fontSize: "16px", fontWeight: 500, color: "#4A4A4A", textAlign: "center" }}>
+          TO BE ANNOUNCED
         </p>
-        <p style={{ fontFamily: "var(--font-ibm-plex-sans)", fontSize: "16px", lineHeight: 1.75, color: "#1A1A1A", marginBottom: "20px" }}>
-          [us] is built for connection — not content. Intake handled by [u]. Genuine platonic, romantic, and professional relationships, built on consent and designed for people.
-        </p>
-        <a href="https://uniteus.xyz" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-ibm-plex-mono)", fontSize: "13px", color: "#1A1A1A" }}>uniteus.xyz ↗</a>
       </div>
 
       <div style={{ borderTop: "1px solid #4A4A4A", paddingTop: "40px", marginTop: "16px" }}>
