@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import type { Metadata } from "next";
+import { useState, useRef, useEffect } from "react";
 import LogoHero from "@/components/LogoHero";
 
 const GOLD = "#C4974A";
@@ -69,18 +68,54 @@ function DownloadButton({ label, href }: { label: string; href: string }) {
 }
 
 function ChatUI() {
-  const [messages, setMessages] = useState<{ role: "user" | "assistant"; text: string }[]>([]);
+  const [messages, setMessages] = useState<{ role: "user" | "assistant"; content: string }[]>([]);
   const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [streamingResponse, setStreamingResponse] = useState("");
+  const bottomRef = useRef<HTMLDivElement>(null);
 
-  function handleSend() {
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages, streamingResponse]);
+
+  async function handleSend() {
     const trimmed = input.trim();
-    if (!trimmed) return;
-    setMessages(prev => [...prev, { role: "user", text: trimmed }]);
+    if (!trimmed || loading) return;
+    const userMessage = { role: "user" as const, content: trimmed };
+    const updatedMessages = [...messages, userMessage];
+    setMessages(updatedMessages);
     setInput("");
-    // API not wired yet — placeholder response
-    setTimeout(() => {
-      setMessages(prev => [...prev, { role: "assistant", text: "API not yet connected. Responses will draw from the OMARO White Paper, HAI Standard, and The Trust Renaissance framework." }]);
-    }, 400);
+    setLoading(true);
+    setStreamingResponse("");
+
+    try {
+      const res = await fetch("/api/chat/origins", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ messages: updatedMessages }),
+      });
+
+      if (!res.ok || !res.body) throw new Error("Request failed");
+
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder();
+      let full = "";
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        const chunk = decoder.decode(value, { stream: true });
+        full += chunk;
+        setStreamingResponse(full);
+      }
+
+      setMessages(prev => [...prev, { role: "assistant", content: full }]);
+    } catch {
+      setMessages(prev => [...prev, { role: "assistant", content: "Something went wrong. Please try again." }]);
+    } finally {
+      setLoading(false);
+      setStreamingResponse("");
+    }
   }
 
   function handleKey(e: React.KeyboardEvent) {
@@ -94,7 +129,7 @@ function ChatUI() {
     <div style={{ border: `1px solid ${BORDER}`, marginTop: "24px" }}>
       {/* Message area */}
       <div style={{ minHeight: "280px", maxHeight: "400px", overflowY: "auto", padding: "24px", display: "flex", flexDirection: "column", gap: "16px" }}>
-        {messages.length === 0 && (
+        {messages.length === 0 && !streamingResponse && (
           <p style={{ fontFamily: "var(--font-ibm-plex-sans)", fontSize: "14px", color: MUTED, fontStyle: "italic" }}>
             Ask a question about OMARO, the HAI Standard, or The Trust Renaissance.
           </p>
@@ -104,16 +139,33 @@ function ChatUI() {
             <div style={{
               maxWidth: "80%",
               padding: "10px 16px",
-              background: msg.role === "user" ? GOLD : BORDER,
-              color: msg.role === "user" ? BG : TEXT,
+              border: msg.role === "user" ? `1px solid ${GOLD}` : "none",
+              background: msg.role === "user" ? "transparent" : BORDER,
+              color: msg.role === "user" ? GOLD : TEXT,
               fontFamily: "var(--font-ibm-plex-sans)",
               fontSize: "14px",
               lineHeight: 1.6,
             }}>
-              {msg.text}
+              {msg.content}
             </div>
           </div>
         ))}
+        {streamingResponse && (
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+            <div style={{
+              maxWidth: "80%",
+              padding: "10px 16px",
+              background: BORDER,
+              color: TEXT,
+              fontFamily: "var(--font-ibm-plex-sans)",
+              fontSize: "14px",
+              lineHeight: 1.6,
+            }}>
+              {streamingResponse}
+            </div>
+          </div>
+        )}
+        <div ref={bottomRef} />
       </div>
 
       {/* Input row */}
@@ -124,6 +176,7 @@ function ChatUI() {
           onKeyDown={handleKey}
           placeholder="Type your question…"
           rows={2}
+          disabled={loading}
           style={{
             flex: 1,
             background: "transparent",
@@ -134,24 +187,27 @@ function ChatUI() {
             fontSize: "14px",
             padding: "16px",
             resize: "none",
+            opacity: loading ? 0.5 : 1,
           }}
         />
         <button
           onClick={handleSend}
+          disabled={loading}
           style={{
             background: "none",
             border: "none",
             borderLeft: `1px solid ${BORDER}`,
-            cursor: "pointer",
+            cursor: loading ? "not-allowed" : "pointer",
             color: GOLD,
             fontFamily: "var(--font-ibm-plex-mono)",
             fontSize: "12px",
             letterSpacing: "0.08em",
             padding: "0 20px",
             whiteSpace: "nowrap",
+            opacity: loading ? 0.5 : 1,
           }}
         >
-          Send
+          {loading ? "[ sending... ]" : "[ send ]"}
         </button>
       </div>
       <p style={{ fontFamily: "var(--font-ibm-plex-mono)", fontSize: "10px", color: MUTED, letterSpacing: "0.06em", padding: "10px 16px", borderTop: `1px solid ${BORDER}` }}>
