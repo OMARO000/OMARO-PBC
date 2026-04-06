@@ -23,14 +23,14 @@ export default function PressPage() {
       <section className="mb-16">
         <h2
           className="text-xs font-semibold tracking-widest uppercase mb-8"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}
         >
           Press Contact
         </h2>
         <div style={{ borderTop: "1px solid #4A4A4A" }} className="pt-8 space-y-3">
           <p
             className="text-sm"
-            style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
+            style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}
           >
             Press contact
           </p>
@@ -39,7 +39,7 @@ export default function PressPage() {
             className="block text-base underline hover:no-underline"
             style={{
               fontFamily: "var(--font-ibm-plex-mono)",
-              color: "#1A1A1A",
+              color: "#B85C38",
               textUnderlineOffset: "4px",
             }}
           >
@@ -47,7 +47,7 @@ export default function PressPage() {
           </a>
           <p
             className="text-sm"
-            style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#4A4A4A" }}
+            style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#B85C38" }}
           >
             All press communications are encrypted. Use Tuta or PGP.
           </p>
@@ -60,7 +60,7 @@ export default function PressPage() {
       <section className="my-16">
         <h2
           className="text-xs font-semibold tracking-widest uppercase mb-8"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}
         >
           Brand Assets
         </h2>
@@ -73,7 +73,7 @@ export default function PressPage() {
           <a
             href="mailto:press@omaro-pbc.org"
             className="underline hover:no-underline"
-            style={{ color: "#1A1A1A", textUnderlineOffset: "4px" }}
+            style={{ color: "#B85C38", textUnderlineOffset: "4px" }}
           >
             press@omaro-pbc.org
           </a>
@@ -87,13 +87,13 @@ export default function PressPage() {
       <section className="my-16">
         <h2
           className="text-xs font-semibold tracking-widest uppercase mb-8"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}
         >
           Coverage
         </h2>
         <p
           className="text-sm"
-          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#4A4A4A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#B85C38" }}
         >
           No coverage yet. Launch coverage will appear here.
         </p>
@@ -105,13 +105,13 @@ export default function PressPage() {
       <section className="my-16">
         <h2
           className="text-xs font-semibold tracking-widest uppercase mb-8"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}
         >
           Press Releases
         </h2>
         <p
           className="text-sm"
-          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#4A4A4A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#B85C38" }}
         >
           No press releases yet.
         </p>
@@ -123,7 +123,7 @@ export default function PressPage() {
       <section className="mt-16">
         <p
           className="text-sm"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}
         >
           OMARO does not accept advertising, sponsorship, or paid placement
           inquiries.

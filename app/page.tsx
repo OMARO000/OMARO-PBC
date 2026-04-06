@@ -146,12 +146,12 @@ export default function Home() {
             <h3 className="text-lg font-semibold mb-3" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}>
               OMEN — Corporate Accountability Ledger
             </h3>
-            <p className="text-base leading-relaxed mb-5" style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#4A4A4A" }}>
+            <p className="text-base leading-relaxed mb-5" style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}>
               We keep the receipts. Court-grade documentation of verified
               violations across thousands of companies. Permanent. Open.
               Citable.
             </p>
-            <a href="https://omen.xyz" target="_blank" rel="noopener noreferrer" className="text-sm underline hover:no-underline" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A", textUnderlineOffset: "4px" }}>
+            <a href="https://omen.xyz" target="_blank" rel="noopener noreferrer" className="text-sm underline hover:no-underline" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38", textUnderlineOffset: "4px" }}>
               omen.xyz&nbsp;&rarr;
             </a>
           </div>
@@ -159,12 +159,12 @@ export default function Home() {
             <h3 className="text-lg font-semibold mb-3" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}>
               iGITit — Open Source Code Analysis
             </h3>
-            <p className="text-base leading-relaxed mb-5" style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#4A4A4A" }}>
+            <p className="text-base leading-relaxed mb-5" style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}>
               Open source, open language. AI-generated plain-language analysis
               of any public GitHub, GitLab, or Radicle repository. What the
               code does. Who it serves. What it touches.
             </p>
-            <a href="https://igitit.xyz" target="_blank" rel="noopener noreferrer" className="text-sm underline hover:no-underline" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A", textUnderlineOffset: "4px" }}>
+            <a href="https://igitit.xyz" target="_blank" rel="noopener noreferrer" className="text-sm underline hover:no-underline" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38", textUnderlineOffset: "4px" }}>
               igitit.xyz&nbsp;&rarr;
             </a>
           </div>

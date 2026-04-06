@@ -15,7 +15,7 @@ export default function DataCoopPage() {
     <div className="max-w-3xl mx-auto px-6 py-16 md:py-24 text-center">
       <LogoHero />
       <div className="mb-16">
-        <p className="text-xs font-semibold tracking-widest uppercase mb-6" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}>
+        <p className="text-xs font-semibold tracking-widest uppercase mb-6" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}>
           Data Co-op
         </p>
         <h1 className="text-3xl md:text-5xl font-semibold leading-tight" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}>
@@ -34,7 +34,7 @@ export default function DataCoopPage() {
           Consent management and research participation requires an OMARO account. Log in below to manage your data preferences.
         </p>
         <div className="pt-4">
-          <span className="inline-block text-sm tracking-widest uppercase" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}>
+          <span className="inline-block text-sm tracking-widest uppercase" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}>
             Account login — coming soon
           </span>
         </div>

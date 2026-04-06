@@ -15,7 +15,7 @@ function MetricRow({ label, value }: { label: string; value: string }) {
     >
       <span
         className="text-sm text-left"
-        style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#4A4A4A" }}
+        style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
       >
         {label}
       </span>
@@ -54,7 +54,7 @@ export default function TransparencyPage() {
       <section className="mb-16">
         <h2
           className="text-xs font-semibold tracking-widest uppercase mb-8"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}
         >
           Annual Benefit Reports
         </h2>
@@ -71,14 +71,14 @@ export default function TransparencyPage() {
             </span>
             <span
               className="text-sm text-right"
-              style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
+              style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}
             >
               Publishing Q4 2026
             </span>
           </div>
           <p
             className="text-xs mt-4"
-            style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
+            style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}
           >
             All reports pinned to IPFS. Dual links: hosted + immutable.
           </p>
@@ -89,7 +89,7 @@ export default function TransparencyPage() {
       <section className="mb-16">
         <h2
           className="text-xs font-semibold tracking-widest uppercase mb-8"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}
         >
           Platform Metrics
         </h2>
@@ -106,7 +106,7 @@ export default function TransparencyPage() {
       <section className="mb-16">
         <h2
           className="text-xs font-semibold tracking-widest uppercase mb-8"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}
         >
           Enforcement Actions
         </h2>
@@ -117,7 +117,7 @@ export default function TransparencyPage() {
         </div>
         <p
           className="text-xs mt-6"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}
         >
           All corrections are public. Nothing is silently removed.
         </p>
@@ -127,7 +127,7 @@ export default function TransparencyPage() {
       <section>
         <h2
           className="text-xs font-semibold tracking-widest uppercase mb-8"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}
         >
           HAI Standard Audit Framework
         </h2>
