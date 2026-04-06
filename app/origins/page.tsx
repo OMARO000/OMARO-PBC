@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 
-const GOLD = "#C4974A";
+const GOLD = "#B85C38";
 const BG = "#0f0e0c";
 const TEXT = "#F0EDE8";
 const MUTED = "#6a6a62";
