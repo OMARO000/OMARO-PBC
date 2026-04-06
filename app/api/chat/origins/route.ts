@@ -1,7 +1,13 @@
 import Anthropic from '@anthropic-ai/sdk'
+import https from 'https'
 import { NextRequest } from 'next/server'
 
-const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
+const client = new Anthropic({
+  apiKey: process.env.ANTHROPIC_API_KEY,
+  ...(process.env.NODE_ENV !== 'production' && {
+    httpAgent: new https.Agent({ rejectUnauthorized: false })
+  })
+})
 
 const SYSTEM_PROMPT = `You are an AI assistant for OMARO Public Benefit Corporation. You answer questions about OMARO's work, philosophy, and published documents. You speak with clarity, warmth, and precision — never corporate, never vague.
 
