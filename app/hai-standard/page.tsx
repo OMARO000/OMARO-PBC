@@ -4,7 +4,7 @@ import LogoHero from "@/components/LogoHero";
 export const metadata: Metadata = {
   title: "HAI Standard",
   description:
-    "The HAI Standard is OMARO's grading standard and cultural contract for how AI should be built, deployed, and governed. Eight pillars. A scoring matrix. A public audit trail.",
+    "The HAI Standard is OMARO's grading standard and cultural contract for how AI should be built, deployed, and governed. Nine pillars. A scoring matrix. A public audit trail.",
 };
 
 const pillars = [
@@ -63,6 +63,13 @@ const pillars = [
     risk: "Self-certification from parties with financial interest in passing.",
     requirements:
       "Third-party audit by an entity with no financial relationship to the deployer. Audit results pinned to IPFS with immutable timestamp. Full audit triggered at deployment. Annual re-audit thereafter, or upon any major version change. Audit refusal is a public record.",
+  },
+  {
+    number: "IX",
+    name: "Human Dignity Across the Full Stack",
+    risk: "Vulnerable populations unprotected, and the human cost of AI production made invisible.",
+    requirements:
+      "Heightened design requirements and audit scrutiny for AI deployed toward children, elderly people, those in mental health crisis, and those without meaningful exit options. No dark patterns, no engagement optimization, no profiling that exploits diminished capacity. Mandatory human escalation pathways that cannot be gated behind friction. Organizations building AI must disclose labor conditions of data production pipelines, commit to fair compensation and safe working conditions for annotation workers, and account for environmental costs of their infrastructure. Accountability begins at the training pipeline, not at the product launch.",
   },
 ];
 
@@ -160,7 +167,7 @@ export default function RescueAIPage() {
           className="text-xs font-semibold tracking-widest uppercase mb-12"
           style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
         >
-          The Eight Pillars
+          The Nine Pillars
         </h2>
 
         <div className="space-y-0">
@@ -217,6 +224,30 @@ export default function RescueAIPage() {
             </div>
           ))}
         </div>
+      </section>
+
+      <Divider />
+
+      {/* Version / registry */}
+      <section className="py-12 space-y-2">
+        <p
+          className="text-xs tracking-wide"
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
+        >
+          HAI Standard v1.1 · 2026 · Published by OMARO Origins
+        </p>
+        <p
+          className="text-xs tracking-wide"
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
+        >
+          Full documentation, scoring methodology, and compliance resources at omaro.xyz/hai-standard
+        </p>
+        <p
+          className="text-xs tracking-wide"
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
+        >
+          The HAI Project public registry — track organizational commitments and audit status — at haiproject.xyz
+        </p>
       </section>
 
       <Divider />

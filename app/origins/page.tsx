@@ -67,6 +67,53 @@ function DownloadButton({ label, href }: { label: string; href: string }) {
   );
 }
 
+const LIST_RE = /^(\*\*)?([IVXLCDM]+\.|[0-9]+\.)\s*/;
+
+function stripMd(text: string): string {
+  return text.replace(/\*\*(.+?)\*\*/g, "$1");
+}
+
+function AssistantBubbles({ content }: { content: string }) {
+  const bubbleStyle = {
+    maxWidth: "80%",
+    padding: "10px 16px",
+    background: BORDER,
+    color: TEXT,
+    fontFamily: "var(--font-ibm-plex-sans)",
+    fontSize: "14px",
+    lineHeight: 1.6,
+  };
+
+  const paragraphs = content.split(/\n\n+/);
+
+  return (
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "0.25rem" }}>
+      {paragraphs.map((para, i) => {
+        const lines = para.split(/\n/).filter(l => l.trim());
+        const isList = lines.length > 1 && lines.every(l => LIST_RE.test(l.trim()));
+
+        if (isList) {
+          return (
+            <div key={i} style={bubbleStyle}>
+              <ul style={{ margin: 0, padding: "0 0 0 1.2em" }}>
+                {lines.map((line, j) => (
+                  <li key={j}>{stripMd(line.replace(LIST_RE, "").trim())}</li>
+                ))}
+              </ul>
+            </div>
+          );
+        }
+
+        return (
+          <div key={i} style={bubbleStyle}>
+            {stripMd(para.trim())}
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
 function ChatUI() {
   const [messages, setMessages] = useState<{ role: "user" | "assistant"; content: string }[]>([]);
   const [input, setInput] = useState("");
@@ -134,37 +181,27 @@ function ChatUI() {
             Ask a question about OMARO, the HAI Standard, or The Trust Renaissance.
           </p>
         )}
-        {messages.map((msg, i) => (
-          <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: msg.role === "user" ? "flex-end" : "flex-start" }}>
-            <div style={{
-              maxWidth: "80%",
-              padding: "10px 16px",
-              border: msg.role === "user" ? `1px solid ${GOLD}` : "none",
-              background: msg.role === "user" ? "transparent" : BORDER,
-              color: msg.role === "user" ? GOLD : TEXT,
-              fontFamily: "var(--font-ibm-plex-sans)",
-              fontSize: "14px",
-              lineHeight: 1.6,
-            }}>
-              {msg.content}
+        {messages.map((msg, i) =>
+          msg.role === "user" ? (
+            <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "flex-end" }}>
+              <div style={{
+                maxWidth: "80%",
+                padding: "10px 16px",
+                border: `1px solid ${GOLD}`,
+                background: "transparent",
+                color: GOLD,
+                fontFamily: "var(--font-ibm-plex-sans)",
+                fontSize: "14px",
+                lineHeight: 1.6,
+              }}>
+                {msg.content}
+              </div>
             </div>
-          </div>
-        ))}
-        {streamingResponse && (
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
-            <div style={{
-              maxWidth: "80%",
-              padding: "10px 16px",
-              background: BORDER,
-              color: TEXT,
-              fontFamily: "var(--font-ibm-plex-sans)",
-              fontSize: "14px",
-              lineHeight: 1.6,
-            }}>
-              {streamingResponse}
-            </div>
-          </div>
+          ) : (
+            <AssistantBubbles key={i} content={msg.content} />
+          )
         )}
+        {streamingResponse && <AssistantBubbles content={streamingResponse} />}
         <div ref={bottomRef} />
       </div>
 
