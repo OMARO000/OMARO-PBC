@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import LogoHero from "@/components/LogoHero";
 
 export const metadata: Metadata = {
   title: "OMARO",
@@ -28,7 +27,6 @@ export default function Home() {
     <>
       {/* ── Logo Hero ── */}
       <div className="max-w-3xl mx-auto px-6 pt-16">
-        <LogoHero />
       </div>
 
       {/* ── Hero ── */}

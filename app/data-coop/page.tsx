@@ -1,5 +1,4 @@
 import type { Metadata } from "next"
-import LogoHero from "@/components/LogoHero"
 
 export const metadata: Metadata = {
   title: "Data Co-op",
@@ -13,7 +12,6 @@ function Divider() {
 export default function DataCoopPage() {
   return (
     <div className="max-w-3xl mx-auto px-6 py-16 md:py-24 text-center">
-      <LogoHero />
       <div className="mb-16">
         <p className="text-xs font-semibold tracking-widest uppercase mb-6" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}>
           Data Co-op

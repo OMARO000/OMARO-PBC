@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import LogoHero from "@/components/LogoHero";
 
 export const metadata: Metadata = {
   title: "Transparency",
@@ -32,7 +31,6 @@ function MetricRow({ label, value }: { label: string; value: string }) {
 export default function TransparencyPage() {
   return (
     <div className="max-w-3xl mx-auto px-6 py-16 md:py-24 text-center">
-      <LogoHero />
 
       <h1
         className="text-3xl md:text-5xl font-semibold mb-10"

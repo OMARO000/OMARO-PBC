@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import LogoHero from "@/components/LogoHero";
 
 export const metadata: Metadata = {
   title: "Founder",
@@ -9,7 +8,6 @@ export const metadata: Metadata = {
 export default function FounderPage() {
   return (
     <div className="max-w-3xl mx-auto px-6 py-16 md:py-24 text-center">
-      <LogoHero />
 
       <p
         className="text-xs font-semibold tracking-widest uppercase mb-6"

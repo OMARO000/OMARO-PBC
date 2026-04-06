@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import LogoHero from "@/components/LogoHero";
 
 const GOLD = "#C4974A";
 const BG = "#0f0e0c";
@@ -261,7 +260,6 @@ export default function OriginsPage() {
   return (
     <div style={{ background: BG, color: TEXT, minHeight: "100vh" }}>
       <div style={{ maxWidth: "780px", margin: "0 auto", padding: "60px 40px" }}>
-        <LogoHero />
 
         <h1 style={{ fontFamily: "var(--font-ibm-plex-mono)", fontSize: "2.5rem", fontWeight: 600, color: TEXT, marginBottom: "64px" }}>
           OMARO Origins

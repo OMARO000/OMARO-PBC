@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import LogoHero from "@/components/LogoHero";
 
 export const metadata: Metadata = {
   title: "Mission",
@@ -15,7 +14,6 @@ export default function MissionPage() {
   return (
     <div className="max-w-3xl mx-auto px-6 py-16 md:py-24 text-center">
 
-      <LogoHero />
 
       <h1
         className="text-3xl md:text-5xl font-semibold leading-tight mb-16"
