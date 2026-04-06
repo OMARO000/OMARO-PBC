@@ -37,10 +37,11 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   );
 }
 
-function DownloadButton({ label, href }: { label: string; href: string }) {
+function DownloadButton({ label, href, download }: { label: string; href: string; download?: boolean }) {
   return (
     <a
       href={href}
+      download={download || undefined}
       style={{
         display: "inline-block",
         fontFamily: "var(--font-ibm-plex-mono)",
@@ -120,10 +121,12 @@ function ChatUI() {
   const [loading, setLoading] = useState(false);
   const [streamingResponse, setStreamingResponse] = useState("");
   const bottomRef = useRef<HTMLDivElement>(null);
+  const messageCount = messages.length;
 
   useEffect(() => {
+    if (messageCount === 0 && !streamingResponse) return;
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages, streamingResponse]);
+  }, [messageCount, streamingResponse]);
 
   async function handleSend() {
     const trimmed = input.trim();
@@ -291,7 +294,7 @@ export default function OriginsPage() {
               {para}
             </p>
           ))}
-          <DownloadButton label="Download →" href="#" />
+          <DownloadButton label="Download →" href="/OMARO_WP_2026.pdf" download />
         </section>
 
         <Divider />
@@ -305,7 +308,10 @@ export default function OriginsPage() {
           <p style={{ fontFamily: "var(--font-ibm-plex-sans)", fontSize: "16px", lineHeight: 1.8, color: MUTED, marginBottom: "20px" }}>
             Description coming soon.
           </p>
-          <DownloadButton label="Download →" href="#" />
+          <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
+            <DownloadButton label="Download →" href="/OMARO_HAI_WP.pdf" download />
+            <DownloadButton label="Download Executive Edition →" href="/OMARO_HAI_EXEC_WP_2026_.pdf" download />
+          </div>
         </section>
 
         <Divider />

@@ -250,6 +250,25 @@ export default function RescueAIPage() {
         </p>
       </section>
 
+      {/* Link to Origins */}
+      <div className="py-4">
+        <a
+          href="/origins"
+          style={{
+            display: "inline-block",
+            fontFamily: "var(--font-ibm-plex-mono)",
+            fontSize: "13px",
+            letterSpacing: "0.08em",
+            color: "#1A1A1A",
+            border: "1px solid #1A1A1A",
+            padding: "10px 24px",
+            textDecoration: "none",
+          }}
+        >
+          Read the White Papers →
+        </a>
+      </div>
+
       <Divider />
 
       {/* Closing */}
