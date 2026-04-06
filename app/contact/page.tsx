@@ -3,8 +3,7 @@ import LogoHero from "@/components/LogoHero";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description:
-    "Contact OMARO PBC. All addresses are Tuta encrypted. PGP available on request.",
+  description: "Contact OMARO PBC.",
 };
 
 function EmailRow({ label, address, note }: { label: string; address: string; note?: string }) {
@@ -59,23 +58,12 @@ export default function ContactPage() {
         className="mb-12"
         style={{ borderTop: "1px solid #4A4A4A" }}
       >
-        <EmailRow label="General" address="hello@omaro-pbc.org" />
-        <EmailRow label="Press" address="press@omaro-pbc.org" />
-        <EmailRow label="Legal" address="legal@omaro-pbc.org" />
         <EmailRow
-          label="Security"
-          address="security@omaro-pbc.org"
-          note="For vulnerability reports only."
+          label="General Inquiries"
+          address="support@omaro.xyz"
+          note="Email not yet active — launching with omaro.xyz domain."
         />
       </div>
-
-      {/* Encryption note */}
-      <p
-        className="text-sm mb-16"
-        style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
-      >
-        All addresses are Tuta encrypted. PGP available on request.
-      </p>
 
       <div style={{ borderTop: "1px solid #4A4A4A" }} />
 
