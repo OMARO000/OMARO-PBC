@@ -87,7 +87,7 @@ export default function RescueAIPage() {
       <div className="mb-16">
         <p
           className="text-xs font-semibold tracking-widest uppercase mb-6"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}
         >
           HAI STANDARD
         </p>
@@ -165,7 +165,7 @@ export default function RescueAIPage() {
       <section className="py-16">
         <h2
           className="text-xs font-semibold tracking-widest uppercase mb-12"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}
         >
           The Nine Pillars
         </h2>
@@ -176,7 +176,7 @@ export default function RescueAIPage() {
               <div className="py-10 text-center">
                 <p
                   className="text-xs tabular-nums mb-2"
-                  style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
+                  style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}
                 >
                   Pillar {pillar.number}
                 </p>
@@ -191,7 +191,7 @@ export default function RescueAIPage() {
                   <div>
                     <p
                       className="text-xs font-semibold tracking-widest uppercase mb-2"
-                      style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
+                      style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}
                     >
                       Risk Addressed
                     </p>
@@ -205,7 +205,7 @@ export default function RescueAIPage() {
                   <div>
                     <p
                       className="text-xs font-semibold tracking-widest uppercase mb-2"
-                      style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
+                      style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}
                     >
                       Requirements
                     </p>
@@ -232,19 +232,19 @@ export default function RescueAIPage() {
       <section className="py-12 space-y-2">
         <p
           className="text-xs tracking-wide"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}
         >
           HAI Standard v1.1 · 2026 · Published by OMARO Origins
         </p>
         <p
           className="text-xs tracking-wide"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}
         >
           Full documentation, scoring methodology, and compliance resources at omaro.xyz/hai-standard
         </p>
         <p
           className="text-xs tracking-wide"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}
         >
           The HAI Project public registry — track organizational commitments and audit status — at haiproject.xyz
         </p>
@@ -259,8 +259,8 @@ export default function RescueAIPage() {
             fontFamily: "var(--font-ibm-plex-mono)",
             fontSize: "13px",
             letterSpacing: "0.08em",
-            color: "#1A1A1A",
-            border: "1px solid #1A1A1A",
+            color: "#B85C38",
+            border: "1px solid #B85C38",
             padding: "10px 24px",
             textDecoration: "none",
           }}

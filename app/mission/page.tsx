@@ -103,7 +103,7 @@ export default function MissionPage() {
         {/* Closing */}
         <p
           className="text-xl md:text-2xl font-semibold leading-snug"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}
         >
           We are not building against the future.
           <br />

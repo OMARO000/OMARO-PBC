@@ -54,7 +54,7 @@ export default function Nav() {
             const isActive = !external && pathname === href;
             const linkStyle = {
               fontFamily: "var(--font-ibm-plex-mono)",
-              color: "#1A1A1A",
+              color: isActive ? "#B85C38" : "#1A1A1A",
               textDecoration: isActive ? "underline" : "none",
               textUnderlineOffset: "4px",
             };

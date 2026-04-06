@@ -11,6 +11,8 @@
 :root {
   --background: #F0EDE8;
   --foreground: #1A1A1A;
+  --terracotta: #B85C38;
+  --terracotta-hover: #D4724E;
 }
 
 body {

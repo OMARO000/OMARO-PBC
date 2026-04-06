@@ -27,7 +27,7 @@ export default function Footer() {
                 className="text-xs hover:underline"
                 style={{
                   fontFamily: "var(--font-ibm-plex-mono)",
-                  color: "#4A4A4A",
+                  color: "#B85C38",
                   textUnderlineOffset: "3px",
                 }}
               >
@@ -41,7 +41,7 @@ export default function Footer() {
         <div className="flex flex-col items-start sm:items-end gap-1">
           <span
             className="text-xs"
-            style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
+            style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}
           >
             Sovereign by Design.
           </span>

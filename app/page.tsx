@@ -16,7 +16,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <p
       className="text-xs font-semibold tracking-widest uppercase mb-8"
-      style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#4A4A4A" }}
+      style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}
     >
       {children}
     </p>
@@ -43,7 +43,7 @@ export default function Home() {
             display: "inline-block",
             width: "3px",
             height: "1em",
-            background: "#1A1A1A",
+            background: "#B85C38",
             marginLeft: "4px",
             verticalAlign: "text-bottom",
             animation: "blink 1.2s step-end infinite"
@@ -98,7 +98,7 @@ export default function Home() {
           <Link
             href="/data-coop"
             className="inline-block text-sm underline hover:no-underline"
-            style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A", textUnderlineOffset: "4px" }}
+            style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38", textUnderlineOffset: "4px" }}
           >
             Learn more &rarr;
           </Link>
@@ -129,7 +129,7 @@ export default function Home() {
           <Link
             href="/hai-standard"
             className="inline-block text-sm underline hover:no-underline"
-            style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A", textUnderlineOffset: "4px" }}
+            style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38", textUnderlineOffset: "4px" }}
           >
             Learn more &rarr;
           </Link>
@@ -169,7 +169,7 @@ export default function Home() {
             </a>
           </div>
           <div className="border p-8" style={{ borderColor: "#4A4A4A" }}>
-            <p style={{ fontFamily: "var(--font-ibm-plex-mono)", fontSize: "16px", fontWeight: 500, color: "#4A4A4A", textAlign: "center" }}>
+            <p style={{ fontFamily: "var(--font-ibm-plex-mono)", fontSize: "16px", fontWeight: 500, color: "#B85C38", textAlign: "center" }}>
               TO BE ANNOUNCED
             </p>
           </div>
