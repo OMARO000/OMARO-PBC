@@ -24,7 +24,7 @@ export default function Nav() {
     <header
       style={{
         backgroundColor: "#F0EDE8",
-        borderBottom: "1px solid #4A4A4A",
+        borderBottom: "1px solid #1A1A1A",
       }}
     >
       <nav
@@ -124,7 +124,7 @@ export default function Nav() {
       {menuOpen && (
         <div
           id="mobile-menu"
-          style={{ borderTop: "1px solid #4A4A4A" }}
+          style={{ borderTop: "1px solid #1A1A1A" }}
         >
           <ul className="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-4 list-none m-0 text-center">
             {navLinks.map(({ href, label, external }) => {

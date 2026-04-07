@@ -23,7 +23,7 @@ export default function ProductsPage() {
       </h1>
 
       {/* OMEN */}
-      <div style={{ border: "1px solid #4A4A4A", padding: "32px", marginBottom: "24px", height: "auto" }}>
+      <div style={{ border: "1px solid #1A1A1A", padding: "32px", marginBottom: "24px", height: "auto" }}>
         <h3 style={{ fontFamily: "var(--font-ibm-plex-mono)", fontSize: "16px", fontWeight: 500, color: "#1A1A1A", marginBottom: "20px" }}>
           OMEN — Corporate Accountability Ledger
         </h3>
@@ -37,7 +37,7 @@ export default function ProductsPage() {
       </div>
 
       {/* iGITit */}
-      <div style={{ border: "1px solid #4A4A4A", padding: "32px", marginBottom: "24px", height: "auto" }}>
+      <div style={{ border: "1px solid #1A1A1A", padding: "32px", marginBottom: "24px", height: "auto" }}>
         <h3 style={{ fontFamily: "var(--font-ibm-plex-mono)", fontSize: "16px", fontWeight: 500, color: "#1A1A1A", marginBottom: "20px" }}>
           iGITit — Open Source Code Analysis
         </h3>
@@ -50,14 +50,21 @@ export default function ProductsPage() {
         <a href="https://igitit.xyz" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-ibm-plex-mono)", fontSize: "13px", color: "#B85C38" }}>igitit.xyz ↗</a>
       </div>
 
-      {/* [us] */}
-      <div style={{ border: "1px solid #4A4A4A", padding: "32px", marginBottom: "24px", height: "auto" }}>
-        <p style={{ fontFamily: "var(--font-ibm-plex-mono)", fontSize: "16px", fontWeight: 500, color: "#B85C38", textAlign: "center" }}>
-          TO BE ANNOUNCED
+      {/* HAI Project */}
+      <div style={{ border: "1px solid #1A1A1A", padding: "32px", marginBottom: "24px", height: "auto" }}>
+        <h3 style={{ fontFamily: "var(--font-ibm-plex-mono)", fontSize: "16px", fontWeight: 500, color: "#1A1A1A", marginBottom: "20px" }}>
+          HAI Project — Honorable AI Standard
+        </h3>
+        <p style={{ fontFamily: "var(--font-ibm-plex-sans)", fontSize: "16px", lineHeight: 1.75, color: "#1A1A1A", marginBottom: "16px" }}>
+          The standard is public. The record is permanent. HAI Project is OMARO&apos;s public accountability infrastructure for artificial intelligence — a nine-pillar framework that defines what it means to build AI that is transparent, human-controlled, and genuinely built for people. Not a checklist. A contract with the public.
         </p>
+        <p style={{ fontFamily: "var(--font-ibm-plex-sans)", fontSize: "16px", lineHeight: 1.75, color: "#1A1A1A", marginBottom: "20px" }}>
+          Any company can apply. Findings are published to a permanent public registry. Organizations that meet the standard earn a record of that commitment. Those that don&apos;t earn a record of that too.
+        </p>
+        <a href="https://haiproject.xyz" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-ibm-plex-mono)", fontSize: "13px", color: "#B85C38" }}>haiproject.xyz ↗</a>
       </div>
 
-      <div style={{ borderTop: "1px solid #4A4A4A", paddingTop: "40px", marginTop: "16px" }}>
+      <div style={{ borderTop: "1px solid #1A1A1A", paddingTop: "40px", marginTop: "16px" }}>
         <p style={{ fontFamily: "var(--font-ibm-plex-mono)", fontSize: "13px", color: "#B85C38" }}>
           All OMARO products are open-source.
           <br />

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 function Divider() {
-  return <div style={{ borderTop: "1px solid #4A4A4A" }} />;
+  return <div style={{ borderTop: "1px solid #1A1A1A" }} />;
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
@@ -49,10 +49,28 @@ export default function Home() {
         </h1>
         <p
           className="text-lg md:text-xl mx-auto max-w-2xl"
-          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#4A4A4A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
         >
           Infrastructure that keeps humans in every room that matters.
         </p>
+        <div className="mt-6">
+          <a
+            href="https://haiproject.xyz#donate"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontFamily: "var(--font-ibm-plex-mono)",
+              fontSize: "0.75rem",
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              color: "#B85C38",
+              textDecoration: "underline",
+              textUnderlineOffset: "4px",
+            }}
+          >
+            Support the mission &rarr;
+          </a>
+        </div>
       </section>
 
       <Divider />
@@ -140,7 +158,7 @@ export default function Home() {
       <section className="max-w-3xl mx-auto px-6 py-16 md:py-20 text-center">
         <SectionLabel>Products</SectionLabel>
         <div className="grid gap-6">
-          <div className="border p-8" style={{ borderColor: "#4A4A4A" }}>
+          <div className="border p-8" style={{ borderColor: "#1A1A1A" }}>
             <h3 className="text-lg font-semibold mb-3" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}>
               OMEN — Corporate Accountability Ledger
             </h3>
@@ -153,7 +171,7 @@ export default function Home() {
               omen.xyz&nbsp;&rarr;
             </a>
           </div>
-          <div className="border p-8" style={{ borderColor: "#4A4A4A" }}>
+          <div className="border p-8" style={{ borderColor: "#1A1A1A" }}>
             <h3 className="text-lg font-semibold mb-3" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}>
               iGITit — Open Source Code Analysis
             </h3>
@@ -166,10 +184,16 @@ export default function Home() {
               igitit.xyz&nbsp;&rarr;
             </a>
           </div>
-          <div className="border p-8" style={{ borderColor: "#4A4A4A" }}>
-            <p style={{ fontFamily: "var(--font-ibm-plex-mono)", fontSize: "16px", fontWeight: 500, color: "#B85C38", textAlign: "center" }}>
-              TO BE ANNOUNCED
+          <div className="border p-8" style={{ borderColor: "#1A1A1A" }}>
+            <h3 className="text-lg font-semibold mb-3" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}>
+              HAI Project — Honorable AI Standard
+            </h3>
+            <p className="text-base leading-relaxed mb-5" style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}>
+              AI is not the threat. Unaccountable AI is. The HAI Project is the public infrastructure that makes accountability structural — a nine-pillar standard, a public registry, and a certification system built for the people on the other side of every AI decision. Companies either meet the standard or they don&apos;t. Both are on the record.
             </p>
+            <a href="https://haiproject.xyz" target="_blank" rel="noopener noreferrer" className="text-sm underline hover:no-underline" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38", textUnderlineOffset: "4px" }}>
+              haiproject.xyz&nbsp;&rarr;
+            </a>
           </div>
         </div>
       </section>
