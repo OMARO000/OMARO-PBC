@@ -6,7 +6,6 @@ export default function Footer() {
     { label: "omen.xyz", href: "https://omen.xyz" },
     { label: "igitit.xyz", href: "https://igitit.xyz" },
     { label: "haiproject.xyz", href: "https://haiproject.xyz" },
-    { label: "justjoinus.xyz", href: "https://justjoinus.xyz" },
   ];
 
   const socials = [

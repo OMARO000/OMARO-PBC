@@ -13,7 +13,7 @@ const navLinks = [
   { href: "https://trentonwroberts.com", label: "Founder", external: true },
   { href: "/press", label: "Press" },
   { href: "/origins", label: "Origins" },
-  { href: "/contact", label: "Contact" },
+  { href: "/connect", label: "Connect" },
 ];
 
 export default function Nav() {
