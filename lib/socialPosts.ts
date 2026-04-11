@@ -1,10 +1,10 @@
 export const socialPosts = [
   {
     platform: "x",
-    handle: "@omaro_xyz",
+    handle: "@OMAROXYZ",
     content: "Update this manually with your latest post.",
     date: "Apr 10, 2026",
-    url: "https://x.com/omaro_xyz",
+    url: "https://x.com/OMAROXYZ",
   },
   {
     platform: "linkedin",
@@ -15,9 +15,9 @@ export const socialPosts = [
   },
   {
     platform: "bluesky",
-    handle: "@omaro.xyz",
+    handle: "@omaroxyz.bsky.social",
     content: "Update this manually with your latest post.",
     date: "Apr 10, 2026",
-    url: "https://bsky.app/profile/omaro.xyz",
+    url: "https://bsky.app/profile/omaroxyz.bsky.social",
   },
 ];
