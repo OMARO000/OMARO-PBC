@@ -39,7 +39,7 @@ export default function Nav() {
           alignItems: "center",
           justifyContent: "space-between",
           padding: 0,
-          height: "72px",
+          height: "84px",
           background: BG,
           borderBottom: "1px solid rgba(26,26,26,0.12)",
           zIndex: 100,
@@ -103,7 +103,7 @@ export default function Nav() {
               const isActive = !external && pathname === href;
               const linkStyle: React.CSSProperties = {
                 fontFamily: MONO,
-                fontSize: "11px",
+                fontSize: "15px",
                 textTransform: "uppercase",
                 letterSpacing: "0.06em",
                 color: isActive ? TERRA : DARK,
@@ -165,7 +165,7 @@ export default function Nav() {
               href="/account"
               style={{
                 fontFamily: MONO,
-                fontSize: "10px",
+                fontSize: "13px",
                 letterSpacing: "0.08em",
                 textTransform: "uppercase",
                 padding: "5px 0",
@@ -195,7 +195,7 @@ export default function Nav() {
               href="/account"
               style={{
                 fontFamily: MONO,
-                fontSize: "10px",
+                fontSize: "13px",
                 letterSpacing: "0.08em",
                 textTransform: "uppercase",
                 padding: "5px 0",
@@ -250,7 +250,7 @@ export default function Nav() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div id="mobile-menu" style={{ borderBottom: `1px solid rgba(26,26,26,0.12)`, background: BG, zIndex: 99, position: "sticky", top: "72px" }}>
+        <div id="mobile-menu" style={{ borderBottom: `1px solid rgba(26,26,26,0.12)`, background: BG, zIndex: 99, position: "sticky", top: "84px" }}>
           <ul
             style={{
               margin: "0 auto",
@@ -266,7 +266,7 @@ export default function Nav() {
               const isActive = !external && pathname === href;
               const linkStyle: React.CSSProperties = {
                 fontFamily: MONO,
-                fontSize: "11px",
+                fontSize: "15px",
                 textTransform: "uppercase",
                 letterSpacing: "0.06em",
                 color: DARK,
