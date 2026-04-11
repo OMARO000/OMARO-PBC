@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ConnectClient from "@/components/ConnectClient";
+import SocialFeed from "@/components/SocialFeed";
 
 export const metadata: Metadata = {
   title: "Connect",
@@ -53,6 +54,9 @@ export default function ConnectPage() {
 
       {/* Social icons — client component for hover handlers */}
       <ConnectClient />
+
+      {/* Social feed widget */}
+      <SocialFeed />
 
       {/* Divider */}
       <div style={{ borderTop: "1px solid #1A1A1A" }} />
