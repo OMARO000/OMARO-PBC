@@ -55,9 +55,7 @@ export default function Home() {
         </p>
         <div className="mt-6">
           <a
-            href="https://haiproject.xyz#donate"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/donate"
             style={{
               fontFamily: "var(--font-ibm-plex-mono)",
               fontSize: "0.75rem",
