@@ -16,61 +16,75 @@ const navLinks = [
   { href: "/connect", label: "Connect" },
 ];
 
-const btnBase: React.CSSProperties = {
-  fontFamily: "var(--font-ibm-plex-mono)",
-  fontSize: "10px",
-  letterSpacing: "0.08em",
-  textTransform: "uppercase",
-  padding: "6px 14px",
-  borderRadius: "2px",
-  textDecoration: "none",
-  display: "block",
-  textAlign: "center",
-  whiteSpace: "nowrap",
-  transition: "background 0.15s, color 0.15s",
-};
+const MONO = "var(--font-ibm-plex-mono)";
+const TERRA = "#B85C38";
+const DARK = "#1A1A1A";
+const BG = "#F0EDE8";
 
 export default function Nav() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header
-      style={{
-        backgroundColor: "#F0EDE8",
-        borderBottom: "1px solid #1A1A1A",
-      }}
-    >
+    <header style={{ backgroundColor: BG, borderBottom: `1px solid ${DARK}` }}>
       <nav
-        className="max-w-6xl mx-auto px-6 py-4 flex items-center"
+        style={{
+          maxWidth: "1152px",
+          margin: "0 auto",
+          padding: "0 24px",
+          height: "52px",
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
         aria-label="Main navigation"
       >
-        {/* Wordmark — far left */}
-        <Link
-          href="/"
-          style={{
-            fontFamily: "var(--font-ibm-plex-mono)",
-            fontWeight: 500,
-            fontSize: "40px",
-            color: "#1A1A1A",
-            textDecoration: "none",
-            letterSpacing: "0.15em",
-          }}
-          className="shrink-0 uppercase hover:opacity-70 transition-opacity"
-          aria-label="OMARO PBC home"
-        >
-          OMARO
-        </Link>
+        {/* LEFT — wordmark */}
+        <div style={{ flexShrink: 0 }}>
+          <Link
+            href="/"
+            style={{
+              fontFamily: MONO,
+              fontWeight: 500,
+              fontSize: "40px",
+              color: DARK,
+              textDecoration: "none",
+              letterSpacing: "0.15em",
+            }}
+            className="uppercase hover:opacity-70 transition-opacity"
+            aria-label="OMARO PBC home"
+          >
+            OMARO
+          </Link>
+        </div>
 
-        {/* Desktop nav links — centered */}
-        <ul className="hidden md:flex flex-1 items-center justify-center gap-7 list-none m-0 p-0">
+        {/* CENTER — nav links (desktop only) */}
+        <ul
+          className="hidden md:flex"
+          style={{
+            flex: 1,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "28px",
+            flexWrap: "nowrap",
+            listStyle: "none",
+            margin: 0,
+            padding: 0,
+          }}
+        >
           {navLinks.map(({ href, label, external }) => {
             const isActive = !external && pathname === href;
-            const linkStyle = {
-              fontFamily: "var(--font-ibm-plex-mono)",
-              color: isActive ? "#B85C38" : "#1A1A1A",
+            const linkStyle: React.CSSProperties = {
+              fontFamily: MONO,
+              fontSize: "11px",
+              textTransform: "uppercase",
+              letterSpacing: "0.06em",
+              color: isActive ? TERRA : DARK,
               textDecoration: isActive ? "underline" : "none",
               textUnderlineOffset: "4px",
+              whiteSpace: "nowrap",
             };
             return (
               <li key={href}>
@@ -80,7 +94,7 @@ export default function Nav() {
                     target="_blank"
                     rel="noopener noreferrer"
                     style={linkStyle}
-                    className="text-sm tracking-wide hover:underline transition-all"
+                    className="hover:underline transition-all"
                   >
                     {label}
                   </a>
@@ -88,7 +102,7 @@ export default function Nav() {
                   <Link
                     href={href}
                     style={linkStyle}
-                    className="text-sm tracking-wide hover:underline transition-all"
+                    className="hover:underline transition-all"
                     aria-current={isActive ? "page" : undefined}
                   >
                     {label}
@@ -99,25 +113,39 @@ export default function Nav() {
           })}
         </ul>
 
-        {/* Right — account buttons stacked (desktop) + hamburger (mobile) */}
-        <div className="shrink-0 flex items-center justify-end gap-2">
+        {/* RIGHT — account buttons (desktop) + hamburger (mobile) */}
+        <div style={{ flexShrink: 0, display: "flex", alignItems: "center", gap: "8px" }}>
           {/* Stacked account buttons — desktop only */}
-          <div className="hidden md:flex flex-col gap-1">
+          <div
+            className="hidden md:flex"
+            style={{ flexDirection: "column", alignItems: "stretch", gap: "4px" }}
+          >
             <a
               href="/account"
               style={{
-                ...btnBase,
-                border: "1px solid #B85C38",
-                color: "#B85C38",
+                fontFamily: MONO,
+                fontSize: "10px",
+                letterSpacing: "0.08em",
+                textTransform: "uppercase",
+                padding: "5px 12px",
+                borderRadius: "2px",
+                textDecoration: "none",
+                textAlign: "center",
+                whiteSpace: "nowrap",
+                minWidth: "120px",
+                border: `1px solid ${TERRA}`,
+                color: TERRA,
                 background: "transparent",
+                transition: "background 0.15s, color 0.15s",
+                display: "block",
               }}
               onMouseEnter={e => {
-                e.currentTarget.style.background = "#B85C38";
-                e.currentTarget.style.color = "#F0EDE8";
+                e.currentTarget.style.background = TERRA;
+                e.currentTarget.style.color = BG;
               }}
               onMouseLeave={e => {
                 e.currentTarget.style.background = "transparent";
-                e.currentTarget.style.color = "#B85C38";
+                e.currentTarget.style.color = TERRA;
               }}
             >
               Login
@@ -125,13 +153,24 @@ export default function Nav() {
             <a
               href="/account"
               style={{
-                ...btnBase,
-                border: "1px solid #B85C38",
-                color: "#F0EDE8",
-                background: "#B85C38",
+                fontFamily: MONO,
+                fontSize: "10px",
+                letterSpacing: "0.08em",
+                textTransform: "uppercase",
+                padding: "5px 12px",
+                borderRadius: "2px",
+                textDecoration: "none",
+                textAlign: "center",
+                whiteSpace: "nowrap",
+                minWidth: "120px",
+                border: `1px solid ${TERRA}`,
+                color: BG,
+                background: TERRA,
+                transition: "background 0.15s",
+                display: "block",
               }}
               onMouseEnter={e => (e.currentTarget.style.background = "#9A4A2E")}
-              onMouseLeave={e => (e.currentTarget.style.background = "#B85C38")}
+              onMouseLeave={e => (e.currentTarget.style.background = TERRA)}
             >
               Create Account
             </a>
@@ -148,21 +187,18 @@ export default function Nav() {
             <span
               className="block w-5 h-px transition-transform"
               style={{
-                backgroundColor: "#1A1A1A",
+                backgroundColor: DARK,
                 transform: menuOpen ? "translateY(5px) rotate(45deg)" : "none",
               }}
             />
             <span
               className="block w-5 h-px transition-opacity"
-              style={{
-                backgroundColor: "#1A1A1A",
-                opacity: menuOpen ? 0 : 1,
-              }}
+              style={{ backgroundColor: DARK, opacity: menuOpen ? 0 : 1 }}
             />
             <span
               className="block w-5 h-px transition-transform"
               style={{
-                backgroundColor: "#1A1A1A",
+                backgroundColor: DARK,
                 transform: menuOpen ? "translateY(-5px) rotate(-45deg)" : "none",
               }}
             />
@@ -172,16 +208,27 @@ export default function Nav() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div
-          id="mobile-menu"
-          style={{ borderTop: "1px solid #1A1A1A" }}
-        >
-          <ul className="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-4 list-none m-0 text-center">
+        <div id="mobile-menu" style={{ borderTop: `1px solid ${DARK}` }}>
+          <ul
+            style={{
+              maxWidth: "1152px",
+              margin: "0 auto",
+              padding: "16px 24px",
+              display: "flex",
+              flexDirection: "column",
+              gap: "16px",
+              listStyle: "none",
+              textAlign: "center",
+            }}
+          >
             {navLinks.map(({ href, label, external }) => {
               const isActive = !external && pathname === href;
-              const linkStyle = {
-                fontFamily: "var(--font-ibm-plex-mono)",
-                color: "#1A1A1A",
+              const linkStyle: React.CSSProperties = {
+                fontFamily: MONO,
+                fontSize: "11px",
+                textTransform: "uppercase",
+                letterSpacing: "0.06em",
+                color: DARK,
                 textDecoration: isActive ? "underline" : "none",
                 textUnderlineOffset: "4px",
               };
@@ -193,7 +240,7 @@ export default function Nav() {
                       target="_blank"
                       rel="noopener noreferrer"
                       style={linkStyle}
-                      className="text-sm tracking-wide hover:underline"
+                      className="hover:underline"
                       onClick={() => setMenuOpen(false)}
                     >
                       {label}
@@ -202,7 +249,7 @@ export default function Nav() {
                     <Link
                       href={href}
                       style={linkStyle}
-                      className="text-sm tracking-wide hover:underline"
+                      className="hover:underline"
                       onClick={() => setMenuOpen(false)}
                       aria-current={isActive ? "page" : undefined}
                     >
