@@ -26,22 +26,37 @@ export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header style={{ backgroundColor: BG, borderBottom: `1px solid ${DARK}` }}>
-      <nav
+    <>
+      <header
         style={{
-          maxWidth: "1152px",
-          margin: "0 auto",
-          padding: "0 24px",
-          height: "52px",
+          position: "sticky",
+          top: 0,
+          left: 0,
+          right: 0,
+          width: "100%",
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
           justifyContent: "space-between",
+          padding: 0,
+          height: "56px",
+          background: BG,
+          borderBottom: "1px solid rgba(26,26,26,0.12)",
+          zIndex: 100,
+          boxSizing: "border-box",
         }}
         aria-label="Main navigation"
       >
-        {/* LEFT — wordmark */}
-        <div style={{ flexShrink: 0 }}>
+        {/* Child 1 — Logo LEFT */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            paddingLeft: "24px",
+            flexShrink: 0,
+            width: "140px",
+          }}
+        >
           <Link
             href="/"
             style={{
@@ -59,126 +74,153 @@ export default function Nav() {
           </Link>
         </div>
 
-        {/* CENTER — nav links (desktop only) */}
-        <ul
+        {/* Child 2 — Nav links CENTER (desktop only) */}
+        <div
           className="hidden md:flex"
           style={{
-            flex: 1,
-            display: "flex",
-            justifyContent: "center",
+            flexDirection: "row",
             alignItems: "center",
+            justifyContent: "center",
+            flex: 1,
             gap: "28px",
             flexWrap: "nowrap",
-            listStyle: "none",
-            margin: 0,
-            padding: 0,
+            overflow: "hidden",
           }}
         >
-          {navLinks.map(({ href, label, external }) => {
-            const isActive = !external && pathname === href;
-            const linkStyle: React.CSSProperties = {
-              fontFamily: MONO,
-              fontSize: "11px",
-              textTransform: "uppercase",
-              letterSpacing: "0.06em",
-              color: isActive ? TERRA : DARK,
-              textDecoration: isActive ? "underline" : "none",
-              textUnderlineOffset: "4px",
-              whiteSpace: "nowrap",
-            };
-            return (
-              <li key={href}>
-                {external ? (
-                  <a
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={linkStyle}
-                    className="hover:underline transition-all"
-                  >
-                    {label}
-                  </a>
-                ) : (
-                  <Link
-                    href={href}
-                    style={linkStyle}
-                    className="hover:underline transition-all"
-                    aria-current={isActive ? "page" : undefined}
-                  >
-                    {label}
-                  </Link>
-                )}
-              </li>
-            );
-          })}
-        </ul>
+          <ul
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              gap: "28px",
+              flexWrap: "nowrap",
+              listStyle: "none",
+              margin: 0,
+              padding: 0,
+            }}
+          >
+            {navLinks.map(({ href, label, external }) => {
+              const isActive = !external && pathname === href;
+              const linkStyle: React.CSSProperties = {
+                fontFamily: MONO,
+                fontSize: "11px",
+                textTransform: "uppercase",
+                letterSpacing: "0.06em",
+                color: isActive ? TERRA : DARK,
+                textDecoration: isActive ? "underline" : "none",
+                textUnderlineOffset: "4px",
+                whiteSpace: "nowrap",
+              };
+              return (
+                <li key={href}>
+                  {external ? (
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={linkStyle}
+                      className="hover:underline transition-all"
+                    >
+                      {label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={href}
+                      style={linkStyle}
+                      className="hover:underline transition-all"
+                      aria-current={isActive ? "page" : undefined}
+                    >
+                      {label}
+                    </Link>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
 
-        {/* RIGHT — account buttons (desktop) + hamburger (mobile) */}
-        <div style={{ flexShrink: 0, display: "flex", alignItems: "center", gap: "8px" }}>
+        {/* Child 3 — Account buttons RIGHT (desktop) + hamburger (mobile) */}
+        <div
+          style={{
+            flexShrink: 0,
+            width: "140px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "flex-end",
+          }}
+        >
           {/* Stacked account buttons — desktop only */}
           <div
             className="hidden md:flex"
-            style={{ flexDirection: "column", alignItems: "stretch", gap: "4px" }}
+            style={{
+              flexDirection: "column",
+              alignItems: "stretch",
+              justifyContent: "center",
+              gap: "4px",
+              paddingRight: "24px",
+              width: "100%",
+            }}
           >
-            <a
+            <Link
               href="/account"
               style={{
                 fontFamily: MONO,
                 fontSize: "10px",
                 letterSpacing: "0.08em",
                 textTransform: "uppercase",
-                padding: "5px 12px",
+                padding: "5px 0",
                 borderRadius: "2px",
                 textDecoration: "none",
                 textAlign: "center",
-                whiteSpace: "nowrap",
-                minWidth: "120px",
+                width: "100%",
                 border: `1px solid ${TERRA}`,
                 color: TERRA,
                 background: "transparent",
                 transition: "background 0.15s, color 0.15s",
                 display: "block",
+                boxSizing: "border-box",
               }}
               onMouseEnter={e => {
-                e.currentTarget.style.background = TERRA;
-                e.currentTarget.style.color = BG;
+                (e.currentTarget as HTMLElement).style.background = TERRA;
+                (e.currentTarget as HTMLElement).style.color = BG;
               }}
               onMouseLeave={e => {
-                e.currentTarget.style.background = "transparent";
-                e.currentTarget.style.color = TERRA;
+                (e.currentTarget as HTMLElement).style.background = "transparent";
+                (e.currentTarget as HTMLElement).style.color = TERRA;
               }}
             >
               Login
-            </a>
-            <a
+            </Link>
+            <Link
               href="/account"
               style={{
                 fontFamily: MONO,
                 fontSize: "10px",
                 letterSpacing: "0.08em",
                 textTransform: "uppercase",
-                padding: "5px 12px",
+                padding: "5px 0",
                 borderRadius: "2px",
                 textDecoration: "none",
                 textAlign: "center",
-                whiteSpace: "nowrap",
-                minWidth: "120px",
+                width: "100%",
                 border: `1px solid ${TERRA}`,
-                color: BG,
+                color: "#FFFFFF",
                 background: TERRA,
                 transition: "background 0.15s",
                 display: "block",
+                boxSizing: "border-box",
               }}
-              onMouseEnter={e => (e.currentTarget.style.background = "#9A4A2E")}
-              onMouseLeave={e => (e.currentTarget.style.background = TERRA)}
+              onMouseEnter={e => ((e.currentTarget as HTMLElement).style.background = "#9A4A2E")}
+              onMouseLeave={e => ((e.currentTarget as HTMLElement).style.background = TERRA)}
             >
               Create Account
-            </a>
+            </Link>
           </div>
 
           {/* Hamburger — mobile only */}
           <button
             className="md:hidden flex flex-col gap-1.5 p-1"
+            style={{ marginRight: "16px" }}
             onClick={() => setMenuOpen(!menuOpen)}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
@@ -204,14 +246,13 @@ export default function Nav() {
             />
           </button>
         </div>
-      </nav>
+      </header>
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div id="mobile-menu" style={{ borderTop: `1px solid ${DARK}` }}>
+        <div id="mobile-menu" style={{ borderBottom: `1px solid rgba(26,26,26,0.12)`, background: BG, zIndex: 99, position: "sticky", top: "56px" }}>
           <ul
             style={{
-              maxWidth: "1152px",
               margin: "0 auto",
               padding: "16px 24px",
               display: "flex",
@@ -262,6 +303,6 @@ export default function Nav() {
           </ul>
         </div>
       )}
-    </header>
+    </>
   );
 }
