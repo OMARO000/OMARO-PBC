@@ -16,6 +16,20 @@ const navLinks = [
   { href: "/connect", label: "Connect" },
 ];
 
+const btnBase: React.CSSProperties = {
+  fontFamily: "var(--font-ibm-plex-mono)",
+  fontSize: "10px",
+  letterSpacing: "0.08em",
+  textTransform: "uppercase",
+  padding: "6px 14px",
+  borderRadius: "2px",
+  textDecoration: "none",
+  display: "block",
+  textAlign: "center",
+  whiteSpace: "nowrap",
+  transition: "background 0.15s, color 0.15s",
+};
+
 export default function Nav() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -31,7 +45,7 @@ export default function Nav() {
         className="max-w-6xl mx-auto px-6 py-4 flex items-center"
         aria-label="Main navigation"
       >
-        {/* Wordmark — text only */}
+        {/* Wordmark — far left */}
         <Link
           href="/"
           style={{
@@ -48,7 +62,7 @@ export default function Nav() {
           OMARO
         </Link>
 
-        {/* Desktop links — horizontally centered */}
+        {/* Desktop nav links — centered */}
         <ul className="hidden md:flex flex-1 items-center justify-center gap-7 list-none m-0 p-0">
           {navLinks.map(({ href, label, external }) => {
             const isActive = !external && pathname === href;
@@ -83,59 +97,47 @@ export default function Nav() {
               </li>
             );
           })}
-
         </ul>
 
-        {/* Right — account buttons (desktop) + hamburger (mobile) */}
-        <div className="shrink-0 flex items-center gap-2 justify-end">
-          <a
-            href="/account"
-            className="hidden md:inline-block"
-            style={{
-              fontFamily: "var(--font-ibm-plex-mono)",
-              fontSize: "11px",
-              letterSpacing: "0.08em",
-              textTransform: "uppercase",
-              padding: "6px 14px",
-              border: "1px solid #B85C38",
-              borderRadius: "2px",
-              color: "#B85C38",
-              background: "transparent",
-              textDecoration: "none",
-              transition: "background 0.15s, color 0.15s",
-            }}
-            onMouseEnter={e => {
-              e.currentTarget.style.background = "#B85C38";
-              e.currentTarget.style.color = "#F0EDE8";
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.background = "transparent";
-              e.currentTarget.style.color = "#B85C38";
-            }}
-          >
-            Login
-          </a>
-          <a
-            href="/account"
-            className="hidden md:inline-block"
-            style={{
-              fontFamily: "var(--font-ibm-plex-mono)",
-              fontSize: "11px",
-              letterSpacing: "0.08em",
-              textTransform: "uppercase",
-              padding: "6px 14px",
-              border: "1px solid #B85C38",
-              borderRadius: "2px",
-              color: "#F0EDE8",
-              background: "#B85C38",
-              textDecoration: "none",
-              transition: "background 0.15s",
-            }}
-            onMouseEnter={e => (e.currentTarget.style.background = "#9A4A2E")}
-            onMouseLeave={e => (e.currentTarget.style.background = "#B85C38")}
-          >
-            Create Account
-          </a>
+        {/* Right — account buttons stacked (desktop) + hamburger (mobile) */}
+        <div className="shrink-0 flex items-center justify-end gap-2">
+          {/* Stacked account buttons — desktop only */}
+          <div className="hidden md:flex flex-col gap-1">
+            <a
+              href="/account"
+              style={{
+                ...btnBase,
+                border: "1px solid #B85C38",
+                color: "#B85C38",
+                background: "transparent",
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.background = "#B85C38";
+                e.currentTarget.style.color = "#F0EDE8";
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.background = "transparent";
+                e.currentTarget.style.color = "#B85C38";
+              }}
+            >
+              Login
+            </a>
+            <a
+              href="/account"
+              style={{
+                ...btnBase,
+                border: "1px solid #B85C38",
+                color: "#F0EDE8",
+                background: "#B85C38",
+              }}
+              onMouseEnter={e => (e.currentTarget.style.background = "#9A4A2E")}
+              onMouseLeave={e => (e.currentTarget.style.background = "#B85C38")}
+            >
+              Create Account
+            </a>
+          </div>
+
+          {/* Hamburger — mobile only */}
           <button
             className="md:hidden flex flex-col gap-1.5 p-1"
             onClick={() => setMenuOpen(!menuOpen)}
