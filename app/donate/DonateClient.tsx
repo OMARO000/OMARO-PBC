@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import QRCode from "qrcode.react";
+import { QRCodeCanvas } from "qrcode.react";
 
 const MONO = "var(--font-ibm-plex-mono)";
 const SANS = "var(--font-ibm-plex-sans)";
@@ -49,7 +49,7 @@ function WalletAddress({
 
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "20px" }}>
-      <QRCode value={address} size={160} bgColor={BG} fgColor={DARK} />
+      <QRCodeCanvas value={address} size={160} bgColor={BG} fgColor={DARK} />
       <button
         onClick={handleCopy}
         title="Click to copy"
