@@ -67,6 +67,10 @@ export default function ConnectPage() {
           label="General Inquiries"
           address="support@omaro.xyz"
         />
+        <EmailRow
+          label="Legal"
+          address="legal@omaro.xyz"
+        />
       </div>
 
       {/* What not to contact us about */}
