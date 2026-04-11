@@ -44,10 +44,12 @@ export default function AccountCTA() {
       style={{
         border: `1px solid ${TERRA}`,
         borderRadius: "2px",
-        padding: "24px 28px",
+        padding: "14px 18px",
         background: BG,
         textAlign: "left",
         marginBottom: "40px",
+        maxWidth: "50%",
+        margin: "0 auto 40px",
       }}
     >
       <p
