@@ -39,7 +39,7 @@ export default function Nav() {
           alignItems: "center",
           justifyContent: "space-between",
           padding: 0,
-          height: "56px",
+          height: "72px",
           background: BG,
           borderBottom: "1px solid rgba(26,26,26,0.12)",
           zIndex: 100,
@@ -250,7 +250,7 @@ export default function Nav() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div id="mobile-menu" style={{ borderBottom: `1px solid rgba(26,26,26,0.12)`, background: BG, zIndex: 99, position: "sticky", top: "56px" }}>
+        <div id="mobile-menu" style={{ borderBottom: `1px solid rgba(26,26,26,0.12)`, background: BG, zIndex: 99, position: "sticky", top: "72px" }}>
           <ul
             style={{
               margin: "0 auto",
