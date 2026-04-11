@@ -55,18 +55,15 @@ export default function ConnectPage() {
       <ConnectClient />
 
       {/* Divider */}
-      <div style={{ borderTop: "1px solid #1A1A1A", marginBottom: "0" }} />
+      <div style={{ borderTop: "1px solid #1A1A1A" }} />
 
       {/* Email */}
       <div className="mb-12">
         <EmailRow
           label="General Inquiries"
           address="support@omaro.xyz"
-          note="Email not yet active — launching with omaro.xyz domain."
         />
       </div>
-
-      <div style={{ borderTop: "1px solid #1A1A1A" }} />
 
       {/* What not to contact us about */}
       <section className="mt-16">

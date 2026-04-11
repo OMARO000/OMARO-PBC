@@ -37,6 +37,39 @@ const socials = [
       </svg>
     ),
   },
+  {
+    label: "Bluesky",
+    href: "https://bsky.app/profile/omaro.xyz",
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.958 3.816 3.844 6.914 3.503 3.732-.413 6.462 2.709 3.462 6.25z M12 10.8c1.087-2.114 4.046-6.053 6.798-7.995 2.636-1.861 3.641-1.539 4.3-1.24.763.343.902 1.515.902 2.203 0 .69-.378 5.65-.624 6.479-.815 2.958-3.816 3.844-6.914 3.503-3.732-.413-6.462 2.709-3.462 6.25z" />
+      </svg>
+    ),
+  },
+  {
+    label: "beehiiv",
+    href: "https://omaro.beehiiv.com",
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <polygon
+          points="16,2 28.8,9.5 28.8,22.5 16,30 3.2,22.5 3.2,9.5"
+          stroke="currentColor"
+          strokeWidth="2"
+        />
+        <text
+          x="16"
+          y="22"
+          textAnchor="middle"
+          fontSize="14"
+          fontWeight="700"
+          fill="currentColor"
+          fontFamily="monospace"
+        >
+          b
+        </text>
+      </svg>
+    ),
+  },
 ];
 
 export default function ConnectClient() {
