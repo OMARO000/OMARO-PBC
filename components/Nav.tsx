@@ -86,8 +86,56 @@ export default function Nav() {
 
         </ul>
 
-        {/* Right — spacer (desktop) / hamburger (mobile) */}
-        <div className="shrink-0 flex items-center justify-end" style={{ minWidth: 60 }}>
+        {/* Right — account buttons (desktop) + hamburger (mobile) */}
+        <div className="shrink-0 flex items-center gap-2 justify-end">
+          <a
+            href="/account"
+            className="hidden md:inline-block"
+            style={{
+              fontFamily: "var(--font-ibm-plex-mono)",
+              fontSize: "11px",
+              letterSpacing: "0.08em",
+              textTransform: "uppercase",
+              padding: "6px 14px",
+              border: "1px solid #B85C38",
+              borderRadius: "2px",
+              color: "#B85C38",
+              background: "transparent",
+              textDecoration: "none",
+              transition: "background 0.15s, color 0.15s",
+            }}
+            onMouseEnter={e => {
+              e.currentTarget.style.background = "#B85C38";
+              e.currentTarget.style.color = "#F0EDE8";
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.background = "transparent";
+              e.currentTarget.style.color = "#B85C38";
+            }}
+          >
+            Login
+          </a>
+          <a
+            href="/account"
+            className="hidden md:inline-block"
+            style={{
+              fontFamily: "var(--font-ibm-plex-mono)",
+              fontSize: "11px",
+              letterSpacing: "0.08em",
+              textTransform: "uppercase",
+              padding: "6px 14px",
+              border: "1px solid #B85C38",
+              borderRadius: "2px",
+              color: "#F0EDE8",
+              background: "#B85C38",
+              textDecoration: "none",
+              transition: "background 0.15s",
+            }}
+            onMouseEnter={e => (e.currentTarget.style.background = "#9A4A2E")}
+            onMouseLeave={e => (e.currentTarget.style.background = "#B85C38")}
+          >
+            Create Account
+          </a>
           <button
             className="md:hidden flex flex-col gap-1.5 p-1"
             onClick={() => setMenuOpen(!menuOpen)}
