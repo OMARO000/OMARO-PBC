@@ -54,7 +54,7 @@ export default function SocialFeed() {
   const post = socialPosts[active];
 
   return (
-    <div style={{ maxWidth: "480px", margin: "0 auto 24px" }}>
+    <div style={{ maxWidth: "480px", margin: "0 auto", paddingBottom: 0 }}>
       {/* Card */}
       <div
         style={{

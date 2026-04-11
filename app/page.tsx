@@ -31,7 +31,7 @@ export default function Home() {
       </div>
 
       {/* ── Hero ── */}
-      <section className="max-w-6xl mx-auto px-6 pb-24 md:pb-36 text-center">
+      <section className="max-w-6xl mx-auto px-6 text-center" style={{ paddingBottom: "48px" }}>
         <h1
           className="text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-8 mx-auto"
           style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}
