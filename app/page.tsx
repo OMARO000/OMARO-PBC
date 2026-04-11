@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import SocialFeed from "@/components/SocialFeed";
 
 export const metadata: Metadata = {
   title: "OMARO",
@@ -68,6 +69,9 @@ export default function Home() {
           >
             Support the mission &rarr;
           </a>
+        </div>
+        <div style={{ marginTop: "32px" }}>
+          <SocialFeed />
         </div>
       </section>
 
