@@ -70,7 +70,7 @@ export default function Home() {
             Support the mission &rarr;
           </a>
         </div>
-        <div style={{ marginTop: "32px" }}>
+        <div style={{ marginTop: "16px" }}>
           <SocialFeed />
         </div>
       </section>

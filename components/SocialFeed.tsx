@@ -54,14 +54,14 @@ export default function SocialFeed() {
   const post = socialPosts[active];
 
   return (
-    <div style={{ maxWidth: "480px", margin: "0 auto 40px" }}>
+    <div style={{ maxWidth: "480px", margin: "0 auto 24px" }}>
       {/* Card */}
       <div
         style={{
           border: `1px solid rgba(26,26,26,0.2)`,
           borderRadius: "2px",
           background: BG,
-          padding: "20px 24px",
+          padding: "14px 18px",
           opacity: visible ? 1 : 0,
           transition: "opacity 0.3s ease",
           minHeight: "130px",
@@ -115,7 +115,7 @@ export default function SocialFeed() {
       </div>
 
       {/* Dot indicators */}
-      <div style={{ display: "flex", justifyContent: "center", gap: "8px", marginTop: "12px" }}>
+      <div style={{ display: "flex", justifyContent: "center", gap: "8px", marginTop: "8px" }}>
         {socialPosts.map((_, i) => (
           <button
             key={i}
