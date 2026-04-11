@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import AccountCTA from "./AccountCTA"
 
 export const metadata: Metadata = {
   title: "Data Co-op",
@@ -22,6 +23,7 @@ export default function DataCoopPage() {
       </div>
       <Divider />
       <section className="py-16 space-y-8">
+        <AccountCTA />
         <p className="text-base md:text-lg leading-relaxed" style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}>
           Every OMARO product collects data with your knowledge and consent. That data funds research at the OMARO Human Research Institute. The research feeds back into what we build. You are not a source. You are a participant.
         </p>
