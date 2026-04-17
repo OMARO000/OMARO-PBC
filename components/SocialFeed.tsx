@@ -27,6 +27,18 @@ const PLATFORM_ICONS: Record<string, React.ReactNode> = {
   ),
 };
 
+const CHAR_LIMITS: Record<string, number> = {
+  x: 280,
+  bluesky: 300,
+  linkedin: 280,
+};
+
+function getDisplayContent(platform: string, content: string): { text: string; truncated: boolean } {
+  const limit = CHAR_LIMITS[platform] ?? 280;
+  if (content.length <= limit) return { text: content, truncated: false };
+  return { text: content.slice(0, limit).trimEnd() + "...", truncated: true };
+}
+
 export default function SocialFeed() {
   const [active, setActive] = useState(0);
   const [visible, setVisible] = useState(true);
@@ -52,22 +64,21 @@ export default function SocialFeed() {
   }
 
   const post = socialPosts[active];
+  const { text, truncated } = getDisplayContent(post.platform, post.content);
 
   return (
-    <div style={{ maxWidth: "480px", margin: "0 auto", paddingBottom: 0 }}>
+    <div style={{ maxWidth: "560px", margin: "0 auto", paddingBottom: 0 }}>
       {/* Card */}
       <div
         style={{
           border: `1px solid rgba(26,26,26,0.2)`,
           borderRadius: "2px",
           background: BG,
-          padding: "14px 18px",
+          padding: "16px 20px",
           opacity: visible ? 1 : 0,
           transition: "opacity 0.3s ease",
-          minHeight: "130px",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "space-between",
         }}
       >
         {/* Top: icon + handle */}
@@ -79,8 +90,18 @@ export default function SocialFeed() {
         </div>
 
         {/* Content */}
-        <p style={{ fontFamily: SANS, fontSize: "14px", color: DARK, lineHeight: 1.6, flexGrow: 1 }}>
-          {post.content}
+        <p style={{ fontFamily: SANS, fontSize: "14px", color: DARK, lineHeight: 1.7, flexGrow: 1, margin: 0, whiteSpace: "pre-wrap" }}>
+          {text}
+          {truncated && (
+            <a
+              href={post.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: TERRA, marginLeft: "4px", textDecoration: "underline", textUnderlineOffset: "3px", fontFamily: MONO, fontSize: "11px", letterSpacing: "0.05em" }}
+            >
+              Read more →
+            </a>
+          )}
         </p>
 
         {/* Bottom: view post + date */}
