@@ -91,7 +91,7 @@ export default function RescueAIPage() {
         </p>
         <h1
           className="text-3xl md:text-5xl font-semibold leading-tight"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--foreground)" }}
         >
           Artificial intelligence is not the threat.
           <br />
@@ -105,14 +105,14 @@ export default function RescueAIPage() {
       <section className="py-16 space-y-8">
         <p
           className="text-base md:text-lg leading-relaxed"
-          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}
         >
           We are not in a race against AI. We are in a race against the version
           of the future where humans forgot to keep a seat at the table.
         </p>
         <p
           className="text-base md:text-lg leading-relaxed"
-          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}
         >
           The argument for pure AI maximalism is serious and worth engaging
           honestly. The competitive pressure is real. Nations and corporations
@@ -120,7 +120,7 @@ export default function RescueAIPage() {
         </p>
         <p
           className="text-base md:text-lg leading-relaxed"
-          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}
         >
           But the race argument has a flaw at its core: there is no finish line.
           Optimizing purely for AI adoption means continuously ceding human
@@ -130,7 +130,7 @@ export default function RescueAIPage() {
         </p>
         <p
           className="text-base md:text-lg leading-relaxed"
-          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}
         >
           AI already outperforms humans at speed, scale, and pattern
           recognition. It cannot outperform humans at contextual moral judgment,
@@ -141,7 +141,7 @@ export default function RescueAIPage() {
         </p>
         <p
           className="text-base md:text-lg leading-relaxed"
-          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}
         >
           You do not have to choose between using AI and remaining human.
           Your phone&apos;s GPS knows every turn. You still decide where you&apos;re going.
@@ -151,7 +151,7 @@ export default function RescueAIPage() {
         </p>
         <p
           className="text-base md:text-lg leading-relaxed font-medium"
-          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}
         >
           The HAI Standard is that architecture.
         </p>
@@ -180,7 +180,7 @@ export default function RescueAIPage() {
                 </p>
                 <h3
                   className="text-xl md:text-2xl font-semibold mb-6"
-                  style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}
+                  style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--foreground)" }}
                 >
                   {pillar.name}
                 </h3>
@@ -209,7 +209,7 @@ export default function RescueAIPage() {
                     </p>
                     <p
                       className="text-base leading-relaxed"
-                      style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
+                      style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}
                     >
                       {pillar.requirements}
                     </p>
@@ -273,7 +273,7 @@ export default function RescueAIPage() {
       <section className="py-16">
         <p
           className="text-2xl md:text-3xl font-semibold"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--foreground)" }}
         >
           OMARO builds the table.
           <br />

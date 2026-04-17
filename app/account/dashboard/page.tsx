@@ -16,7 +16,7 @@ export default function DashboardPage() {
       </p>
       <h1
         className="text-2xl md:text-4xl font-semibold"
-        style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}
+        style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--foreground)" }}
       >
         Account Dashboard — Coming Soon.
       </h1>

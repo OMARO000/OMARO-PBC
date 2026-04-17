@@ -24,7 +24,7 @@ function EmailRow({ label, address, note }: { label: string; address: string; no
         className="text-base underline hover:no-underline"
         style={{
           fontFamily: "var(--font-ibm-plex-mono)",
-          color: "#1A1A1A",
+          color: "var(--foreground)",
           textUnderlineOffset: "4px",
         }}
       >
@@ -47,7 +47,7 @@ export default function ConnectPage() {
     <div className="max-w-3xl mx-auto px-6 py-16 md:py-24 text-center">
       <h1
         className="text-3xl md:text-5xl font-semibold mb-16"
-        style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}
+        style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--foreground)" }}
       >
         Connect.
       </h1>
@@ -83,7 +83,7 @@ export default function ConnectPage() {
         </h2>
         <p
           className="text-base mb-6"
-          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}
         >
           We do not accept:
         </p>
@@ -97,7 +97,7 @@ export default function ConnectPage() {
             <li
               key={i}
               className="text-base"
-              style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
+              style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}
             >
               {item}
             </li>
@@ -105,7 +105,7 @@ export default function ConnectPage() {
         </ul>
         <p
           className="text-base leading-relaxed"
-          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}
         >
           Correction requests are reviewed only when accompanied by verifiable
           evidence that a documented fact is inaccurate. Corrections are issued

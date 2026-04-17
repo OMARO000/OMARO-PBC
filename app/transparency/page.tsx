@@ -14,13 +14,13 @@ function MetricRow({ label, value }: { label: string; value: string }) {
     >
       <span
         className="text-sm text-left"
-        style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
+        style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}
       >
         {label}
       </span>
       <span
         className="text-sm font-semibold tabular-nums text-right"
-        style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}
+        style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--foreground)" }}
       >
         {value}
       </span>
@@ -34,14 +34,14 @@ export default function TransparencyPage() {
 
       <h1
         className="text-3xl md:text-5xl font-semibold mb-10"
-        style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}
+        style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--foreground)" }}
       >
         The record includes us.
       </h1>
 
       <p
         className="text-base md:text-lg leading-relaxed mb-16"
-        style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
+        style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}
       >
         OMARO PBC publishes annual benefit reports, platform metrics, and
         enforcement actions. We hold corporations accountable. We hold
@@ -63,7 +63,7 @@ export default function TransparencyPage() {
           >
             <span
               className="text-sm text-left"
-              style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
+              style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}
             >
               2026
             </span>
@@ -132,7 +132,7 @@ export default function TransparencyPage() {
         <div className="space-y-4">
           <p
             className="text-base leading-relaxed"
-            style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
+            style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}
           >
             OMARO products are evaluated against the HAI Standard —
             eight pillars covering integrity &amp; transparency, accountability chain,
@@ -141,7 +141,7 @@ export default function TransparencyPage() {
           </p>
           <p
             className="text-base leading-relaxed"
-            style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
+            style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}
           >
             All audit results are pinned to IPFS. Dual links: hosted +
             immutable. OMARO holds itself to the same standard it publishes.

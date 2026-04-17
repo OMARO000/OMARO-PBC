@@ -6,8 +6,8 @@ import { socialPosts } from "@/lib/socialPosts";
 const MONO = "var(--font-ibm-plex-mono)";
 const SANS = "var(--font-ibm-plex-sans)";
 const TERRA = "#9b1b30";
-const DARK = "#1A1A1A";
-const BG = "#ffffff";
+const DARK = "var(--foreground)";
+const BG = "var(--background)";
 
 const PLATFORM_ICONS: Record<string, React.ReactNode> = {
   x: (

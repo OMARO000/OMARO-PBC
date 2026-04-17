@@ -17,7 +17,7 @@ export default function MissionPage() {
 
       <h1
         className="text-3xl md:text-5xl font-semibold leading-tight mb-16"
-        style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}
+        style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--foreground)" }}
       >
         Every race needs a finish line.
         <br />
@@ -30,7 +30,7 @@ export default function MissionPage() {
         <div className="space-y-6">
           <p
             className="text-base md:text-lg leading-relaxed"
-            style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
+            style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}
           >
             Somewhere along the way, progress became a competition. Not a
             competition with a clear opponent or a defined prize — just a
@@ -40,7 +40,7 @@ export default function MissionPage() {
           </p>
           <p
             className="text-base md:text-lg leading-relaxed"
-            style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
+            style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}
           >
             We think this is worth pausing on.
           </p>
@@ -51,7 +51,7 @@ export default function MissionPage() {
         {/* Section 2 */}
         <p
           className="text-base md:text-lg leading-relaxed"
-          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}
         >
           The things that make us worth building for — judgment, conscience,
           connection, the capacity to be accountable to one another — these are
@@ -69,7 +69,7 @@ export default function MissionPage() {
         {/* Section 3 */}
         <p
           className="text-base md:text-lg leading-relaxed"
-          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}
         >
           OMARO was built on a simple conviction: you were never supposed to be
           a user. You were supposed to be a person. The systems being built
@@ -85,7 +85,7 @@ export default function MissionPage() {
         {/* Section 4 */}
         <p
           className="text-base md:text-lg leading-relaxed"
-          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}
         >
           What gets lost is trust. What gets lost is accountability. What gets
           lost is the belief that the infrastructure of daily life — the

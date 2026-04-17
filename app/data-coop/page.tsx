@@ -17,20 +17,20 @@ export default function DataCoopPage() {
         <p className="text-xs font-semibold tracking-widest uppercase mb-6" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30" }}>
           Data Co-op
         </p>
-        <h1 className="text-3xl md:text-5xl font-semibold leading-tight" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}>
+        <h1 className="text-3xl md:text-5xl font-semibold leading-tight" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--foreground)" }}>
           You own what you bring.
         </h1>
       </div>
       <Divider />
       <section className="py-16 space-y-8">
         <AccountCTA />
-        <p className="text-base md:text-lg leading-relaxed" style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}>
+        <p className="text-base md:text-lg leading-relaxed" style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}>
           Every OMARO product collects data with your knowledge and consent. That data funds research at the OMARO Human Research Institute. The research feeds back into what we build. You are not a source. You are a participant.
         </p>
-        <p className="text-base md:text-lg leading-relaxed" style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}>
+        <p className="text-base md:text-lg leading-relaxed" style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}>
           The Data Co-op is the mechanism. You choose what to share, from which products, for which purposes. You can withdraw at any time. Deletion is real. Nothing is retained beyond what you authorize.
         </p>
-        <p className="text-base md:text-lg leading-relaxed" style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}>
+        <p className="text-base md:text-lg leading-relaxed" style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}>
           Consent management and research participation requires an OMARO account. Log in below to manage your data preferences.
         </p>
         <div className="pt-4">

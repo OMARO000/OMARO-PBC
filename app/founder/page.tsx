@@ -17,7 +17,7 @@ export default function FounderPage() {
       </p>
       <h1
         className="text-3xl md:text-5xl font-semibold mb-4"
-        style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}
+        style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--foreground)" }}
       >
         BEAST
       </h1>

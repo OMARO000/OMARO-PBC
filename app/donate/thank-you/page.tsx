@@ -11,13 +11,13 @@ export default function ThankYouPage() {
     <div className="max-w-xl mx-auto px-6 py-16 md:py-24 text-center">
       <h1
         className="text-3xl md:text-5xl font-semibold mb-8"
-        style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}
+        style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--foreground)" }}
       >
         Thank You.
       </h1>
       <p
         className="text-base leading-relaxed mb-12"
-        style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
+        style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}
       >
         Your support keeps OMARO independent.
       </p>

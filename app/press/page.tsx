@@ -12,7 +12,7 @@ export default function PressPage() {
 
       <h1
         className="text-3xl md:text-5xl font-semibold mb-16"
-        style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#1A1A1A" }}
+        style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--foreground)" }}
       >
         Press.
       </h1>
@@ -64,7 +64,7 @@ export default function PressPage() {
         </h2>
         <p
           className="text-base leading-relaxed"
-          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}
+          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}
         >
           Logo files, brand guidelines, and approved descriptions available on
           request. Email{" "}
