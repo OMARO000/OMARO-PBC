@@ -16,7 +16,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <p
       className="text-xs font-semibold tracking-widest uppercase mb-8"
-      style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}
+      style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30" }}
     >
       {children}
     </p>
@@ -42,7 +42,7 @@ export default function Home() {
             display: "inline-block",
             width: "3px",
             height: "1em",
-            background: "#B85C38",
+            background: "#9b1b30",
             marginLeft: "4px",
             verticalAlign: "text-bottom",
             animation: "blink 1.2s step-end infinite"
@@ -62,7 +62,7 @@ export default function Home() {
               fontSize: "0.75rem",
               letterSpacing: "0.1em",
               textTransform: "uppercase",
-              color: "#B85C38",
+              color: "#9b1b30",
               textDecoration: "underline",
               textUnderlineOffset: "4px",
             }}
@@ -116,7 +116,7 @@ export default function Home() {
           <Link
             href="/data-coop"
             className="inline-block text-sm underline hover:no-underline"
-            style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38", textUnderlineOffset: "4px" }}
+            style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30", textUnderlineOffset: "4px" }}
           >
             Learn more &rarr;
           </Link>
@@ -147,7 +147,7 @@ export default function Home() {
           <Link
             href="/hai-standard"
             className="inline-block text-sm underline hover:no-underline"
-            style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38", textUnderlineOffset: "4px" }}
+            style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30", textUnderlineOffset: "4px" }}
           >
             Learn more &rarr;
           </Link>
@@ -169,7 +169,7 @@ export default function Home() {
               violations across thousands of companies. Permanent. Open.
               Citable.
             </p>
-            <a href="https://omen.xyz" target="_blank" rel="noopener noreferrer" className="text-sm underline hover:no-underline" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38", textUnderlineOffset: "4px" }}>
+            <a href="https://omen.xyz" target="_blank" rel="noopener noreferrer" className="text-sm underline hover:no-underline" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30", textUnderlineOffset: "4px" }}>
               omen.xyz&nbsp;&rarr;
             </a>
           </div>
@@ -182,7 +182,7 @@ export default function Home() {
               of any public GitHub, GitLab, or Radicle repository. What the
               code does. Who it serves. What it touches.
             </p>
-            <a href="https://igitit.xyz" target="_blank" rel="noopener noreferrer" className="text-sm underline hover:no-underline" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38", textUnderlineOffset: "4px" }}>
+            <a href="https://igitit.xyz" target="_blank" rel="noopener noreferrer" className="text-sm underline hover:no-underline" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30", textUnderlineOffset: "4px" }}>
               igitit.xyz&nbsp;&rarr;
             </a>
           </div>
@@ -193,7 +193,7 @@ export default function Home() {
             <p className="text-base leading-relaxed mb-5" style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#1A1A1A" }}>
               AI is not the threat. Unaccountable AI is. The HAI Project is the public infrastructure that makes accountability structural — a nine-pillar standard, a public registry, and a certification system built for the people on the other side of every AI decision. Companies either meet the standard or they don&apos;t. Both are on the record.
             </p>
-            <a href="https://haiproject.xyz" target="_blank" rel="noopener noreferrer" className="text-sm underline hover:no-underline" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38", textUnderlineOffset: "4px" }}>
+            <a href="https://haiproject.xyz" target="_blank" rel="noopener noreferrer" className="text-sm underline hover:no-underline" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30", textUnderlineOffset: "4px" }}>
               haiproject.xyz&nbsp;&rarr;
             </a>
           </div>

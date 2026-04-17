@@ -33,7 +33,7 @@ export default function ProductsPage() {
         <p style={{ fontFamily: "var(--font-ibm-plex-sans)", fontSize: "16px", lineHeight: 1.75, color: "#1A1A1A", marginBottom: "20px" }}>
           OMEN keeps the receipts. Court-grade documentation of verified violations across thousands of companies — permanent, open, and citable. The record doesn&apos;t expire.
         </p>
-        <a href="https://omen.xyz" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-ibm-plex-mono)", fontSize: "13px", color: "#B85C38" }}>omen.xyz ↗</a>
+        <a href="https://omen.xyz" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-ibm-plex-mono)", fontSize: "13px", color: "#9b1b30" }}>omen.xyz ↗</a>
       </div>
 
       {/* iGITit */}
@@ -47,7 +47,7 @@ export default function ProductsPage() {
         <p style={{ fontFamily: "var(--font-ibm-plex-sans)", fontSize: "16px", lineHeight: 1.75, color: "#1A1A1A", marginBottom: "20px" }}>
           iGITit reads the code and tells you what it does — in plain language. Any public repository, analyzed and explained. Open source, open language.
         </p>
-        <a href="https://igitit.xyz" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-ibm-plex-mono)", fontSize: "13px", color: "#B85C38" }}>igitit.xyz ↗</a>
+        <a href="https://igitit.xyz" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-ibm-plex-mono)", fontSize: "13px", color: "#9b1b30" }}>igitit.xyz ↗</a>
       </div>
 
       {/* HAI Project */}
@@ -61,11 +61,11 @@ export default function ProductsPage() {
         <p style={{ fontFamily: "var(--font-ibm-plex-sans)", fontSize: "16px", lineHeight: 1.75, color: "#1A1A1A", marginBottom: "20px" }}>
           Any company can apply. Findings are published to a permanent public registry. Organizations that meet the standard earn a record of that commitment. Those that don&apos;t earn a record of that too.
         </p>
-        <a href="https://haiproject.xyz" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-ibm-plex-mono)", fontSize: "13px", color: "#B85C38" }}>haiproject.xyz ↗</a>
+        <a href="https://haiproject.xyz" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-ibm-plex-mono)", fontSize: "13px", color: "#9b1b30" }}>haiproject.xyz ↗</a>
       </div>
 
       <div style={{ borderTop: "1px solid #1A1A1A", paddingTop: "40px", marginTop: "16px" }}>
-        <p style={{ fontFamily: "var(--font-ibm-plex-mono)", fontSize: "13px", color: "#B85C38" }}>
+        <p style={{ fontFamily: "var(--font-ibm-plex-mono)", fontSize: "13px", color: "#9b1b30" }}>
           All OMARO products are open-source.
           <br />
           All are built for people, not advertisers.

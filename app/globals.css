@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-off-white: #F0EDE8;
+  --color-off-white: #ffffff;
   --color-charcoal-grey: #4A4A4A;
   --color-charcoal-black: #1A1A1A;
   --font-mono: var(--font-ibm-plex-mono);
@@ -9,14 +9,14 @@
 }
 
 :root {
-  --background: #F0EDE8;
+  --background: #ffffff;
   --foreground: #1A1A1A;
-  --terracotta: #B85C38;
-  --terracotta-hover: #D4724E;
+  --terracotta: #9b1b30;
+  --terracotta-hover: #9b1b30;
 }
 
 body {
-  background-color: #F0EDE8;
+  background-color: #ffffff;
   background-image: repeating-linear-gradient(
     45deg,
     rgba(26,26,26,0.06) 0px,

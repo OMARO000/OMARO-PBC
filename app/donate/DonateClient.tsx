@@ -5,9 +5,9 @@ import { QRCodeCanvas } from "qrcode.react";
 
 const MONO = "var(--font-ibm-plex-mono)";
 const SANS = "var(--font-ibm-plex-sans)";
-const TERRA = "#B85C38";
+const TERRA = "#9b1b30";
 const DARK = "#1A1A1A";
-const BG = "#F0EDE8";
+const BG = "#ffffff";
 
 const PRESET_AMOUNTS = [5, 25, 100];
 

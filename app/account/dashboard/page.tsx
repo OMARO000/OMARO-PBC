@@ -10,7 +10,7 @@ export default function DashboardPage() {
     <div className="max-w-xl mx-auto px-6 py-16 md:py-24 text-center">
       <p
         className="text-xs tracking-widest uppercase mb-6"
-        style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}
+        style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30" }}
       >
         Your OMARO Account
       </p>

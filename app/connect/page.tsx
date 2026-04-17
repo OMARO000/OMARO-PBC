@@ -15,7 +15,7 @@ function EmailRow({ label, address, note }: { label: string; address: string; no
     >
       <p
         className="text-xs tracking-widest uppercase mb-1"
-        style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}
+        style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30" }}
       >
         {label}
       </p>
@@ -33,7 +33,7 @@ function EmailRow({ label, address, note }: { label: string; address: string; no
       {note && (
         <p
           className="text-xs mt-1"
-          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#B85C38" }}
+          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#9b1b30" }}
         >
           {note}
         </p>
@@ -77,7 +77,7 @@ export default function ConnectPage() {
       <section className="mt-16">
         <h2
           className="text-xs font-semibold tracking-widest uppercase mb-8"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30" }}
         >
           What Not to Contact Us About
         </h2>

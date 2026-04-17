@@ -48,14 +48,14 @@ export default function Footer() {
   ];
 
   return (
-    <footer style={{ backgroundColor: "#1A1A1A", color: "#F0EDE8" }}>
+    <footer style={{ backgroundColor: "#1A1A1A", color: "#ffffff" }}>
       <div className="max-w-6xl mx-auto px-6 py-8">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
           {/* Left: entity + product links */}
           <div className="flex flex-col gap-3">
             <span
               className="text-xs font-semibold"
-              style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#F0EDE8" }}
+              style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#ffffff" }}
             >
               OMARO Public Benefit Corporation
             </span>
@@ -69,7 +69,7 @@ export default function Footer() {
                   className="text-xs hover:underline"
                   style={{
                     fontFamily: "var(--font-ibm-plex-mono)",
-                    color: "#B85C38",
+                    color: "#9b1b30",
                     textUnderlineOffset: "3px",
                   }}
                 >
@@ -87,7 +87,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   aria-label={label}
                   style={{
-                    color: "#B85C38",
+                    color: "#9b1b30",
                     transition: "opacity 0.2s",
                     display: "flex",
                     alignItems: "center",
@@ -105,7 +105,7 @@ export default function Footer() {
           <div className="flex flex-col items-start sm:items-end gap-2">
             <span
               className="text-xs"
-              style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#B85C38" }}
+              style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30" }}
             >
               Sovereign by Design.
             </span>
@@ -119,20 +119,20 @@ export default function Footer() {
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
                 padding: "0.4rem 1rem",
-                background: "#B85C38",
-                color: "#F0EDE8",
+                background: "#9b1b30",
+                color: "#ffffff",
                 textDecoration: "none",
                 display: "inline-block",
                 transition: "background 0.2s",
               }}
-              onMouseEnter={e => (e.currentTarget.style.background = "#D4724E")}
-              onMouseLeave={e => (e.currentTarget.style.background = "#B85C38")}
+              onMouseEnter={e => (e.currentTarget.style.background = "#9b1b30")}
+              onMouseLeave={e => (e.currentTarget.style.background = "#9b1b30")}
             >
               Donate
             </a>
             <span
               className="text-xs"
-              style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#F0EDE8", opacity: 0.4 }}
+              style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#ffffff", opacity: 0.4 }}
             >
               &copy; 2026 OMARO PBC
             </span>

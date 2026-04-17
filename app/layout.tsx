@@ -36,7 +36,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${ibmPlexMono.variable} ${ibmPlexSans.variable} antialiased min-h-screen flex flex-col`}
-        style={{ backgroundColor: "#F0EDE8", color: "#1A1A1A" }}
+        style={{ backgroundColor: "#ffffff", color: "#1A1A1A" }}
       >
         <Nav />
         <main className="flex-1">

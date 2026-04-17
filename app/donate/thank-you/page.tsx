@@ -28,7 +28,7 @@ export default function ThankYouPage() {
           fontSize: "12px",
           letterSpacing: "0.08em",
           textTransform: "uppercase",
-          color: "#B85C38",
+          color: "#9b1b30",
           textDecoration: "underline",
           textUnderlineOffset: "4px",
         }}

@@ -2,9 +2,9 @@
 
 import { useState, useRef, useEffect } from "react";
 
-const GOLD = "#B85C38";
+const GOLD = "#9b1b30";
 const BG = "#0f0e0c";
-const TEXT = "#F0EDE8";
+const TEXT = "#ffffff";
 const MUTED = "#6a6a62";
 const BORDER = "#2a2a26";
 

@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 
 const MONO = "var(--font-ibm-plex-mono)";
-const TERRA = "#B85C38";
+const TERRA = "#9b1b30";
 const DARK = "#1A1A1A";
-const BG = "#F0EDE8";
+const BG = "#ffffff";
 
 function parseAccountCookie(): string | null {
   if (typeof document === "undefined") return null;
