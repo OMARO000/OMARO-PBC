@@ -25,11 +25,9 @@ export default function Nav() {
   const [dark, setDark] = useState(false);
 
   useEffect(() => {
-    localStorage.removeItem("omaro-theme"); const stored = null;
-    if (stored === "dark") {
-      setDark(true);
-      document.documentElement.setAttribute("data-theme", "dark");
-    }
+    const stored = localStorage.getItem("omaro-theme");
+    const isDark = stored !== "light";
+    setDark(isDark);
   }, []);
 
   const toggleTheme = () => {

@@ -33,7 +33,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: `(function(){var t=localStorage.getItem('omaro-theme');document.documentElement.setAttribute('data-theme',t==='light'?'light':'dark');})()` }} />
+      </head>
       <body
         className={`${ibmPlexMono.variable} ${ibmPlexSans.variable} antialiased min-h-screen flex flex-col`}
         style={{ backgroundColor: "var(--background)", color: "var(--foreground)" }}
