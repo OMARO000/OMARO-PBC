@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import SocialFeed from "@/components/SocialFeed";
 import { LAYERS, CHANNELS } from "@/lib/iris";
 
 export const metadata: Metadata = {
@@ -64,9 +63,6 @@ export default function Home() {
           <a href="/donate" style={{ fontFamily: MONO, fontSize: "0.75rem", letterSpacing: "0.1em", textTransform: "uppercase", color: ACCENT, textDecoration: "underline", textUnderlineOffset: "4px" }}>
             Support the work &rarr;
           </a>
-        </div>
-        <div style={{ marginTop: "16px" }}>
-          <SocialFeed />
         </div>
       </section>
 
