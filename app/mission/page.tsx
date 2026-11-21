@@ -92,8 +92,8 @@ export default function MissionPage() {
           platforms, the institutions, the systems — was built with you in mind.
           <br /><br />
           We build infrastructure to recover that ground. Permanent records.
-          Honest analysis. Genuine connection. Tools that treat the people using
-          them as the point of the exercise — not the product.
+          Plain analysis. Real connection. Tools that treat the people using
+          them as the point of the exercise.
         </p>
 
         <Divider />
@@ -101,7 +101,7 @@ export default function MissionPage() {
         {/* Closing */}
         <p
           className="text-xl md:text-2xl font-semibold leading-snug"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30" }}
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--accent)" }}
         >
           We are not building against the future.
           <br />

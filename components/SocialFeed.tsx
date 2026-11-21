@@ -5,7 +5,7 @@ import { socialPosts } from "@/lib/socialPosts";
 
 const MONO = "var(--font-ibm-plex-mono)";
 const SANS = "var(--font-ibm-plex-sans)";
-const TERRA = "#9b1b30";
+const TERRA = "var(--accent)";
 const DARK = "var(--foreground)";
 const BG = "var(--background)";
 

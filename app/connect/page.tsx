@@ -11,11 +11,11 @@ function EmailRow({ label, address, note }: { label: string; address: string; no
   return (
     <div
       className="py-5 text-center"
-      style={{ borderBottom: "1px solid #1A1A1A" }}
+      style={{ borderBottom: "1px solid var(--border)" }}
     >
       <p
         className="text-xs tracking-widest uppercase mb-1"
-        style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30" }}
+        style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--accent)" }}
       >
         {label}
       </p>
@@ -33,7 +33,7 @@ function EmailRow({ label, address, note }: { label: string; address: string; no
       {note && (
         <p
           className="text-xs mt-1"
-          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#9b1b30" }}
+          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--accent)" }}
         >
           {note}
         </p>
@@ -59,7 +59,7 @@ export default function ConnectPage() {
       <SocialFeed />
 
       {/* Divider */}
-      <div style={{ borderTop: "1px solid #1A1A1A" }} />
+      <div style={{ borderTop: "1px solid var(--border)" }} />
 
       {/* Email */}
       <div className="mb-12">
@@ -77,7 +77,7 @@ export default function ConnectPage() {
       <section className="mt-16">
         <h2
           className="text-xs font-semibold tracking-widest uppercase mb-8"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30" }}
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--accent)" }}
         >
           What Not to Contact Us About
         </h2>

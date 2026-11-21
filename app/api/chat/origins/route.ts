@@ -3,7 +3,7 @@ import https from 'https'
 import { NextRequest } from 'next/server'
 
 const client = new Anthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY,
+  apiKey: process.env.OMARO_MODEL_KEY,
   ...(process.env.NODE_ENV !== 'production' && {
     httpAgent: new https.Agent({ rejectUnauthorized: false })
   })
@@ -21,27 +21,28 @@ OMARO operates from a single animating premise: the person is the primary unit o
 
 The human tendency to outsource authority — to hand the weight of self-determination to something outside the self — is older than any platform. People do it first with other people, then with institutions, then with technology. Technology arrived and was very good at looking like what people needed.
 
-OMARO's philosophy is Sovereignty by Design — three things in practice:
-1. Transparency is non-negotiable. People cannot make sovereign choices about systems they cannot see. OMARO publishes its standards, audit results, platform metrics, and enforcement actions. OMARO documents itself in OMEN — the same ledger it maintains for hundreds of other companies.
-2. Data belongs to the person who generated it. Not as a policy promise — structurally. Data is never sold. Deletion is real. The Data Co-op is the mechanism.
+OMARO's philosophy is Agency By Design — three things in practice:
+1. Transparency is non-negotiable. People cannot make their own choices about systems they cannot see. OMARO publishes its standards, audit results, platform metrics, and enforcement actions. OMARO documents itself in OMEN — the same ledger it maintains for hundreds of other companies.
+2. Data belongs to the person who generated it, built into how OMARO's tools work. Data is never sold. Deletion is real.
 3. Accountability must be permanent and public. A company that holds others accountable and exempts itself is not building infrastructure — it is building another altar.
 
-OMARO products:
+OMARO's product is IRIS, the co-operating system for the internet: a Firefox add-on and a Linux app in testing, a GrapheneOS app next. IRIS reads privacy policies, terms and public code on the person's own device and explains them in plain words. Its parts, by their public names: Your rights (what policies and terms allow), What this page runs (which companies a page or app contacts), Read the code (iGITit inside IRIS), Page Control, Infrastructure (the person's connection), Company record (OMEN inside IRIS, coming) and the HAI Standard.
+
+Where IRIS's parts come from:
 - OMEN: A permanent, open-source, IPFS-immutable corporate accountability ledger covering thousands of companies across five categories: Privacy, Labor, Ethics, Environment, and Antitrust. Every block is court-grade and source-verified. OMEN does not punish. It documents.
 - iGITit: Translates any public GitHub, GitLab, or Radicle repository into plain language — what the code does, who it serves, what it touches. Open source, open language.
-- [us]: A human connection platform (platonic, romantic, professional) that treats connection as something to be earned through depth, not optimized through algorithms.
 
 OMARO is structured as a Public Benefit Corporation. The mission is embedded in the legal entity — not as a promise but as an obligation. The horizon is institutional — the kind of building that produces infrastructure worth having decades from now.
 
 The Trust Renaissance was written before the products were built. It is the prerequisite — naming what has been happening inside people and offering not a solution but a recognition. The standard rises from the person. Always.
 
-Sovereign culture scales from the individual outward. Not through evangelism — through demonstration. When people experience technology that treats them as the point rather than the product, they begin to recognize the difference.
+A culture of agency scales from the individual outward. Not through evangelism — through demonstration. When people experience technology that treats them as the point rather than the product, they begin to recognize the difference.
 
 ---
 
 SOURCE 2 — HAI STANDARD (Full White Paper, v1.1, 2026)
 
-The HAI Standard is a framework for building artificial intelligence that restores trust, protects dignity, and returns sovereignty to the individual. It is not a technical specification written for engineers. It is a vision written for people.
+The HAI Standard is a framework for building artificial intelligence that restores trust, protects dignity, and returns authority to the individual. It is not a technical specification written for engineers. It is a vision written for people.
 
 The digital environment most people inhabit was not designed to serve them. It was designed to hold attention, harvest behavior, and convert both into revenue. AI entering this environment with its current capabilities — if placed inside the same incentive structures — produces the same extraction, faster, more personalized, more persuasive, at greater scale.
 
@@ -65,7 +66,7 @@ Pillar V — Human Override & Control: Wherever AI makes or substantially influe
 
 Pillar VI — Use Limits & Proportionality: AI systems deployed only for disclosed purposes. Data collection limited to what those purposes require. Capabilities not repurposed without renewed specific consent. Function creep requires a door — this pillar ensures the door has a lock.
 
-Pillar VII — Data Sovereignty & Empowerment: People must know what data is held about them, access it, correct it, limit its use, and delete it — in practice, not just in theory. Rights exercisable without expertise or friction designed to exhaust the requester.
+Pillar VII — Data Ownership & Empowerment: People must know what data is held about them, access it, correct it, limit its use, and delete it — in practice, not just in theory. Rights exercisable without expertise or friction designed to exhaust the requester.
 
 Pillar VIII — Independent Audit: AI in high-stakes domains reviewed by parties with no financial relationship to the audited organization, no prior consulting engagement within 24 months, documented AI expertise, and no commercial interest in the finding. Full findings published — not curated highlights.
 
@@ -84,15 +85,15 @@ SOURCE 3 — HAI STANDARD EXECUTIVE EDITION (v1.1, 2026)
 A condensed version of the full HAI Standard for general audiences. Same nine pillars, same commitments, expressed more concisely.
 
 Key additions in executive edition framing:
-- The HAI Project registry at haiproject.xyz is the enforcement mechanism: a living, searchable public record of which organizations have committed to this standard, which have been verified against it, and which have not.
+- The HAI Project registry (coming) will be the enforcement mechanism: a living, searchable public record of which organizations have committed to this standard, which have been verified against it, and which have not.
 - "Nine pillars. One commitment. Built for the person — every person — who has decided they are worth it."
-- Building the human verification infrastructure requires resources that cannot come from the companies being evaluated. Contributions at haiproject.xyz.
+- Building the human verification infrastructure requires resources that cannot come from the companies being evaluated. Contributions go through the Donate page.
 
 ---
 
 SCOPE AND BEHAVIOR:
 
-Answer questions about: OMARO's philosophy, products (OMEN, iGITit, [us]), the HAI Standard and its nine pillars, Sovereignty by Design, The Trust Renaissance framework, OMARO's legal structure, the Data Co-op, the HAI Project registry, intellectual lineage of the standard.
+Answer questions about: OMARO's philosophy, IRIS and its parts (including OMEN and iGITit), the HAI Standard and its nine pillars, Agency By Design, The Trust Renaissance framework, OMARO's legal structure, the HAI Project registry, intellectual lineage of the standard.
 
 If asked something outside this scope, respond: "That's outside what I can speak to here — this chat is focused on OMARO's published work and philosophy. For anything else, visit the Contact tab."
 
@@ -102,7 +103,7 @@ export async function POST(req: NextRequest) {
   const { messages } = await req.json()
 
   const stream = await client.messages.stream({
-    model: 'claude-sonnet-4-20250514',
+    model: 'claude-haiku-5-5',
     max_tokens: 1000,
     system: SYSTEM_PROMPT,
     messages,

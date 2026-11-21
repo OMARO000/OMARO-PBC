@@ -6,9 +6,9 @@ import { generateAccountNumber } from "@/lib/account";
 
 const MONO = "var(--font-ibm-plex-mono)";
 const SANS = "var(--font-ibm-plex-sans)";
-const TERRA = "#9b1b30";
-const DARK = "#1A1A1A";
-const BG = "#ffffff";
+const TERRA = "var(--accent)";
+const DARK = "var(--foreground)";
+const BG = "var(--background)";
 
 function PrimaryButton({
   children,
@@ -141,8 +141,7 @@ export default function AccountClient() {
             className="text-base leading-relaxed mb-12"
             style={{ fontFamily: SANS, color: DARK }}
           >
-            One account number works across every OMARO product — [us], OMEN,
-            HAI Project, and everything we build. There is no email address. No
+            One account number works across IRIS and everything OMARO builds. There is no email address. No
             password. Just a number that is yours. We cannot recover it if you
             lose it.
           </p>

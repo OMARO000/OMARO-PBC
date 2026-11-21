@@ -88,7 +88,7 @@ export default function ConnectClient() {
             display: "flex",
             alignItems: "center",
           }}
-          onMouseEnter={(e) => (e.currentTarget.style.color = "#9b1b30")}
+          onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent)")}
           onMouseLeave={(e) => (e.currentTarget.style.color = "#1A1A1A")}
         >
           {icon}

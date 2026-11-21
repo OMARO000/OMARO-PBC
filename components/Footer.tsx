@@ -3,9 +3,8 @@
 export default function Footer() {
   const products = [
     { label: "omaro.org", href: "https://omaro.org" },
-    { label: "omen.xyz", href: "https://omen.xyz" },
-    { label: "igitit.xyz", href: "https://igitit.xyz" },
-    { label: "haiproject.xyz", href: "https://haiproject.xyz" },
+    { label: "IRIS", href: "/iris" },
+    { label: "HAI Standard", href: "/hai-standard" },
   ];
 
   const socials = [
@@ -69,7 +68,7 @@ export default function Footer() {
                   className="text-xs hover:underline"
                   style={{
                     fontFamily: "var(--font-ibm-plex-mono)",
-                    color: "#9b1b30",
+                    color: "var(--accent)",
                     textUnderlineOffset: "3px",
                   }}
                 >
@@ -87,7 +86,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   aria-label={label}
                   style={{
-                    color: "#9b1b30",
+                    color: "var(--accent)",
                     transition: "opacity 0.2s",
                     display: "flex",
                     alignItems: "center",
@@ -105,28 +104,26 @@ export default function Footer() {
           <div className="flex flex-col items-start sm:items-end gap-2">
             <span
               className="text-xs"
-              style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30" }}
+              style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--accent)" }}
             >
-              Sovereign by Design.
+              Agency By Design.
             </span>
             <a
-              href="https://haiproject.xyz#donate"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/donate"
               style={{
                 fontFamily: "var(--font-ibm-plex-mono)",
                 fontSize: "0.7rem",
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
                 padding: "0.4rem 1rem",
-                background: "#9b1b30",
+                background: "var(--accent)",
                 color: "#ffffff",
                 textDecoration: "none",
                 display: "inline-block",
                 transition: "background 0.2s",
               }}
-              onMouseEnter={e => (e.currentTarget.style.background = "#9b1b30")}
-              onMouseLeave={e => (e.currentTarget.style.background = "#9b1b30")}
+              onMouseEnter={e => (e.currentTarget.style.background = "var(--accent)")}
+              onMouseLeave={e => (e.currentTarget.style.background = "var(--accent)")}
             >
               Donate
             </a>

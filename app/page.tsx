@@ -1,23 +1,33 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SocialFeed from "@/components/SocialFeed";
+import { LAYERS, CHANNELS } from "@/lib/iris";
 
 export const metadata: Metadata = {
   title: "OMARO",
   description:
-    "Infrastructure that keeps humans in every room that matters. OMARO PBC is a Public Benefit Corporation building open-source tools for people.",
+    "Agency By Design. OMARO PBC builds IRIS, the co-operating system for the internet: it reads what you agree to, sees what each app and page does, and tells you in plain words.",
 };
 
+const MONO = "var(--font-ibm-plex-mono)";
+const SANS = "var(--font-ibm-plex-sans)";
+const ACCENT = "var(--accent)";
+
 function Divider() {
-  return <div style={{ borderTop: "1px solid #1A1A1A" }} />;
+  return <div style={{ borderTop: "1px solid var(--border)" }} />;
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <p
-      className="text-xs font-semibold tracking-widest uppercase mb-8"
-      style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30" }}
-    >
+    <p className="text-xs font-semibold tracking-widest uppercase mb-8" style={{ fontFamily: MONO, color: ACCENT }}>
+      {children}
+    </p>
+  );
+}
+
+function Body({ children }: { children: React.ReactNode }) {
+  return (
+    <p className="text-base md:text-lg leading-relaxed" style={{ fontFamily: SANS, color: "var(--foreground)" }}>
       {children}
     </p>
   );
@@ -26,48 +36,33 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 export default function Home() {
   return (
     <>
-      {/* ── Logo Hero ── */}
-      <div className="max-w-3xl mx-auto px-6 pt-16">
-      </div>
-
       {/* ── Hero ── */}
-      <section className="max-w-6xl mx-auto px-6 text-center" style={{ paddingBottom: "48px" }}>
+      <section className="max-w-6xl mx-auto px-6 pt-16 text-center" style={{ paddingBottom: "48px" }}>
         <h1
           className="text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-8 mx-auto"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--foreground)" }}
+          style={{ fontFamily: MONO, color: "var(--foreground)" }}
         >
-          Sovereign By Design.
-          <br />
-          OMARO builds for the people.<span style={{
+          Agency By Design.
+          <span style={{
             display: "inline-block",
             width: "3px",
             height: "1em",
-            background: "#9b1b30",
+            background: ACCENT,
             marginLeft: "4px",
             verticalAlign: "text-bottom",
             animation: "blink 1.2s step-end infinite"
           }}></span>
         </h1>
-        <p
-          className="text-lg md:text-xl mx-auto max-w-2xl"
-          style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}
-        >
-          Infrastructure that keeps humans in every room that matters.
+        <p className="text-lg md:text-xl mx-auto max-w-2xl" style={{ fontFamily: SANS, color: "var(--foreground)" }}>
+          IRIS, the co-operating system for the internet. It reads what you agree to, sees what each app and page
+          does, and tells you in plain words.
         </p>
-        <div className="mt-6">
-          <a
-            href="/donate"
-            style={{
-              fontFamily: "var(--font-ibm-plex-mono)",
-              fontSize: "0.75rem",
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-              color: "#9b1b30",
-              textDecoration: "underline",
-              textUnderlineOffset: "4px",
-            }}
-          >
-            Support the mission &rarr;
+        <div className="mt-6 flex justify-center gap-6 flex-wrap">
+          <Link href="/iris" style={{ fontFamily: MONO, fontSize: "0.75rem", letterSpacing: "0.1em", textTransform: "uppercase", color: ACCENT, textDecoration: "underline", textUnderlineOffset: "4px" }}>
+            Meet IRIS &rarr;
+          </Link>
+          <a href="/donate" style={{ fontFamily: MONO, fontSize: "0.75rem", letterSpacing: "0.1em", textTransform: "uppercase", color: ACCENT, textDecoration: "underline", textUnderlineOffset: "4px" }}>
+            Support the work &rarr;
           </a>
         </div>
         <div style={{ marginTop: "16px" }}>
@@ -77,50 +72,35 @@ export default function Home() {
 
       <Divider />
 
-      {/* ── What We Build ── */}
+      {/* ── IRIS ── */}
       <section className="max-w-3xl mx-auto px-6 py-16 md:py-20 text-center">
-        <SectionLabel>What We Build</SectionLabel>
+        <SectionLabel>What we build</SectionLabel>
         <div className="space-y-6">
-          <p className="text-base md:text-lg leading-relaxed" style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}>
-            We build infrastructure for people who refuse to be passive
-            participants in systems that weren&apos;t designed for them. Not for
-            engagement. Not for extraction. For the humans on the other side of
-            every system that was built without them in mind.
-          </p>
-          <p className="text-base md:text-lg leading-relaxed" style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}>
-            No ads. No data brokers. No optimized outrage. Just infrastructure
-            that tells the truth and treats you like a human.
-          </p>
+          <Body>
+            You agreed to policies nobody has time to read. Apps reach for your files, your screen and your typing, and
+            nothing tells you. IRIS reads all of it for you, on your own device, and answers in plain language.
+          </Body>
+          <Body>
+            Every answer shows the sentence it came from, so you can check it. No ads, no data brokers, and nothing about
+            you is sold.
+          </Body>
         </div>
-      </section>
-
-      <Divider />
-
-      {/* ── Data Co-op ── */}
-      <section className="max-w-3xl mx-auto px-6 py-16 md:py-20 text-center">
-        <SectionLabel>Data Co-op</SectionLabel>
-        <div className="space-y-6">
-          <h2 className="text-2xl md:text-3xl font-semibold" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--foreground)" }}>
-            You own what you bring.
-          </h2>
-          <p className="text-base md:text-lg leading-relaxed" style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}>
-            Data collected inside OMARO products is used to make those products
-            better. Users share in what it produces. Nothing is sold. Nothing
-            leaves without your signature. The OMARO Human Research Institute
-            uses anonymized, consented data for research that feeds directly
-            back into what we build.
-          </p>
-          <p className="text-base md:text-lg leading-relaxed" style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}>
-            This is not a policy. It is a promise with infrastructure behind it.
-          </p>
-          <Link
-            href="/data-coop"
-            className="inline-block text-sm underline hover:no-underline"
-            style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30", textUnderlineOffset: "4px" }}
-          >
-            Learn more &rarr;
-          </Link>
+        <div className="grid gap-4 mt-10 text-left md:grid-cols-2">
+          {LAYERS.map((l) => (
+            <div key={l.name} className="border p-6" style={{ borderColor: "var(--border)" }}>
+              <h3 className="text-base font-semibold mb-2" style={{ fontFamily: MONO, color: "var(--foreground)" }}>
+                {l.name}{l.status ? <span style={{ color: "var(--muted)", fontWeight: 400 }}> · {l.status}</span> : null}
+              </h3>
+              <p className="text-sm leading-relaxed" style={{ fontFamily: SANS, color: "var(--foreground)" }}>{l.what}</p>
+            </div>
+          ))}
         </div>
+        <p className="text-sm mt-8" style={{ fontFamily: MONO, color: "var(--muted)" }}>
+          {CHANNELS.map((c) => `${c.name}: ${c.status}`).join(" · ")}
+        </p>
+        <Link href="/iris" className="inline-block text-sm underline hover:no-underline mt-6" style={{ fontFamily: MONO, color: ACCENT, textUnderlineOffset: "4px" }}>
+          More about IRIS &rarr;
+        </Link>
       </section>
 
       <Divider />
@@ -129,74 +109,33 @@ export default function Home() {
       <section className="max-w-3xl mx-auto px-6 py-16 md:py-20 text-center">
         <SectionLabel>HAI Standard</SectionLabel>
         <div className="space-y-6">
-          <p className="text-base md:text-lg leading-relaxed" style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}>
-            Artificial intelligence is not the threat. Unaccountable artificial
-            intelligence is.
-          </p>
-          <p className="text-base md:text-lg leading-relaxed" style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}>
-            The HAI Standard is OMARO&apos;s grading standard and cultural contract for
-            how AI should be built, deployed, and governed. Eight pillars. A
-            scoring matrix. A public audit trail pinned to IPFS. Any product,
-            company, or system can submit. Scores are permanent. Accountability
-            is the point.
-          </p>
-          <p className="text-base md:text-lg leading-relaxed" style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}>
-            OMARO-supported builders meet the standard. Everyone else is on the
-            record.
-          </p>
-          <Link
-            href="/hai-standard"
-            className="inline-block text-sm underline hover:no-underline"
-            style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30", textUnderlineOffset: "4px" }}
-          >
-            Learn more &rarr;
+          <Body>
+            The risk in artificial intelligence sits in the parts nobody answers for. The HAI Standard names each one.
+          </Body>
+          <Body>
+            It is OMARO&apos;s standard for how AI should be built, deployed and governed: nine pillars, a scoring
+            matrix, and a public audit trail. Any product, company or system can be scored, and every score stays on the
+            record. IRIS uses the same nine pillars when it reads an AI product&apos;s code.
+          </Body>
+          <Link href="/hai-standard" className="inline-block text-sm underline hover:no-underline" style={{ fontFamily: MONO, color: ACCENT, textUnderlineOffset: "4px" }}>
+            The nine pillars &rarr;
           </Link>
         </div>
       </section>
 
       <Divider />
 
-      {/* ── Products ── */}
+      {/* ── OMARO ── */}
       <section className="max-w-3xl mx-auto px-6 py-16 md:py-20 text-center">
-        <SectionLabel>Products</SectionLabel>
-        <div className="grid gap-6">
-          <div className="border p-8" style={{ borderColor: "#1A1A1A" }}>
-            <h3 className="text-lg font-semibold mb-3" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--foreground)" }}>
-              OMEN — Corporate Accountability Ledger
-            </h3>
-            <p className="text-base leading-relaxed mb-5" style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}>
-              We keep the receipts. Court-grade documentation of verified
-              violations across thousands of companies. Permanent. Open.
-              Citable.
-            </p>
-            <a href="https://omen.xyz" target="_blank" rel="noopener noreferrer" className="text-sm underline hover:no-underline" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30", textUnderlineOffset: "4px" }}>
-              omen.xyz&nbsp;&rarr;
-            </a>
-          </div>
-          <div className="border p-8" style={{ borderColor: "#1A1A1A" }}>
-            <h3 className="text-lg font-semibold mb-3" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--foreground)" }}>
-              iGITit — Open Source Code Analysis
-            </h3>
-            <p className="text-base leading-relaxed mb-5" style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}>
-              Open source, open language. AI-generated plain-language analysis
-              of any public GitHub, GitLab, or Radicle repository. What the
-              code does. Who it serves. What it touches.
-            </p>
-            <a href="https://igitit.xyz" target="_blank" rel="noopener noreferrer" className="text-sm underline hover:no-underline" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30", textUnderlineOffset: "4px" }}>
-              igitit.xyz&nbsp;&rarr;
-            </a>
-          </div>
-          <div className="border p-8" style={{ borderColor: "#1A1A1A" }}>
-            <h3 className="text-lg font-semibold mb-3" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--foreground)" }}>
-              HAI Project — Honorable AI Standard
-            </h3>
-            <p className="text-base leading-relaxed mb-5" style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}>
-              AI is not the threat. Unaccountable AI is. The HAI Project is the public infrastructure that makes accountability structural — a nine-pillar standard, a public registry, and a certification system built for the people on the other side of every AI decision. Companies either meet the standard or they don&apos;t. Both are on the record.
-            </p>
-            <a href="https://haiproject.xyz" target="_blank" rel="noopener noreferrer" className="text-sm underline hover:no-underline" style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30", textUnderlineOffset: "4px" }}>
-              haiproject.xyz&nbsp;&rarr;
-            </a>
-          </div>
+        <SectionLabel>Who we are</SectionLabel>
+        <div className="space-y-6">
+          <Body>
+            OMARO is a public benefit corporation, in formation, building technology that returns authority to the
+            people who use it. We publish how IRIS is measured, including where it still falls short.
+          </Body>
+          <a href="https://omaro-home-site.vercel.app/methodology.html" className="inline-block text-sm underline hover:no-underline" style={{ fontFamily: MONO, color: ACCENT, textUnderlineOffset: "4px" }}>
+            How IRIS is measured &rarr;
+          </a>
         </div>
       </section>
     </>

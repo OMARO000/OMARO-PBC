@@ -52,7 +52,7 @@ export default function TransparencyPage() {
       <section className="mb-16">
         <h2
           className="text-xs font-semibold tracking-widest uppercase mb-8"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30" }}
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--accent)" }}
         >
           Annual Benefit Reports
         </h2>
@@ -69,14 +69,14 @@ export default function TransparencyPage() {
             </span>
             <span
               className="text-sm text-right"
-              style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30" }}
+              style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--accent)" }}
             >
               Publishing Q4 2026
             </span>
           </div>
           <p
             className="text-xs mt-4"
-            style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30" }}
+            style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--accent)" }}
           >
             All reports pinned to IPFS. Dual links: hosted + immutable.
           </p>
@@ -87,7 +87,7 @@ export default function TransparencyPage() {
       <section className="mb-16">
         <h2
           className="text-xs font-semibold tracking-widest uppercase mb-8"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30" }}
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--accent)" }}
         >
           Platform Metrics
         </h2>
@@ -96,7 +96,6 @@ export default function TransparencyPage() {
           <MetricRow label="Violations documented" value="Pending agent run" />
           <MetricRow label="IPFS-pinned blocks" value="Pending" />
           <MetricRow label="API clients" value="0" />
-          <MetricRow label="Data Co-op members" value="0" />
         </div>
       </section>
 
@@ -104,7 +103,7 @@ export default function TransparencyPage() {
       <section className="mb-16">
         <h2
           className="text-xs font-semibold tracking-widest uppercase mb-8"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30" }}
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--accent)" }}
         >
           Enforcement Actions
         </h2>
@@ -115,7 +114,7 @@ export default function TransparencyPage() {
         </div>
         <p
           className="text-xs mt-6"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30" }}
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--accent)" }}
         >
           All corrections are public. Nothing is silently removed.
         </p>
@@ -125,7 +124,7 @@ export default function TransparencyPage() {
       <section>
         <h2
           className="text-xs font-semibold tracking-widest uppercase mb-8"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30" }}
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--accent)" }}
         >
           HAI Standard Audit Framework
         </h2>
@@ -135,9 +134,8 @@ export default function TransparencyPage() {
             style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}
           >
             OMARO products are evaluated against the HAI Standard —
-            eight pillars covering integrity &amp; transparency, accountability chain,
-            safety &amp; robustness, equality &amp; non-discrimination, human override &amp; control,
-            use limits &amp; proportionality, data sovereignty &amp; empowerment, and independent audit.
+            nine pillars, listed in full on the HAI Standard page, from integrity &amp; transparency
+            and human override &amp; control to data ownership &amp; empowerment and human dignity across the full stack.
           </p>
           <p
             className="text-base leading-relaxed"

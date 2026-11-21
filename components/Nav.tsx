@@ -6,8 +6,7 @@ import { useState, useEffect } from "react";
 
 const navLinks = [
   { href: "/mission", label: "Mission" },
-  { href: "/products", label: "Products" },
-  { href: "/data-coop", label: "Data Co-op" },
+  { href: "/iris", label: "IRIS" },
   { href: "/hai-standard", label: "HAI Standard" },
   { href: "/transparency", label: "Transparency" },
   { href: "https://trentonwroberts.com", label: "Founder", external: true },
@@ -17,7 +16,7 @@ const navLinks = [
 ];
 
 const MONO = "var(--font-ibm-plex-mono)";
-const TERRA = "#9b1b30";
+const TERRA = "var(--accent)";
 
 export default function Nav() {
   const pathname = usePathname();
@@ -63,8 +62,11 @@ export default function Nav() {
         }}
         aria-label="Main navigation"
       >
-        <div style={{ display: "flex", alignItems: "center", paddingLeft: "24px", flexShrink: 0, width: "140px" }}>
-          <Link href="/" style={{ fontFamily: MONO, fontWeight: 500, fontSize: "40px", color: TERRA, textDecoration: "none", letterSpacing: "0.15em" }} className="uppercase hover:opacity-70 transition-opacity" aria-label="OMARO PBC home">OMARO</Link>
+        <div style={{ display: "flex", alignItems: "center", paddingLeft: "24px", flexShrink: 0, width: "220px" }}>
+          <Link href="/" style={{ display: "flex", alignItems: "center", gap: "10px", fontFamily: MONO, fontWeight: 500, fontSize: "28px", color: "var(--foreground)", textDecoration: "none", letterSpacing: "0.15em" }} className="uppercase hover:opacity-70 transition-opacity" aria-label="OMARO PBC home">
+            <svg viewBox="0 0 32 32" width="34" height="34" aria-hidden="true"><path d="M11 5H6v22h5M21 5h5v22h-5" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="square" /><circle cx="16" cy="16" r="4" fill="currentColor" /></svg>
+            OMARO
+          </Link>
         </div>
 
         <div className="hidden md:flex" style={{ flexDirection: "row", alignItems: "center", justifyContent: "center", flex: 1, gap: "28px", flexWrap: "nowrap", overflow: "hidden" }}>

@@ -2,11 +2,11 @@
 
 import { useState, useRef, useEffect } from "react";
 
-const GOLD = "#9b1b30";
-const BG = "#0f0e0c";
-const TEXT = "#ffffff";
-const MUTED = "#6a6a62";
-const BORDER = "#2a2a26";
+const GOLD = "var(--accent)";
+const BG = "var(--background)";
+const TEXT = "var(--foreground)";
+const MUTED = "var(--muted)";
+const BORDER = "var(--border)";
 
 const TTR_BODY = `Most books about trust tell you it was broken by someone else. This one doesn't.
 
@@ -304,7 +304,7 @@ export default function OriginsPage() {
             HAI Standard White Paper
           </h2>
           <p style={{ fontFamily: "var(--font-ibm-plex-sans)", fontSize: "16px", lineHeight: 1.8, color: MUTED, marginBottom: "20px" }}>
-            The HAI Standard is a framework for building artificial intelligence that restores trust, protects dignity, and returns sovereignty to the individual. It begins where the OMARO White Paper ends — with the question of what technology must look like once a person has decided they are worth more than what the extractive model offers. Nine structural pillars define the answer: from transparency and accountability chains to data sovereignty, independent audit, and human dignity across the full stack — including the people whose labor makes AI possible before a product ever ships. The HAI Standard is not a regulation. It is a cultural instrument — a precise articulation of what accountability looks like, available to anyone who wants to use it.
+            The HAI Standard is a framework for building artificial intelligence that restores trust, protects dignity, and returns authority to the individual. It begins where the OMARO White Paper ends — with the question of what technology must look like once a person has decided they are worth more than what the extractive model offers. Nine structural pillars define the answer: from transparency and accountability chains to data sovereignty, independent audit, and human dignity across the full stack — including the people whose labor makes AI possible before a product ever ships. The HAI Standard is not a regulation. It is a cultural instrument — a precise articulation of what accountability looks like, available to anyone who wants to use it.
           </p>
           <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
             <DownloadButton label="Download →" href="/OMARO_HAI_WP.pdf" download />

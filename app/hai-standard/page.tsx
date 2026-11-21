@@ -51,8 +51,8 @@ const pillars = [
   },
   {
     number: "VII",
-    name: "Data Sovereignty & Empowerment",
-    risk: "Users treated as a resource, not a party.",
+    name: "Data Ownership & Empowerment",
+    risk: "Users treated as a resource instead of a party.",
     requirements:
       "Users own their data. Export is functional, complete, and machine-readable. Deletion is real and verifiable, not archival. No data retained after deletion request beyond the legal minimum. Users may not be penalized for exercising data rights.",
   },
@@ -73,10 +73,10 @@ const pillars = [
 ];
 
 function Divider() {
-  return <div style={{ borderTop: "1px solid #4A4A4A" }} />;
+  return <div style={{ borderTop: "1px solid var(--border)" }} />;
 }
 
-export default function RescueAIPage() {
+export default function HaiStandardPage() {
   return (
     <div className="max-w-3xl mx-auto px-6 py-16 md:py-24 text-center">
 
@@ -85,7 +85,7 @@ export default function RescueAIPage() {
       <div className="mb-16">
         <p
           className="text-xs font-semibold tracking-widest uppercase mb-6"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30" }}
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--accent)" }}
         >
           HAI STANDARD
         </p>
@@ -93,9 +93,9 @@ export default function RescueAIPage() {
           className="text-3xl md:text-5xl font-semibold leading-tight"
           style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--foreground)" }}
         >
-          Artificial intelligence is not the threat.
+          The risk in artificial intelligence
           <br />
-          Unaccountable artificial intelligence is.
+          is the part nobody answers for.
         </h1>
       </div>
 
@@ -107,15 +107,15 @@ export default function RescueAIPage() {
           className="text-base md:text-lg leading-relaxed"
           style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}
         >
-          We are not in a race against AI. We are in a race against the version
-          of the future where humans forgot to keep a seat at the table.
+          The race that matters is against the version of the future where
+          humans forgot to keep a seat at the table.
         </p>
         <p
           className="text-base md:text-lg leading-relaxed"
           style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--foreground)" }}
         >
-          The argument for pure AI maximalism is serious and worth engaging
-          honestly. The competitive pressure is real. Nations and corporations
+          The argument for pure AI maximalism is serious and worth answering
+          on its merits. The competitive pressure is real. Nations and corporations
           that adopt AI faster will have advantages. This is not in dispute.
         </p>
         <p
@@ -163,7 +163,7 @@ export default function RescueAIPage() {
       <section className="py-16">
         <h2
           className="text-xs font-semibold tracking-widest uppercase mb-12"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30" }}
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--accent)" }}
         >
           The Nine Pillars
         </h2>
@@ -174,7 +174,7 @@ export default function RescueAIPage() {
               <div className="py-10 text-center">
                 <p
                   className="text-xs tabular-nums mb-2"
-                  style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30" }}
+                  style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--accent)" }}
                 >
                   Pillar {pillar.number}
                 </p>
@@ -189,13 +189,13 @@ export default function RescueAIPage() {
                   <div>
                     <p
                       className="text-xs font-semibold tracking-widest uppercase mb-2"
-                      style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30" }}
+                      style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--accent)" }}
                     >
                       Risk Addressed
                     </p>
                     <p
                       className="text-base leading-relaxed"
-                      style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "#4A4A4A" }}
+                      style={{ fontFamily: "var(--font-ibm-plex-sans)", color: "var(--muted)" }}
                     >
                       {pillar.risk}
                     </p>
@@ -203,7 +203,7 @@ export default function RescueAIPage() {
                   <div>
                     <p
                       className="text-xs font-semibold tracking-widest uppercase mb-2"
-                      style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30" }}
+                      style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--accent)" }}
                     >
                       Requirements
                     </p>
@@ -217,7 +217,7 @@ export default function RescueAIPage() {
                 </div>
               </div>
               {i < pillars.length - 1 && (
-                <div style={{ borderTop: "1px solid #4A4A4A" }} />
+                <div style={{ borderTop: "1px solid var(--border)" }} />
               )}
             </div>
           ))}
@@ -230,21 +230,21 @@ export default function RescueAIPage() {
       <section className="py-12 space-y-2">
         <p
           className="text-xs tracking-wide"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30" }}
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--accent)" }}
         >
           HAI Standard v1.1 · 2026 · Published by OMARO Origins
         </p>
         <p
           className="text-xs tracking-wide"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30" }}
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--accent)" }}
         >
           Full documentation, scoring methodology, and compliance resources at omaro.org/hai-standard
         </p>
         <p
           className="text-xs tracking-wide"
-          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30" }}
+          style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "var(--accent)" }}
         >
-          The HAI Project public registry — track organizational commitments and audit status — at haiproject.xyz
+          The HAI Project public registry, where organizations&apos; commitments and audit status will be tracked, is coming.
         </p>
       </section>
 
@@ -257,8 +257,8 @@ export default function RescueAIPage() {
             fontFamily: "var(--font-ibm-plex-mono)",
             fontSize: "13px",
             letterSpacing: "0.08em",
-            color: "#9b1b30",
-            border: "1px solid #9b1b30",
+            color: "var(--accent)",
+            border: "1px solid var(--accent)",
             padding: "10px 24px",
             textDecoration: "none",
           }}

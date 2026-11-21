@@ -3,7 +3,7 @@ import DonateClient from "./DonateClient";
 
 export const metadata: Metadata = {
   title: "Donate",
-  description: "Support the OMARO mission — no ads, no investors, no extraction.",
+  description: "Support OMARO's work on IRIS: no ads, and nothing about you sold.",
 };
 
 export default function DonatePage() {

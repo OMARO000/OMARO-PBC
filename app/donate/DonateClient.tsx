@@ -5,9 +5,9 @@ import { QRCodeCanvas } from "qrcode.react";
 
 const MONO = "var(--font-ibm-plex-mono)";
 const SANS = "var(--font-ibm-plex-sans)";
-const TERRA = "#9b1b30";
-const DARK = "#1A1A1A";
-const BG = "#ffffff";
+const TERRA = "var(--accent)";
+const DARK = "var(--foreground)";
+const BG = "var(--background)";
 
 const PRESET_AMOUNTS = [5, 25, 100];
 
@@ -132,8 +132,8 @@ export default function DonateClient() {
         className="text-base leading-relaxed mb-16 text-center"
         style={{ fontFamily: SANS, color: DARK }}
       >
-        OMARO is infrastructure, not a product. No ads. No investors. No
-        extraction. If this matters to you, this is how you keep it alive.
+        OMARO builds IRIS with no ads and nothing sold about the people who use
+        it. If this matters to you, this is how you keep the work going.
       </p>
 
       {/* ── Stripe ── */}
