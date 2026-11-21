@@ -33,7 +33,7 @@ export default function PressPage() {
             Press contact
           </p>
           <a
-            href="mailto:press@omaro.xyz"
+            href="mailto:press@omaro.org"
             className="block text-base underline hover:no-underline"
             style={{
               fontFamily: "var(--font-ibm-plex-mono)",
@@ -41,7 +41,7 @@ export default function PressPage() {
               textUnderlineOffset: "4px",
             }}
           >
-            press@omaro.xyz
+            press@omaro.org
           </a>
           <p
             className="text-sm"
@@ -69,11 +69,11 @@ export default function PressPage() {
           Logo files, brand guidelines, and approved descriptions available on
           request. Email{" "}
           <a
-            href="mailto:press@omaro.xyz"
+            href="mailto:press@omaro.org"
             className="underline hover:no-underline"
             style={{ color: "#9b1b30", textUnderlineOffset: "4px" }}
           >
-            press@omaro.xyz
+            press@omaro.org
           </a>
           .
         </p>

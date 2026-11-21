@@ -65,11 +65,11 @@ export default function ConnectPage() {
       <div className="mb-12">
         <EmailRow
           label="General Inquiries"
-          address="support@omaro.xyz"
+          address="support@omaro.org"
         />
         <EmailRow
           label="Legal"
-          address="legal@omaro.xyz"
+          address="legal@omaro.org"
         />
       </div>
 

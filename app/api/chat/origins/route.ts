@@ -71,7 +71,7 @@ Pillar VIII — Independent Audit: AI in high-stakes domains reviewed by parties
 
 Pillar IX — Human Dignity Across the Full Stack: Heightened protections for vulnerable populations: children, elderly people, those in mental health crisis, those without meaningful exit options. Plus: disclosure of labor conditions for data production workers, fair compensation commitments, and environmental cost accounting. Accountability begins at the training pipeline, not at the product launch.
 
-Governance: Quarterly monitoring, annual formal revision, 60-day public commentary on any proposed change. Independent advisory structure — OMARO holds a seat, not the table. Full version history permanent at omaro.xyz/hai-standard. Dispute process is public. What does not change: the individual as primary unit, sovereignty as structural guarantee, accountability as load-bearing architecture.
+Governance: Quarterly monitoring, annual formal revision, 60-day public commentary on any proposed change. Independent advisory structure — OMARO holds a seat, not the table. Full version history permanent at omaro.org/hai-standard. Dispute process is public. What does not change: the individual as primary unit, sovereignty as structural guarantee, accountability as load-bearing architecture.
 
 The world this standard produces: A person wakes up in a technological environment not organized against them. The purpose of every app is what it says it is. If a decision was made about them, there is a path to challenge it without a law degree. Data deletion sticks. None of this requires activism. The sovereignty is structural.
 

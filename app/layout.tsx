@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | OMARO",
   },
   description: "Infrastructure that keeps humans in every room that matters.",
-  metadataBase: new URL("https://omaro.xyz"),
+  metadataBase: new URL("https://omaro.org"),
 };
 
 export default function RootLayout({

@@ -238,7 +238,7 @@ export default function RescueAIPage() {
           className="text-xs tracking-wide"
           style={{ fontFamily: "var(--font-ibm-plex-mono)", color: "#9b1b30" }}
         >
-          Full documentation, scoring methodology, and compliance resources at omaro.xyz/hai-standard
+          Full documentation, scoring methodology, and compliance resources at omaro.org/hai-standard
         </p>
         <p
           className="text-xs tracking-wide"

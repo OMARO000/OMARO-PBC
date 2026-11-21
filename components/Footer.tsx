@@ -2,7 +2,7 @@
 
 export default function Footer() {
   const products = [
-    { label: "omaro.xyz", href: "https://omaro.xyz" },
+    { label: "omaro.org", href: "https://omaro.org" },
     { label: "omen.xyz", href: "https://omen.xyz" },
     { label: "igitit.xyz", href: "https://igitit.xyz" },
     { label: "haiproject.xyz", href: "https://haiproject.xyz" },
