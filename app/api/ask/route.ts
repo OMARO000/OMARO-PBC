@@ -31,7 +31,7 @@ function pick(question: string): Chunk[] {
 }
 
 async function store(cmd: (string | number)[]): Promise<any> {
-  const url = process.env.KV_REST_API_URL, token = process.env.KV_REST_API_TOKEN;
+  const url = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL, token = process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN;
   if (!url || !token) return null;
   try {
     const r = await fetch(url, { method: "POST", headers: { Authorization: `Bearer ${token}`, "content-type": "application/json" }, body: JSON.stringify(cmd) });
