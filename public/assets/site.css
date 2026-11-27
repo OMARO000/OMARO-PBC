@@ -51,14 +51,14 @@ img, svg { display: block; }
 .tabs a { white-space: nowrap; }
 .tabs a {
   display: block; padding: 8px 12px; border-radius: 8px;
-  font-size: 14px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; font-stretch: 112.5%;
+  font-size: 14px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; font-stretch: 105%;
   color: var(--muted); text-decoration: none; transition: color .2s var(--ease), background .2s var(--ease);
 }
 .tabs a:hover { color: var(--text); background: rgba(244, 242, 238, .05); }
 .tabs a[aria-current="page"] { color: var(--text); box-shadow: inset 0 -2px 0 var(--silver); border-radius: 8px 8px 0 0; }
 .menu-btn { display: none; margin-left: auto; background: none; border: 1px solid var(--line-2); color: var(--text); border-radius: 8px; padding: 8px 12px; font: inherit; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
-/* between the phone menu and full width, the seven tabs stay on one line */
-@media (min-width: 921px) and (max-width: 1160px) {
+/* between the phone menu and full width, the eight tabs stay on one line */
+@media (min-width: 921px) and (max-width: 1240px) {
   .head-in { gap: 20px; padding: 16px 20px; }
   .home-link .omaro-logo { height: 34px; }
   .tabs { gap: 0; }
@@ -142,6 +142,12 @@ p { margin: 0 0 18px; }
 /* ---------- home hero ---------- */
 .hero { padding: 96px 0 104px; }
 .hero .big-mark { width: clamp(150px, 22vw, 240px); height: auto; color: var(--text); margin: 0 0 44px; }
+/* wider screens: the words sit to the right of the mark */
+@media (min-width: 900px) {
+  .hero .wrap { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: clamp(48px, 6vw, 88px); align-items: center; }
+  .hero .big-mark { width: clamp(200px, 22vw, 280px); margin: 0; }
+  .hero .hero-text .lede { max-width: 620px; }
+}
 .hero h1 { margin-bottom: 26px; }
 
 /* ---------- IRIS page ---------- */
