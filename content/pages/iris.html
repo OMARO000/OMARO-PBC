@@ -1,0 +1,107 @@
+<!--{"title": "IRIS", "desc": "IRIS, the co-operating system for the internet. It reads the fine print, shows what's behind the page and knows the company's record, all on your device.", "nav": "iris", "out": "iris.html"}-->
+<section class="iris-hero">
+  <div class="wrap">
+    <svg class="iris-mark" viewBox="2.5 5.5 27 21" role="img" aria-label="IRIS"><path d="M11 7 4 16l7 9M21 7l7 9-7 9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle class="pupil" cx="16" cy="16" r="4" fill="currentColor"/></svg>
+    <h1>IRIS, the co-operating system for the internet.</h1>
+    <p class="lede">Every app and website you use runs on rules someone else wrote. A co-operating system works on your side of those rules. It sits between you and everything you use, reads what each one says and watches what it does.</p>
+    <div class="row" style="justify-content:center;margin-top:30px">
+      <a class="btn solid" href="#get">Get IRIS</a>
+      <button class="hint" type="button" data-ask="What does IRIS send off my device?" style="margin-top:0">Ask IRIS what leaves your device</button>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="grid two" style="gap:40px 56px">
+      <div class="layer">
+        <h3>IRIS reads the fine print for you.</h3>
+        <p class="muted">Privacy policies and terms become seven plain answers about your rights, each with the sentence it came from: selling your data, deleting it, training AI on it, going to court, how long it's kept, where it goes, and children's data.</p>
+      </div>
+      <div class="layer">
+        <h3>IRIS shows what's behind the page.</h3>
+        <p class="muted">The companies a site talks to, who is identifying your browser, who reads what you type, and what the site does that its policy never mentions.</p>
+      </div>
+      <div class="layer">
+        <h3>IRIS knows the company's record.</h3>
+        <p class="muted">Hindsight shows what governments and courts have decided about the company behind a site or app, with every source named.</p>
+      </div>
+      <div class="layer">
+        <h3>IRIS reads the code.</h3>
+        <p class="muted">On a public code repository, a plain reading of what the software does with people's data, scored on the HAI Standard's nine pillars.</p>
+      </div>
+    </div>
+    <p class="lede" style="margin-top:56px">Everything is read on your device. IRIS sends nothing about you.</p>
+    <p class="muted small">The one thing that can leave your device is an address you ask about: a code repository's or a website's, when you ask IRIS to read its code or look up a company. <a class="link" href="/methodology">How IRIS reads</a></p>
+  </div>
+</section>
+
+<section class="section get" id="get">
+  <div class="wrap">
+    <p class="eyebrow">Get IRIS</p>
+    <h2>Three places to run it.</h2>
+    <p class="muted read">IRIS Lite runs inside Firefox. IRIS Co-OS joins the operating system, on Linux now and GrapheneOS next. Both give the full readings. This section updates itself from IRIS's releases.</p>
+    <div class="grid three" style="margin-top:36px">
+
+      <article class="card" id="firefox" data-release="firefox">
+        <span class="tag">Firefox</span>
+        <h3>IRIS Lite</h3>
+        <p class="status-line">In testing.</p>
+        <p class="muted small">Works only inside Firefox: it reads the websites you visit there and sees nothing else on your device.</p>
+        <ol class="steps">
+          <li>Open IRIS on Firefox Add-ons.</li>
+          <li>Press <b>Add to Firefox</b>, then <b>Add</b>.</li>
+          <li>Pin the &lt;•&gt; to your toolbar and press it on any site.</li>
+        </ol>
+        <div class="foot"><a class="btn solid dl" aria-disabled="true" href="#firefox">Coming soon</a></div>
+      </article>
+
+      <article class="card" id="linux" data-release="linux">
+        <span class="tag">Linux</span>
+        <h3>IRIS Co-OS</h3>
+        <p class="status-line">In testing.</p>
+        <p class="muted small">For Ubuntu and Debian on 64-bit Intel and AMD machines (amd64). Download the .deb, then in Terminal:</p>
+        <div class="term"><span class="c"># install, then open IRIS</span>
+<span class="cmd">sudo apt install ./omaro-iris_<span data-version>0.1.51</span>_amd64.deb</span>
+<span class="cmd">omaro-iris &amp;</span></div>
+        <p class="muted small">Check the file first: <span class="mono">sha256sum omaro-iris_*_amd64.deb</span> should print the number shown under the button.</p>
+        <div class="foot">
+          <a class="btn solid dl" aria-disabled="true" href="#linux">Coming soon</a>
+          <p class="mono small muted sha" hidden style="margin:10px 0 0;word-break:break-all"></p>
+        </div>
+      </article>
+
+      <article class="card" id="grapheneos" data-release="grapheneos">
+        <span class="tag">GrapheneOS · recommended</span>
+        <h3>IRIS Co-OS for your phone</h3>
+        <p class="status-line">Comes after Linux.</p>
+        <p class="muted small">GrapheneOS is the most protected phone system IRIS runs on. IRIS will come through its own F-Droid repository and as a direct APK, never through Apple's or Google's stores.</p>
+        <ol class="steps">
+          <li>Add IRIS's repository in F-Droid or Obtainium, or download the APK.</li>
+          <li>Check the signing fingerprint with AppVerifier against the one on this page.</li>
+        </ol>
+        <p class="muted small">From a computer, with the phone connected:</p>
+        <div class="term"><span class="cmd">adb install iris-grapheneos.apk</span></div>
+        <div class="foot"><a class="btn solid dl" aria-disabled="true" href="#grapheneos">Coming soon</a></div>
+      </article>
+
+    </div>
+    <p class="muted small" style="margin-top:22px">Every release will carry OMARO's signature and its fingerprint, published here, on the release page and on OMARO's social accounts, so a fake would have to change all of them at once.</p>
+  </div>
+</section>
+
+<section class="section" id="seal">
+  <div class="wrap read">
+    <p class="eyebrow">Check a seal</p>
+    <h2>See that a reading is unchanged.</h2>
+    <p class="muted">IRIS seals every reading you copy or save with a SHA-256 fingerprint made on your device. Code reading records carry the same kind of seal. Open or paste a saved file here and this page recomputes the fingerprint in your browser. Nothing is uploaded.</p>
+    <div class="checker">
+      <input id="file" type="file" accept=".txt,.json,text/plain,application/json" aria-label="Open a saved IRIS file or a verification record">
+      <textarea id="text" placeholder="Or paste the saved file, or the record's JSON" aria-label="Saved file or record"></textarea>
+      <button id="check" class="btn" type="button">Check the seal</button>
+      <p id="result" role="status" aria-live="polite"></p>
+    </div>
+    <p class="small" style="margin-top:28px"><a class="link" href="/methodology">Methodology</a> · <a class="link" href="https://igitit-4bty.onrender.com/iris/code/docs">Code API</a></p>
+  </div>
+</section>
+<script src="/assets/seal.js" defer></script>

@@ -1,0 +1,45 @@
+# Keeps the site's figures and documents the same as IRIS's: releases and metrics (status/feed.json),
+# the company documents (docs/legal), the methodology (docs/methodology), and OMARO's Bluesky posts on Connect.
+# Needs one repository secret: IRIS_READ_TOKEN, a fine-grained GitHub token with read-only Contents on IRIS.
+# Runs daily and on demand; commits only when something changed, and Vercel redeploys from that commit.
+name: Site data
+on:
+  schedule:
+    - cron: "23 9 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: site-data
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: OMARO000/IRIS
+          token: ${{ secrets.IRIS_READ_TOKEN }}
+          path: iris
+          sparse-checkout: |
+            docs/legal
+            docs/methodology
+            status
+          persist-credentials: false
+      - run: pip install --quiet markdown weasyprint beautifulsoup4
+      - run: python3 tools/build-status.py iris/status/feed.json
+      - run: python3 tools/build-legal.py iris/docs/legal
+      - run: python3 tools/build-methodology.py iris/docs/methodology
+      - run: python3 tools/fetch-bluesky.py || echo "Bluesky unreachable today; posts unchanged."
+      - run: python3 tools/build-next.py
+      - name: Commit when something changed
+        run: |
+          rm -rf iris
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "OMARO site data"
+            git config user.email "OMARO000@users.noreply.github.com"
+            git add -A content app lib public
+            git commit -m "Site data: releases, figures, documents and posts the same as IRIS's"
+            git push
+          else
+            echo "Nothing changed."
+          fi

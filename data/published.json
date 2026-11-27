@@ -1,0 +1,10 @@
+{
+  "_about": "Figures OMARO has published, kept by hand when a new one is published. The accuracy figure is the latest held-out run in Methodology Part 1.",
+  "accuracy": "79.0%",
+  "accuracy_run": "Held-out run 3, published 2026-11-21",
+  "gold_sites": 98,
+  "grapheneos_note": "Comes after Linux.",
+  "firefox_url": null,
+  "linux_url": null,
+  "grapheneos_url": null
+}

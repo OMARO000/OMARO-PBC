@@ -1,78 +1,16 @@
+// Built by tools/build-next.py from content/pages/iris.html. Edit the source, then rerun the tool.
 import type { Metadata } from "next";
-import { LAYERS, CHANNELS } from "@/lib/iris";
+import Script from "next/script";
 
-export const metadata: Metadata = {
-  title: "IRIS",
-  description:
-    "IRIS, the co-operating system for the internet. It reads privacy policies, terms and code for you, on your own device, and tells you in plain words what each app and site does with your data.",
-};
+export const metadata: Metadata = {"title": "IRIS", "description": "IRIS, the co-operating system for the internet. It reads the fine print, shows what's behind the page and knows the company's record, all on your device."};
 
-const MONO = "var(--font-ibm-plex-mono)";
-const SANS = "var(--font-ibm-plex-sans)";
+const html = "<section class=\"iris-hero\">\n  <div class=\"wrap\">\n    <svg class=\"iris-mark\" viewBox=\"2.5 5.5 27 21\" role=\"img\" aria-label=\"IRIS\"><path d=\"M11 7 4 16l7 9M21 7l7 9-7 9\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle class=\"pupil\" cx=\"16\" cy=\"16\" r=\"4\" fill=\"currentColor\"/></svg>\n    <h1>IRIS, the co-operating system for the internet.</h1>\n    <p class=\"lede\">Every app and website you use runs on rules someone else wrote. A co-operating system works on your side of those rules. It sits between you and everything you use, reads what each one says and watches what it does.</p>\n    <div class=\"row\" style=\"justify-content:center;margin-top:30px\">\n      <a class=\"btn solid\" href=\"#get\">Get IRIS</a>\n      <button class=\"hint\" type=\"button\" data-ask=\"What does IRIS send off my device?\" style=\"margin-top:0\">Ask IRIS what leaves your device</button>\n    </div>\n  </div>\n</section>\n\n<section class=\"section\">\n  <div class=\"wrap\">\n    <div class=\"grid two\" style=\"gap:40px 56px\">\n      <div class=\"layer\">\n        <h3>IRIS reads the fine print for you.</h3>\n        <p class=\"muted\">Privacy policies and terms become seven plain answers about your rights, each with the sentence it came from: selling your data, deleting it, training AI on it, going to court, how long it's kept, where it goes, and children's data.</p>\n      </div>\n      <div class=\"layer\">\n        <h3>IRIS shows what's behind the page.</h3>\n        <p class=\"muted\">The companies a site talks to, who is identifying your browser, who reads what you type, and what the site does that its policy never mentions.</p>\n      </div>\n      <div class=\"layer\">\n        <h3>IRIS knows the company's record.</h3>\n        <p class=\"muted\">Hindsight shows what governments and courts have decided about the company behind a site or app, with every source named.</p>\n      </div>\n      <div class=\"layer\">\n        <h3>IRIS reads the code.</h3>\n        <p class=\"muted\">On a public code repository, a plain reading of what the software does with people's data, scored on the HAI Standard's nine pillars.</p>\n      </div>\n    </div>\n    <p class=\"lede\" style=\"margin-top:56px\">Everything is read on your device. IRIS sends nothing about you.</p>\n    <p class=\"muted small\">The one thing that can leave your device is an address you ask about: a code repository's or a website's, when you ask IRIS to read its code or look up a company. <a class=\"link\" href=\"/methodology\">How IRIS reads</a></p>\n  </div>\n</section>\n\n<section class=\"section get\" id=\"get\">\n  <div class=\"wrap\">\n    <p class=\"eyebrow\">Get IRIS</p>\n    <h2>Three places to run it.</h2>\n    <p class=\"muted read\">IRIS Lite runs inside Firefox. IRIS Co-OS joins the operating system, on Linux now and GrapheneOS next. Both give the full readings. This section updates itself from IRIS's releases.</p>\n    <div class=\"grid three\" style=\"margin-top:36px\">\n\n      <article class=\"card\" id=\"firefox\" data-release=\"firefox\">\n        <span class=\"tag\">Firefox</span>\n        <h3>IRIS Lite</h3>\n        <p class=\"status-line\">In testing.</p>\n        <p class=\"muted small\">Works only inside Firefox: it reads the websites you visit there and sees nothing else on your device.</p>\n        <ol class=\"steps\">\n          <li>Open IRIS on Firefox Add-ons.</li>\n          <li>Press <b>Add to Firefox</b>, then <b>Add</b>.</li>\n          <li>Pin the &lt;\u2022&gt; to your toolbar and press it on any site.</li>\n        </ol>\n        <div class=\"foot\"><a class=\"btn solid dl\" aria-disabled=\"true\" href=\"#firefox\">Coming soon</a></div>\n      </article>\n\n      <article class=\"card\" id=\"linux\" data-release=\"linux\">\n        <span class=\"tag\">Linux</span>\n        <h3>IRIS Co-OS</h3>\n        <p class=\"status-line\">In testing.</p>\n        <p class=\"muted small\">For Ubuntu and Debian on 64-bit Intel and AMD machines (amd64). Download the .deb, then in Terminal:</p>\n        <div class=\"term\"><span class=\"c\"># install, then open IRIS</span>\n<span class=\"cmd\">sudo apt install ./omaro-iris_<span data-version>0.1.51</span>_amd64.deb</span>\n<span class=\"cmd\">omaro-iris &amp;</span></div>\n        <p class=\"muted small\">Check the file first: <span class=\"mono\">sha256sum omaro-iris_*_amd64.deb</span> should print the number shown under the button.</p>\n        <div class=\"foot\">\n          <a class=\"btn solid dl\" aria-disabled=\"true\" href=\"#linux\">Coming soon</a>\n          <p class=\"mono small muted sha\" hidden style=\"margin:10px 0 0;word-break:break-all\"></p>\n        </div>\n      </article>\n\n      <article class=\"card\" id=\"grapheneos\" data-release=\"grapheneos\">\n        <span class=\"tag\">GrapheneOS \u00b7 recommended</span>\n        <h3>IRIS Co-OS for your phone</h3>\n        <p class=\"status-line\">Comes after Linux.</p>\n        <p class=\"muted small\">GrapheneOS is the most protected phone system IRIS runs on. IRIS will come through its own F-Droid repository and as a direct APK, never through Apple's or Google's stores.</p>\n        <ol class=\"steps\">\n          <li>Add IRIS's repository in F-Droid or Obtainium, or download the APK.</li>\n          <li>Check the signing fingerprint with AppVerifier against the one on this page.</li>\n        </ol>\n        <p class=\"muted small\">From a computer, with the phone connected:</p>\n        <div class=\"term\"><span class=\"cmd\">adb install iris-grapheneos.apk</span></div>\n        <div class=\"foot\"><a class=\"btn solid dl\" aria-disabled=\"true\" href=\"#grapheneos\">Coming soon</a></div>\n      </article>\n\n    </div>\n    <p class=\"muted small\" style=\"margin-top:22px\">Every release will carry OMARO's signature and its fingerprint, published here, on the release page and on OMARO's social accounts, so a fake would have to change all of them at once.</p>\n  </div>\n</section>\n\n<section class=\"section\" id=\"seal\">\n  <div class=\"wrap read\">\n    <p class=\"eyebrow\">Check a seal</p>\n    <h2>See that a reading is unchanged.</h2>\n    <p class=\"muted\">IRIS seals every reading you copy or save with a SHA-256 fingerprint made on your device. Code reading records carry the same kind of seal. Open or paste a saved file here and this page recomputes the fingerprint in your browser. Nothing is uploaded.</p>\n    <div class=\"checker\">\n      <input id=\"file\" type=\"file\" accept=\".txt,.json,text/plain,application/json\" aria-label=\"Open a saved IRIS file or a verification record\">\n      <textarea id=\"text\" placeholder=\"Or paste the saved file, or the record's JSON\" aria-label=\"Saved file or record\"></textarea>\n      <button id=\"check\" class=\"btn\" type=\"button\">Check the seal</button>\n      <p id=\"result\" role=\"status\" aria-live=\"polite\"></p>\n    </div>\n    <p class=\"small\" style=\"margin-top:28px\"><a class=\"link\" href=\"/methodology\">Methodology</a> \u00b7 <a class=\"link\" href=\"https://igitit-4bty.onrender.com/iris/code/docs\">Code API</a></p>\n  </div>\n</section>\n";
 
-function H2({ children }: { children: React.ReactNode }) {
-  return <h2 style={{ fontFamily: MONO, fontSize: "20px", fontWeight: 500, color: "var(--foreground)", margin: "56px 0 20px" }}>{children}</h2>;
-}
-function P({ children }: { children: React.ReactNode }) {
-  return <p style={{ fontFamily: SANS, fontSize: "16px", lineHeight: 1.75, color: "var(--foreground)", marginBottom: "16px" }}>{children}</p>;
-}
-
-export default function IrisPage() {
+export default function Page() {
   return (
-    <div className="max-w-3xl mx-auto px-6 py-16 md:py-24">
-      <svg viewBox="0 0 32 32" width="56" height="56" aria-hidden="true" style={{ marginBottom: "24px" }}>
-        <path d="M11 7 4 16l7 9M21 7l7 9-7 9" fill="none" stroke="#3478E0" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-        <circle cx="16" cy="16" r="4" fill="#3478E0" />
-      </svg>
-      <h1 style={{ fontFamily: MONO, fontSize: "2.5rem", fontWeight: 600, color: "var(--foreground)", marginBottom: "32px" }}>
-        IRIS, the co-operating system for the internet.
-      </h1>
-      <P>
-        Every app and website comes with promises you never read and behavior you never see. IRIS reads the privacy
-        policy and terms for you, watches which companies each page and app talks to, and reads public code when there
-        is some. Then it tells you, in plain words, what you agreed to and what is really happening.
-      </P>
-      <P>
-        Every answer shows the sentence it came from. When a policy says nothing, IRIS says so instead of guessing.
-      </P>
-
-      <H2>What IRIS reads</H2>
-      <div className="grid gap-4 md:grid-cols-2">
-        {LAYERS.map((l) => (
-          <div key={l.name} className="border p-6" style={{ borderColor: "var(--border)" }}>
-            <h3 style={{ fontFamily: MONO, fontSize: "16px", fontWeight: 600, color: "var(--foreground)", marginBottom: "8px" }}>
-              {l.name}{l.status ? <span style={{ color: "var(--muted)", fontWeight: 400 }}> · {l.status}</span> : null}
-            </h3>
-            <p style={{ fontFamily: SANS, fontSize: "14px", lineHeight: 1.7, color: "var(--foreground)" }}>{l.what}</p>
-          </div>
-        ))}
-      </div>
-
-      <H2>What stays with you</H2>
-      <P>
-        IRIS reads on your own device. When it fetches a maker&apos;s policy, only that page&apos;s address goes, to the
-        maker&apos;s own website. Read the code sends only the repository&apos;s address to OMARO&apos;s code server.
-        Each part has its own switch, and a part that&apos;s off reads nothing and sends nothing.
-      </P>
-      <P>
-        Seeing is free. Acting for you, such as opt-outs and deletion requests with proof that they were sent, will be
-        part of a paid plan.
-      </P>
-
-      <H2>Where it runs</H2>
-      <ul style={{ fontFamily: SANS, fontSize: "16px", lineHeight: 1.9, color: "var(--foreground)", paddingLeft: "20px", listStyle: "disc" }}>
-        {CHANNELS.map((c) => <li key={c.name}>{c.name}: {c.status}</li>)}
-      </ul>
-      <P>IRIS stays out of the Apple and Google app stores.</P>
-
-      <H2>How it&apos;s measured</H2>
-      <P>
-        OMARO checks IRIS against policies labelled by hand and publishes the results, including the runs that
-        didn&apos;t pass.
-      </P>
-      <a href="https://omaro-home-site.vercel.app/methodology.html" style={{ fontFamily: MONO, fontSize: "14px", color: "var(--accent)", textDecoration: "underline", textUnderlineOffset: "4px" }}>
-        The IRIS methodology &rarr;
-      </a>
-    </div>
+    <>
+      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <Script src="/assets/seal.js" strategy="afterInteractive" />
+    </>
   );
 }
