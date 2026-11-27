@@ -129,14 +129,6 @@ p { margin: 0 0 18px; }
 .grid.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 @media (max-width: 900px) { .grid.three, .grid.four { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 640px) { .grid.two, .grid.three, .grid.four { grid-template-columns: 1fr; } .section { padding: 64px 0; } body { font-size: 17px; } }
-/* phone width: shorter heroes and a smaller mark */
-@media (max-width: 640px) {
-  .head-in { padding: 14px 18px; }
-  .hero { padding: 48px 0 64px; }
-  .hero .big-mark { width: 104px; margin-bottom: 32px; }
-  .iris-hero { padding: 36px 0 48px; }
-  .iris-hero .iris-mark { width: min(260px, 64vw); margin-bottom: 28px; }
-}
 
 .card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 26px; display: flex; flex-direction: column; }
 .card h3 { margin-bottom: 10px; }
@@ -256,3 +248,12 @@ details .prose { margin-top: 18px; }
 .post .who { font-size: 14px; color: var(--stone); margin-bottom: 8px; }
 .post p { margin: 0 0 12px; white-space: pre-wrap; }
 .paper .tag { margin-bottom: 12px; }
+
+/* phone width: shorter heroes and a smaller mark */
+@media (max-width: 640px) {
+  .head-in { padding: 14px 18px; }
+  .hero { padding: 48px 0 64px; }
+  .hero .big-mark { width: 104px; margin-bottom: 32px; }
+  .iris-hero { padding: 36px 0 48px; }
+  .iris-hero .iris-mark { width: min(260px, 64vw); margin-bottom: 28px; }
+}
