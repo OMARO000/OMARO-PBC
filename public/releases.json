@@ -1,0 +1,28 @@
+{
+ "format": "omaro-releases/1",
+ "written": "2026-11-27T17:27Z",
+ "channels": [
+  {
+   "id": "firefox",
+   "name": "IRIS Lite for Firefox",
+   "version": "0.9.40",
+   "date": "2026-11-26",
+   "public": false
+  },
+  {
+   "id": "linux",
+   "name": "IRIS Co-OS for Linux",
+   "version": "0.1.51",
+   "date": "2026-11-26",
+   "public": false
+  },
+  {
+   "id": "grapheneos",
+   "name": "IRIS Co-OS for GrapheneOS",
+   "version": null,
+   "date": null,
+   "public": false,
+   "note": "Comes after Linux."
+  }
+ ]
+}

@@ -1,139 +1,15 @@
+// Built by tools/build-next.py from content/pages/index.html. Edit the source, then rerun the tool.
 import type { Metadata } from "next";
-import Link from "next/link";
-import { LAYERS, CHANNELS } from "@/lib/iris";
 
-export const metadata: Metadata = {
-  title: "OMARO",
-  description:
-    "Agency By Design. OMARO PBC builds IRIS, the co-operating system for the internet: it reads what you agree to, sees what each app and page does, and tells you in plain words.",
-};
 
-const MONO = "var(--font-ibm-plex-mono)";
-const SANS = "var(--font-ibm-plex-sans)";
-const ACCENT = "var(--accent)";
+export const metadata: Metadata = {"title": {"absolute": "OMARO \u00b7 Agency, Returned."}, "description": "OMARO PBC builds technology that returns authority to the people who use it. Its first product is IRIS, the co-operating system for the internet."};
 
-function Divider() {
-  return <div style={{ borderTop: "1px solid var(--border)" }} />;
-}
+const html = "<section class=\"hero\">\n  <div class=\"wrap\">\n    <svg class=\"big-mark omaro-logo\" viewBox=\"4.5 3.5 23 25\" aria-hidden=\"true\" focusable=\"false\"><path class=\"brk brk-l\" d=\"M11 5H6v22h5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"square\"/><path class=\"brk brk-r\" d=\"M21 5h5v22h-5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"square\"/><circle class=\"dot\" cx=\"16\" cy=\"16\" r=\"4\" fill=\"currentColor\"/></svg>\n    <p class=\"eyebrow\">OMARO Public Benefit Corporation</p>\n    <h1>Agency, Returned.</h1>\n    <p class=\"lede\">OMARO builds technology that puts authority back with the people who use it. The first thing we've built is IRIS, the co-operating system for the internet.</p>\n    <div class=\"row\" style=\"margin-top:34px\">\n      <a class=\"btn solid\" href=\"/iris#get\">Get IRIS</a>\n      <a class=\"btn\" href=\"/mission\">Our mission</a>\n    </div>\n  </div>\n</section>\n\n<section class=\"section\">\n  <div class=\"wrap\">\n    <p class=\"eyebrow\">What OMARO is</p>\n    <div class=\"grid two\">\n      <div>\n        <h2>A company bound to the people it serves.</h2>\n      </div>\n      <div>\n        <p>OMARO is a public benefit corporation. Its charter names a public purpose beside profit: returning to people the authority that technology has taken over their attention, their data and their choices.</p>\n        <p class=\"muted\">The dot in our mark is the person. The brackets are the frame technology builds around them, left open so there is room to act. Keeping that frame open is the work.</p>\n        <button class=\"hint\" type=\"button\" data-ask=\"Why is OMARO a public benefit corporation?\">Ask IRIS why OMARO is a public benefit corporation</button>\n      </div>\n    </div>\n  </div>\n</section>\n\n<section class=\"section\">\n  <div class=\"wrap\">\n    <p class=\"eyebrow\">IRIS</p>\n    <h2>IRIS, the co-operating system for the internet.</h2>\n    <p class=\"lede\">IRIS reads the fine print, shows what each site and app does behind the page, and knows the company's record. Everything is read on your device.</p>\n    <div class=\"grid three\" style=\"margin-top:40px\">\n      <a class=\"card\" href=\"/iris#firefox\" style=\"text-decoration:none\" data-release=\"firefox\">\n        <span class=\"tag\">Firefox</span>\n        <h3>IRIS Lite</h3>\n        <p class=\"muted\">Inside Firefox. Reads the sites you visit there and sees nothing else on your device.</p>\n        <p class=\"status-line small foot\">In testing.</p>\n      </a>\n      <a class=\"card\" href=\"/iris#linux\" style=\"text-decoration:none\" data-release=\"linux\">\n        <span class=\"tag\">Linux</span>\n        <h3>IRIS Co-OS</h3>\n        <p class=\"muted\">Joined to the operating system: your apps, your device's settings and your connection, beside every reading.</p>\n        <p class=\"status-line small foot\">In testing.</p>\n      </a>\n      <a class=\"card\" href=\"/iris#grapheneos\" style=\"text-decoration:none\" data-release=\"grapheneos\">\n        <span class=\"tag\">GrapheneOS</span>\n        <h3>IRIS Co-OS for your phone</h3>\n        <p class=\"muted\">The most protected phone system IRIS runs on, and the one we recommend.</p>\n        <p class=\"status-line small foot\">Comes after Linux.</p>\n      </a>\n    </div>\n    <div class=\"row\" style=\"margin-top:28px\">\n      <a class=\"link arrow\" href=\"/iris\">See what IRIS does</a>\n      <button class=\"hint\" type=\"button\" data-ask=\"What is a co-operating system?\">Ask IRIS what a co-operating system is</button>\n    </div>\n  </div>\n</section>\n\n<section class=\"section\">\n  <div class=\"wrap grid two\">\n    <div>\n      <p class=\"eyebrow\">HAI Standard</p>\n      <h2>Nine pillars for AI that answers to people.</h2>\n    </div>\n    <div>\n      <p>The HAI Standard is OMARO's measure of how AI should be built, deployed and governed: who is accountable, who owns the data, who can check the claims. IRIS uses it to read the AI in the products you use.</p>\n      <p><a class=\"link arrow\" href=\"/hai-standard\">Read the HAI Standard</a></p>\n    </div>\n  </div>\n</section>\n\n<section class=\"section\">\n  <div class=\"wrap\">\n    <div class=\"grid two\">\n      <div>\n        <p class=\"eyebrow\">Transparency</p>\n        <h2>Our numbers, in public.</h2>\n      </div>\n      <div>\n        <p>How accurate IRIS is, how it reads, what it releases and what OMARO's own policies say, all published and kept current.</p>\n        <p><a class=\"link arrow\" href=\"/transparency\">See the figures and documents</a></p>\n      </div>\n    </div>\n    <div class=\"grid four\" style=\"margin-top:32px\">\n      <div class=\"metric\"><div class=\"n sm\" data-metric=\"latest_build\">\u00b7</div><div class=\"l\">latest test builds, Linux \u00b7 Firefox</div></div>\n      <div class=\"metric\"><div class=\"n\" data-metric=\"tests\">\u00b7</div><div class=\"l\">automated checks passing in the latest build</div></div>\n      <div class=\"metric\"><div class=\"n\" data-metric=\"accuracy\">\u00b7</div><div class=\"l\">accuracy in the last published held-out test</div></div>\n      <div class=\"metric\"><div class=\"n\" data-metric=\"gold_sites\">\u00b7</div><div class=\"l\">sites in the gold set used to measure it</div></div>\n    </div>\n    <p class=\"asof\" data-asof></p>\n  </div>\n</section>\n\n<section class=\"section\">\n  <div class=\"wrap grid two\">\n    <div>\n      <p class=\"eyebrow\">Donate</p>\n      <h2>Keep it independent.</h2>\n    </div>\n    <div>\n      <p>OMARO takes no advertising and sells no data. Donations pay for servers, testing and the outside security audit IRIS gets before anyone pays for it.</p>\n      <p><a class=\"btn\" href=\"/donate\">Donate</a></p>\n    </div>\n  </div>\n</section>";
 
-function SectionLabel({ children }: { children: React.ReactNode }) {
-  return (
-    <p className="text-xs font-semibold tracking-widest uppercase mb-8" style={{ fontFamily: MONO, color: ACCENT }}>
-      {children}
-    </p>
-  );
-}
-
-function Body({ children }: { children: React.ReactNode }) {
-  return (
-    <p className="text-base md:text-lg leading-relaxed" style={{ fontFamily: SANS, color: "var(--foreground)" }}>
-      {children}
-    </p>
-  );
-}
-
-export default function Home() {
+export default function Page() {
   return (
     <>
-      {/* ── Hero ── */}
-      <section className="max-w-6xl mx-auto px-6 pt-16 text-center" style={{ paddingBottom: "48px" }}>
-        <h1
-          className="text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight mb-8 mx-auto"
-          style={{ fontFamily: MONO, color: "var(--foreground)" }}
-        >
-          Agency By Design.
-          <span style={{
-            display: "inline-block",
-            width: "3px",
-            height: "1em",
-            background: ACCENT,
-            marginLeft: "4px",
-            verticalAlign: "text-bottom",
-            animation: "blink 1.2s step-end infinite"
-          }}></span>
-        </h1>
-        <p className="text-lg md:text-xl mx-auto max-w-2xl" style={{ fontFamily: SANS, color: "var(--foreground)" }}>
-          IRIS, the co-operating system for the internet. It reads what you agree to, sees what each app and page
-          does, and tells you in plain words.
-        </p>
-        <div className="mt-6 flex justify-center gap-6 flex-wrap">
-          <Link href="/iris" style={{ fontFamily: MONO, fontSize: "0.75rem", letterSpacing: "0.1em", textTransform: "uppercase", color: ACCENT, textDecoration: "underline", textUnderlineOffset: "4px" }}>
-            Meet IRIS &rarr;
-          </Link>
-          <a href="/donate" style={{ fontFamily: MONO, fontSize: "0.75rem", letterSpacing: "0.1em", textTransform: "uppercase", color: ACCENT, textDecoration: "underline", textUnderlineOffset: "4px" }}>
-            Support the work &rarr;
-          </a>
-        </div>
-      </section>
-
-      <Divider />
-
-      {/* ── IRIS ── */}
-      <section className="max-w-3xl mx-auto px-6 py-16 md:py-20 text-center">
-        <SectionLabel>What we build</SectionLabel>
-        <div className="space-y-6">
-          <Body>
-            You agreed to policies nobody has time to read. Apps reach for your files, your screen and your typing, and
-            nothing tells you. IRIS reads all of it for you, on your own device, and answers in plain language.
-          </Body>
-          <Body>
-            Every answer shows the sentence it came from, so you can check it. No ads, no data brokers, and nothing about
-            you is sold.
-          </Body>
-        </div>
-        <div className="grid gap-4 mt-10 text-left md:grid-cols-2">
-          {LAYERS.map((l) => (
-            <div key={l.name} className="border p-6" style={{ borderColor: "var(--border)" }}>
-              <h3 className="text-base font-semibold mb-2" style={{ fontFamily: MONO, color: "var(--foreground)" }}>
-                {l.name}{l.status ? <span style={{ color: "var(--muted)", fontWeight: 400 }}> · {l.status}</span> : null}
-              </h3>
-              <p className="text-sm leading-relaxed" style={{ fontFamily: SANS, color: "var(--foreground)" }}>{l.what}</p>
-            </div>
-          ))}
-        </div>
-        <p className="text-sm mt-8" style={{ fontFamily: MONO, color: "var(--muted)" }}>
-          {CHANNELS.map((c) => `${c.name}: ${c.status}`).join(" · ")}
-        </p>
-        <Link href="/iris" className="inline-block text-sm underline hover:no-underline mt-6" style={{ fontFamily: MONO, color: ACCENT, textUnderlineOffset: "4px" }}>
-          More about IRIS &rarr;
-        </Link>
-      </section>
-
-      <Divider />
-
-      {/* ── HAI Standard ── */}
-      <section className="max-w-3xl mx-auto px-6 py-16 md:py-20 text-center">
-        <SectionLabel>HAI Standard</SectionLabel>
-        <div className="space-y-6">
-          <Body>
-            The risk in artificial intelligence sits in the parts nobody answers for. The HAI Standard names each one.
-          </Body>
-          <Body>
-            It is OMARO&apos;s standard for how AI should be built, deployed and governed: nine pillars, a scoring
-            matrix, and a public audit trail. Any product, company or system can be scored, and every score stays on the
-            record. IRIS uses the same nine pillars when it reads an AI product&apos;s code.
-          </Body>
-          <Link href="/hai-standard" className="inline-block text-sm underline hover:no-underline" style={{ fontFamily: MONO, color: ACCENT, textUnderlineOffset: "4px" }}>
-            The nine pillars &rarr;
-          </Link>
-        </div>
-      </section>
-
-      <Divider />
-
-      {/* ── OMARO ── */}
-      <section className="max-w-3xl mx-auto px-6 py-16 md:py-20 text-center">
-        <SectionLabel>Who we are</SectionLabel>
-        <div className="space-y-6">
-          <Body>
-            OMARO is a public benefit corporation, in formation, building technology that returns authority to the
-            people who use it. We publish how IRIS is measured, including where it still falls short.
-          </Body>
-          <a href="https://omaro-home-site.vercel.app/methodology.html" className="inline-block text-sm underline hover:no-underline" style={{ fontFamily: MONO, color: ACCENT, textUnderlineOffset: "4px" }}>
-            How IRIS is measured &rarr;
-          </a>
-        </div>
-      </section>
+      <div dangerouslySetInnerHTML={{ __html: html }} />
     </>
   );
 }
