@@ -1,18 +1,18 @@
 {
  "format": "omaro-releases/1",
- "written": "2026-11-27T17:27Z",
+ "written": "2026-11-27T18:29Z",
  "channels": [
   {
    "id": "firefox",
    "name": "IRIS Lite for Firefox",
-   "version": "0.9.40",
+   "version": "0.9.41",
    "date": "2026-11-26",
    "public": false
   },
   {
    "id": "linux",
    "name": "IRIS Co-OS for Linux",
-   "version": "0.1.51",
+   "version": "0.1.52",
    "date": "2026-11-26",
    "public": false
   },
