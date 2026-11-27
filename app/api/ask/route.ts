@@ -47,7 +47,18 @@ function json(status: number, body: object) {
 export async function GET() {
   const set = !!((process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL) && (process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN));
   const kept = set ? await store(["ZCARD", "site:unanswered"]) : null;
-  return json(200, { model: !!process.env.OMARO_MODEL_KEY, store: set ? (typeof kept === "number" ? "connected" : "unreachable") : "not set", unanswered: typeof kept === "number" ? kept : null });
+  let why: string | null = null;
+  if (set && typeof kept !== "number") {
+    // Why the store didn't answer: the URL's scheme and Upstash's own error text, never the address or token.
+    const url = String(process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL).trim();
+    const scheme = (url.match(/^[a-z]+:/i) || ["none"])[0];
+    try {
+      const r = await fetch(url, { method: "POST", headers: { Authorization: `Bearer ${String(process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN).trim()}`, "content-type": "application/json" }, body: JSON.stringify(["PING"]) });
+      const t = await r.text();
+      why = `${scheme} HTTP ${r.status}: ${t.slice(0, 160)}`;
+    } catch (e: any) { why = `${scheme} ${String(e && (e.cause?.code || e.message) || e).slice(0, 120)}`; }
+  }
+  return json(200, { model: !!process.env.OMARO_MODEL_KEY, store: set ? (typeof kept === "number" ? "connected" : "unreachable") : "not set", unanswered: typeof kept === "number" ? kept : null, ...(why ? { why } : {}) });
 }
 
 export async function POST(req: Request) {
