@@ -68,8 +68,10 @@ img, svg { display: block; }
   .head-in { flex-wrap: wrap; gap: 12px; }
   .home-link .omaro-logo { height: 32px; }
   .menu-btn { display: block; }
+  .head-in { row-gap: 0; }
+  .head-in nav { flex-basis: 100%; }
   .tabs { display: none; width: 100%; flex-direction: column; gap: 0; }
-  .tabs.open { display: flex; }
+  .tabs.open { display: flex; margin-top: 12px; }
   .tabs a { padding: 12px 4px; border-radius: 0; border-top: 1px solid var(--line); }
   .tabs a[aria-current="page"] { box-shadow: inset 3px 0 0 var(--silver); padding-left: 12px; }
 }
