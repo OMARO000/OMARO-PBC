@@ -43,6 +43,13 @@ function json(status: number, body: object) {
   return new Response(JSON.stringify(body), { status, headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" } });
 }
 
+// A health check with no question text: is the store connected, and how many unanswered questions it holds (last 30 days).
+export async function GET() {
+  const set = !!((process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL) && (process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN));
+  const kept = set ? await store(["ZCARD", "site:unanswered"]) : null;
+  return json(200, { model: !!process.env.OMARO_MODEL_KEY, store: set ? (typeof kept === "number" ? "connected" : "unreachable") : "not set", unanswered: typeof kept === "number" ? kept : null });
+}
+
 export async function POST(req: Request) {
   const key = process.env.OMARO_MODEL_KEY;
   if (!key) return json(503, { error: "IRIS on this site isn't switched on yet. Write to support@omaro.org." });
@@ -67,7 +74,7 @@ export async function POST(req: Request) {
 
   const day = new Date().toISOString().slice(0, 10);
   const count = await store(["INCR", `site:asks:${day}`]);
-  if (count === 1) store(["EXPIRE", `site:asks:${day}`, 172800]);
+  if (count === 1) await store(["EXPIRE", `site:asks:${day}`, 172800]);
   if (count && count > DAILY_CAP) return json(429, { error: "IRIS has answered as many questions as it can today. Try tomorrow, or write to support@omaro.org." });
 
   const sources = pick(clean.filter((m: any) => m.role === "user").map((m: any) => m.content).join(" "));
@@ -100,7 +107,7 @@ export async function POST(req: Request) {
   if (!cited.length) {
     const cutoff = now - KEEP_DAYS * 86400000;
     await store(["ZADD", "site:unanswered", now, JSON.stringify({ q: last.content, t: new Date(now).toISOString() })]);
-    store(["ZREMRANGEBYSCORE", "site:unanswered", 0, cutoff]);
+    await store(["ZREMRANGEBYSCORE", "site:unanswered", 0, cutoff]);
   }
   return json(200, { answer: text, sources: cited });
 }
