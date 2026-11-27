@@ -251,7 +251,7 @@ const KB: Chunk[] = [
 "page": "Founder",
 "title": "Founder: Trenton W. Roberts",
 "url": "/founder",
-"text": "Trenton W. Roberts founded OMARO PBC on one conviction: people should hold the authority over their own lives online, and the tools to use it should be plain enough for anyone. He is a product director in the full sense. He decides what IRIS does, what it refuses to do and how every sentence in it reads, then tests each build himself until it holds up. He holds the work to rules that are easy to state and hard to keep: say plainly how it's built, never claim more than the evidence shows, never sell the people it serves. He builds with AI openly, because to him the question that matters is whose values shape the work. IRIS is what those values look like when they're built. Contact OMARO"
+"text": "Trenton W. Roberts founded OMARO PBC on one conviction: people should hold the authority over their own lives online, and the tools to use it should be plain enough for anyone. He is a product director in the full sense. He decides what IRIS does, what it refuses to do and how every sentence in it reads, then tests each build himself until it holds up. He holds the work to rules that are easy to state and hard to keep: say plainly how it's built, never claim more than the evidence shows, never sell the people it serves. He builds with AI openly, because to him the question that matters is whose values shape the work. IRIS is what those values look like when they're built. X Bluesky Farcaster Contact OMARO"
 },
 {
 "page": "Methodology",
