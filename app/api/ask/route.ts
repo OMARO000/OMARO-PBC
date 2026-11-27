@@ -30,9 +30,20 @@ function pick(question: string): Chunk[] {
   }).sort((a, b) => b.score - a.score).slice(0, 8).map((x) => KB[x.i]);
 }
 
-async function store(cmd: (string | number)[]): Promise<any> {
-  const url = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL, token = process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN;
+// The store's address and token as pasted into Vercel, tidied: quotes and spaces dropped, https:// added when missing.
+function storeConf(): { url: string; token: string } | null {
+  const tidy = (v?: string) => String(v || "").trim().replace(/^["']|["']$/g, "").trim();
+  let url = tidy(process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL);
+  const token = tidy(process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN);
   if (!url || !token) return null;
+  if (!/^https?:\/\//i.test(url)) url = "https://" + url.replace(/^[a-z]+:\/\//i, "");
+  return { url: url.replace(/\/+$/, ""), token };
+}
+
+async function store(cmd: (string | number)[]): Promise<any> {
+  const conf = storeConf();
+  if (!conf) return null;
+  const { url, token } = conf;
   try {
     const r = await fetch(url, { method: "POST", headers: { Authorization: `Bearer ${token}`, "content-type": "application/json" }, body: JSON.stringify(cmd) });
     return (await r.json()).result;
@@ -45,20 +56,17 @@ function json(status: number, body: object) {
 
 // A health check with no question text: is the store connected, and how many unanswered questions it holds (last 30 days).
 export async function GET() {
-  const set = !!((process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL) && (process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN));
-  const kept = set ? await store(["ZCARD", "site:unanswered"]) : null;
+  const conf = storeConf();
+  const kept = conf ? await store(["ZCARD", "site:unanswered"]) : null;
   let why: string | null = null;
-  if (set && typeof kept !== "number") {
-    // Why the store didn't answer: the URL's scheme and Upstash's own error text, never the address or token.
-    const url = String(process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL).trim();
-    const scheme = (url.match(/^[a-z]+:/i) || ["none"])[0];
+  if (conf && typeof kept !== "number") {
+    // Why the store didn't answer: Upstash's own error text, never the address or token.
     try {
-      const r = await fetch(url, { method: "POST", headers: { Authorization: `Bearer ${String(process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN).trim()}`, "content-type": "application/json" }, body: JSON.stringify(["PING"]) });
-      const t = await r.text();
-      why = `${scheme} HTTP ${r.status}: ${t.slice(0, 160)}`;
-    } catch (e: any) { why = `${scheme} ${String(e && (e.cause?.code || e.message) || e).slice(0, 120)}`; }
+      const r = await fetch(conf.url, { method: "POST", headers: { Authorization: `Bearer ${conf.token}`, "content-type": "application/json" }, body: JSON.stringify(["PING"]) });
+      why = `HTTP ${r.status}: ${(await r.text()).slice(0, 160)}`;
+    } catch (e: any) { why = String(e && (e.cause?.code || e.message) || e).slice(0, 120); }
   }
-  return json(200, { model: !!process.env.OMARO_MODEL_KEY, store: set ? (typeof kept === "number" ? "connected" : "unreachable") : "not set", unanswered: typeof kept === "number" ? kept : null, ...(why ? { why } : {}) });
+  return json(200, { model: !!process.env.OMARO_MODEL_KEY, store: conf ? (typeof kept === "number" ? "connected" : "unreachable") : "not set", unanswered: typeof kept === "number" ? kept : null, ...(why ? { why } : {}) });
 }
 
 export async function POST(req: Request) {
