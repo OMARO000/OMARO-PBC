@@ -249,11 +249,12 @@ details .prose { margin-top: 18px; }
 .post p { margin: 0 0 12px; white-space: pre-wrap; }
 .paper .tag { margin-bottom: 12px; }
 
-/* phone width: shorter heroes and a smaller mark */
+/* phone width: shorter heroes, a smaller mark, tables that scroll inside themselves */
 @media (max-width: 640px) {
   .head-in { padding: 14px 18px; }
   .hero { padding: 48px 0 64px; }
   .hero .big-mark { width: 104px; margin-bottom: 32px; }
   .iris-hero { padding: 36px 0 48px; }
   .iris-hero .iris-mark { width: min(260px, 64vw); margin-bottom: 28px; }
+  main table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
 }
