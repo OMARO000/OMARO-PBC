@@ -90,7 +90,7 @@
     '<div class="chat-head">' + SMALL + '<b>Ask IRIS</b><button class="x" type="button" aria-label="Close">×</button></div>' +
     '<div class="chat-log" aria-live="polite"><div class="msg iris">I answer from OMARO\'s public material: this site, the published documents and released features. Each answer names where it came from.</div><div class="chat-sugg"></div></div>' +
     '<form class="chat-form"><textarea rows="1" maxlength="600" placeholder="Ask about OMARO or IRIS" aria-label="Your question"></textarea><button type="submit">Ask</button></form>' +
-    '<p class="chat-note">OMARO keeps nothing you type here. Your question goes to Anthropic\'s model to write the answer. <a href="/transparency#iris-on-this-site">What IRIS may say</a></p>';
+    '<p class="chat-note">OMARO keeps only the questions IRIS can\'t answer, as text, for 30 days. Questions go to Anthropic\'s model to write the answer. <a href="/transparency#iris-on-this-site">What IRIS may say</a></p>';
   document.body.appendChild(fab); document.body.appendChild(panel);
 
   var log = panel.querySelector(".chat-log"), form = panel.querySelector(".chat-form"),

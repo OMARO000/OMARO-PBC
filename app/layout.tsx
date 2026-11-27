@@ -20,14 +20,14 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <head>
         <meta name="theme-color" content="#0D0D0C" />
         <link rel="preload" href="/assets/fonts/archivo.woff2" as="font" type="font/woff2" crossOrigin="" />
-        <link rel="stylesheet" href="/assets/site.css?v=2026-11-27" />
+        <link rel="stylesheet" href="/assets/site.css?v=2026-11-27b" />
       </head>
       <body>
         <a className="skip" href="#main">Skip to the page</a>
         <header className="site-head" dangerouslySetInnerHTML={{ __html: header }} />
         <main id="main">{children}</main>
         <footer className="site-foot" dangerouslySetInnerHTML={{ __html: footer }} />
-        <Script src="/assets/site.js?v=2026-11-27" strategy="afterInteractive" />
+        <Script src="/assets/site.js?v=2026-11-27b" strategy="afterInteractive" />
       </body>
     </html>
   );
