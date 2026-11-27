@@ -47,7 +47,8 @@ img, svg { display: block; }
 .head-in { max-width: var(--max); margin: 0 auto; padding: 18px 24px; display: flex; align-items: center; gap: 32px; }
 .home-link { display: block; color: var(--text); flex-shrink: 0; }
 .home-link .omaro-logo { height: 40px; width: auto; }   /* about 2.5x the old 16px logo */
-.tabs { display: flex; gap: 4px; margin: 0 0 0 auto; padding: 0; list-style: none; flex-wrap: wrap; justify-content: flex-end; }
+.tabs { display: flex; gap: 4px; margin: 0 0 0 auto; padding: 0; list-style: none; flex-wrap: nowrap; justify-content: flex-end; }
+.tabs a { white-space: nowrap; }
 .tabs a {
   display: block; padding: 8px 12px; border-radius: 8px;
   font-size: 14px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; font-stretch: 112.5%;
@@ -56,6 +57,13 @@ img, svg { display: block; }
 .tabs a:hover { color: var(--text); background: rgba(244, 242, 238, .05); }
 .tabs a[aria-current="page"] { color: var(--text); box-shadow: inset 0 -2px 0 var(--silver); border-radius: 8px 8px 0 0; }
 .menu-btn { display: none; margin-left: auto; background: none; border: 1px solid var(--line-2); color: var(--text); border-radius: 8px; padding: 8px 12px; font: inherit; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; cursor: pointer; }
+/* between the phone menu and full width, the seven tabs stay on one line */
+@media (min-width: 921px) and (max-width: 1160px) {
+  .head-in { gap: 20px; padding: 16px 20px; }
+  .home-link .omaro-logo { height: 34px; }
+  .tabs { gap: 0; }
+  .tabs a { padding: 8px 8px; font-size: 13px; letter-spacing: .05em; font-stretch: 100%; }
+}
 @media (max-width: 920px) {
   .head-in { flex-wrap: wrap; gap: 12px; }
   .home-link .omaro-logo { height: 32px; }
@@ -68,9 +76,9 @@ img, svg { display: block; }
 
 /* ---------- logo motion: the brackets open once on load, then the dot settles (decision 386 a) ---------- */
 .omaro-logo .brk-l, .omaro-logo .brk-r, .omaro-logo .dot { transform-box: fill-box; transform-origin: center; }
-.motion .omaro-logo:not(.still) .brk-l { animation: brk-open-l .9s var(--ease) .15s both; }
-.motion .omaro-logo:not(.still) .brk-r { animation: brk-open-r .9s var(--ease) .15s both; }
-.motion .omaro-logo:not(.still) .dot   { animation: dot-settle .8s var(--ease) .85s both; }
+.motion .omaro-logo:not(.still) .brk-l { animation: brk-open-l .9s var(--ease) .15s backwards; }
+.motion .omaro-logo:not(.still) .brk-r { animation: brk-open-r .9s var(--ease) .15s backwards; }
+.motion .omaro-logo:not(.still) .dot   { animation: dot-settle .8s var(--ease) .85s backwards; }
 @keyframes brk-open-l { from { transform: translateX(4.5px); opacity: 0; } 40% { opacity: 1; } to { transform: none; opacity: 1; } }
 @keyframes brk-open-r { from { transform: translateX(-4.5px); opacity: 0; } 40% { opacity: 1; } to { transform: none; opacity: 1; } }
 @keyframes dot-settle { 0% { transform: translateY(-5px) scale(.6); opacity: 0; } 55% { transform: translateY(.6px) scale(1.04); opacity: 1; } 100% { transform: none; opacity: 1; } }
@@ -121,6 +129,14 @@ p { margin: 0 0 18px; }
 .grid.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 @media (max-width: 900px) { .grid.three, .grid.four { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 640px) { .grid.two, .grid.three, .grid.four { grid-template-columns: 1fr; } .section { padding: 64px 0; } body { font-size: 17px; } }
+/* phone width: shorter heroes, a smaller mark, a smaller mark */
+@media (max-width: 640px) {
+  .head-in { padding: 14px 18px; }
+  .hero { padding: 48px 0 64px; }
+  .hero .big-mark { width: 104px; margin-bottom: 32px; }
+  .iris-hero { padding: 36px 0 48px; }
+  .iris-hero .iris-mark { width: min(260px, 64vw); margin-bottom: 28px; }
+}
 
 .card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 26px; display: flex; flex-direction: column; }
 .card h3 { margin-bottom: 10px; }
