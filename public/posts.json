@@ -1,5 +1,5 @@
 {
- "_about": "Posts shown on /connect. Bluesky posts are added daily by .github/workflows/status.yml; X and LinkedIn posts are added here by hand (X's API is paid).",
+ "_about": "Posts shown on /connect. Bluesky posts are added daily by .github/workflows/site-data.yml; X and LinkedIn posts are added here by hand (X's API is paid).",
  "posts": [
   {"platform": "X", "handle": "@OMAROXYZ", "url": "https://x.com/OMAROXYZ", "date": "2026-04-10", "text": "Corporations have been breaking promises for decades with zero consequences. IRIS changes that. Every violation documented. Every broken commitment recorded. Immutable. Searchable. Permanent. The record does not forget and neither do we. omaro.org"},
   {"platform": "Bluesky", "handle": "@omaroxyz.bsky.social", "url": "https://bsky.app/profile/omaroxyz.bsky.social", "date": "2026-04-10", "text": "The Out Ledger is coming to IRIS as its Company record. Every corporate violation it documents gets pinned to IPFS. Immutable, dual-linked, permanent. Companies can pay fines, issue apologies, and rebrand. The record stays. omaro.org"},
