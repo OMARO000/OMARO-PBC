@@ -21,7 +21,7 @@ Rules:
 End your reply with one final line exactly like "SOURCES: 2, 5" naming the sources you used, or "SOURCES: none" when you couldn't answer.`;
 
 // Words for matching, with plurals folded ("cookies" finds "Cookie policy", "accounts" finds "account").
-function stem(w: string): string { return w.length > 4 && w.endsWith("ies") ? w.slice(0, -3) + "y" : w.length > 3 && w.endsWith("s") && !w.endsWith("ss") ? w.slice(0, -1) : w; }
+function stem(w: string): string { if (w.length > 3 && w.endsWith("s") && !w.endsWith("ss")) w = w.slice(0, -1); return w.length > 3 ? w.replace(/e$/, "").replace(/y$/, "i") : w; }
 function words(s: string): string[] { return (s.toLowerCase().match(/[a-z0-9]+/g) || []).filter((w) => w.length > 2).map(stem); }
 function pick(question: string): Chunk[] {
   const q = new Set(words(question));
