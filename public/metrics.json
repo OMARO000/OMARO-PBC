@@ -1,7 +1,7 @@
 {
  "format": "omaro-metrics/1",
  "as_of": "2026-11-27",
- "note": "Counted from IRIS's own builds and published tests. this site counts no visitors.",
+ "note": "Counted from IRIS's own builds and published tests. This site counts no visitors.",
  "figures": {
   "tests": 561,
   "accuracy": "79.0%",

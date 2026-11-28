@@ -2,7 +2,7 @@
 """Writes releases.json and metrics.json for omaro.org from IRIS's release feed (status/feed.json).
 
 Usage: python3 tools/build-status.py <path to IRIS's status/feed.json>
-Run daily by .github/workflows/status.yml. Only public fields are copied: channel, version and date.
+Run daily by .github/workflows/site-data.yml. Only public fields are copied: channel, version and date.
 Change notes stay out, because they describe unreleased work. A channel turns public when
 data/published.json gives its download address.
 """
@@ -38,7 +38,7 @@ lin, ff = by_id.get("linux", {}).get("version"), by_id.get("firefox", {}).get("v
 metrics = {
     "format": "omaro-metrics/1",
     "as_of": tests.get("counted") or feed.get("written"),
-    "note": "Counted from IRIS's own builds and published tests. this site counts no visitors.",
+    "note": "Counted from IRIS's own builds and published tests. This site counts no visitors.",
     "figures": {
         "tests": total,
         "accuracy": pub.get("accuracy"),
@@ -53,4 +53,12 @@ metrics = {
 }
 (ROOT / "public" / "releases.json").write_text(json.dumps(releases, indent=1) + "\n")
 (ROOT / "public" / "metrics.json").write_text(json.dumps(metrics, indent=1) + "\n")
+# The page's own text carries the Linux version too, for readers without JavaScript.
+if lin:
+    import re
+    page = ROOT / "content" / "pages" / "iris.html"
+    old = page.read_text()
+    new = re.sub(r"(<span data-version>)[^<]*(</span>)", lambda m: m.group(1) + lin + m.group(2), old)
+    if new != old:
+        page.write_text(new)
 print("releases.json and metrics.json written")
