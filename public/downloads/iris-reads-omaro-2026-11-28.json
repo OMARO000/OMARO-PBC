@@ -1,0 +1,124 @@
+{
+  "schema": "iris-macula/1.0",
+  "sealedAt": "2026-11-28T05:09:03.529Z",
+  "reading": {
+    "site": "omaro-site.vercel.app",
+    "overall": "clear",
+    "iris": "0.9.40",
+    "documents": [
+      {
+        "url": "https://omaro-site.vercel.app/transparency",
+        "kind": "privacy",
+        "sha256": "ec4e9ac7082398416ef93de8d7125f16d455299d41b218912d4f5c42d01bad73"
+      }
+    ],
+    "rights": [
+      {
+        "right": "ai_training",
+        "state": "respected",
+        "quotes": [
+          {
+            "sentence": "We never sell your data, never share it for advertising, and never use it to train any AI model.",
+            "rule": "train.none",
+            "source": "https://omaro-site.vercel.app/transparency"
+          },
+          {
+            "sentence": "We never use your data to train AI models, ours or anyone else's.",
+            "rule": "train.none",
+            "source": "https://omaro-site.vercel.app/transparency"
+          }
+        ]
+      },
+      {
+        "right": "selling",
+        "state": "respected",
+        "quotes": [
+          {
+            "sentence": "We never sell your data, never share it for advertising, and never use it to train any AI model.",
+            "rule": "sell.none",
+            "source": "https://omaro-site.vercel.app/transparency"
+          },
+          {
+            "sentence": "What we never do We never sell your data, and we never share it with advertisers, data brokers or anyone else.",
+            "rule": "sell.none",
+            "source": "https://omaro-site.vercel.app/transparency"
+          }
+        ]
+      },
+      {
+        "right": "deletion",
+        "state": "respected",
+        "quotes": [
+          {
+            "sentence": "You can delete all of it at any time with Forget everything in IRIS's settings, and removing IRIS deletes it too.",
+            "rule": "delete.right",
+            "source": "https://omaro-site.vercel.app/transparency"
+          },
+          {
+            "sentence": "Your rights You can see, export and delete everything IRIS keeps, from IRIS's own settings, without asking us.",
+            "rule": "delete.right",
+            "source": "https://omaro-site.vercel.app/transparency"
+          },
+          {
+            "sentence": "Outside an account, we hold no personal data about you, so a request to us under any privacy law will find nothing to delete; an account you can close yourself in IRIS, which deletes it from our server.",
+            "rule": "delete.right",
+            "source": "https://omaro-site.vercel.app/transparency"
+          }
+        ]
+      },
+      {
+        "right": "court",
+        "state": "respected",
+        "quotes": [
+          {
+            "sentence": "If we can't put it right, you can bring a claim in court where you live, under the laws that protect you there.",
+            "rule": "court.courts",
+            "source": "https://omaro-site.vercel.app/transparency"
+          },
+          {
+            "sentence": "If we can't, you can bring a claim in court where you live, under the laws that protect you there.",
+            "rule": "court.courts",
+            "source": "https://omaro-site.vercel.app/transparency"
+          }
+        ]
+      },
+      {
+        "right": "retention",
+        "state": "respected",
+        "detail": "Mostly not kept",
+        "quotes": [
+          {
+            "sentence": "The hourly count is deleted automatically after one hour.",
+            "rule": "retain.none",
+            "source": "https://omaro-site.vercel.app/transparency"
+          }
+        ]
+      },
+      {
+        "right": "region",
+        "state": "respected",
+        "quotes": [
+          {
+            "sentence": "Where data is kept What IRIS learns is kept only within your device, wherever you are.",
+            "rule": "region.local",
+            "source": "https://omaro-site.vercel.app/transparency"
+          }
+        ]
+      },
+      {
+        "right": "children",
+        "state": "respected",
+        "quotes": [
+          {
+            "sentence": "We do not collect personal information from children.",
+            "rule": "children.none",
+            "source": "https://omaro-site.vercel.app/transparency"
+          }
+        ]
+      }
+    ],
+    "code": [],
+    "fingerprinting": []
+  },
+  "sha256": "4c55a98273ec2dc2c338fa4398ab15b195dce286dda8b5e547cc0a5b89db3f51"
+}

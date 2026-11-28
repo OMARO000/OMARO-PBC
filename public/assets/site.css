@@ -284,6 +284,9 @@ details .prose { margin-top: 18px; }
   .ip-l { font-size: 13px; }
 }
 
+.ip-grid .ip { animation: none !important; }
+.ip-q { margin: 10px 0 0; padding-top: 10px; border-top: 1px solid var(--line); font-size: 14px; line-height: 1.45; color: var(--text); }
+
 /* phone width: shorter heroes, a smaller mark, tables that scroll inside themselves */
 @media (max-width: 640px) {
   .head-in { padding: 14px 18px; }
