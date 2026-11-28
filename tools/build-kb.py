@@ -26,7 +26,7 @@ MAX = 1600
 def chunks(path, url, page):
     soup = BeautifulSoup(path.read_text(), "html.parser")
     main = soup
-    for bad in main.select("script, style, .checker, .hint, .term .copy"):
+    for bad in main.select("script, style, .checker, .hint, .term .copy, .ip-side, .ip-cap"):
         bad.decompose()
     out, title, buf, anchor, doc = [], page, [], "", None
     def flush():

@@ -257,6 +257,33 @@ details .prose { margin-top: 18px; }
 .post p { margin: 0 0 12px; white-space: pre-wrap; }
 .paper .tag { margin-bottom: 12px; }
 
+/* ---------- IRIS page: example reading panels beside the mark (decision S16) ---------- */
+.iris-stage { display: grid; grid-template-columns: 1fr minmax(0, 420px) 1fr; align-items: center; gap: 36px; max-width: 1120px; margin: 0 auto 18px; }
+.iris-stage .iris-mark { width: 100%; margin: 0; }
+.ip-side { display: grid; gap: 14px; }
+.ip { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; text-align: left; transition: border-color .3s var(--ease); }
+.ip-k { margin: 0 0 6px; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--stone); font-weight: 600; }
+.ip-v { margin: 0; font-family: "Unbounded", "Archivo", sans-serif; font-size: 17px; font-weight: 500; }
+.ip-l { margin: 4px 0 0; font-size: 14px; line-height: 1.4; color: var(--muted); }
+.ip-g { font-style: normal; font-family: system-ui, "Segoe UI Symbol", "Noto Sans Symbols 2", sans-serif; font-weight: 400; }
+.ip-half { display: inline-block; width: .8em; height: .8em; vertical-align: -.02em; }
+.ip-s.ok { color: #78B8E8; } .ip-s.mid { color: #B7C0CC; } .ip-s.bad { color: #F2788C; } .ip-s.num { color: var(--text); }
+.ip-cap { font-size: 13px; color: var(--stone); margin: 0 auto 26px; max-width: 560px; }
+/* the side IRIS looks at lights up, in time with the pupil */
+.motion .ip-left .ip { animation: ip-look-l 5.2s var(--ease) infinite; }
+.motion .ip-right .ip { animation: ip-look-r 5.2s var(--ease) infinite; }
+@keyframes ip-look-l { 0%, 18%, 52%, 100% { border-color: var(--line); box-shadow: none; } 30%, 40% { border-color: rgba(52, 120, 224, .65); box-shadow: 0 0 0 1px rgba(52, 120, 224, .25), 0 0 28px rgba(52, 120, 224, .12); } }
+@keyframes ip-look-r { 0%, 50%, 84%, 100% { border-color: var(--line); box-shadow: none; } 62%, 72% { border-color: rgba(52, 120, 224, .65); box-shadow: 0 0 0 1px rgba(52, 120, 224, .25), 0 0 28px rgba(52, 120, 224, .12); } }
+@media (prefers-reduced-motion: reduce) { .motion .ip { animation: none !important; } }
+@media (max-width: 900px) {
+  .iris-stage { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .iris-stage .iris-mark { grid-column: 1 / -1; grid-row: 1; width: min(260px, 64vw); margin: 0 auto 14px; }
+  .ip-side { gap: 10px; }
+  .ip { padding: 12px 13px; }
+  .ip-v { font-size: 14px; white-space: nowrap; }
+  .ip-l { font-size: 13px; }
+}
+
 /* phone width: shorter heroes, a smaller mark, tables that scroll inside themselves */
 @media (max-width: 640px) {
   .head-in { padding: 14px 18px; }
