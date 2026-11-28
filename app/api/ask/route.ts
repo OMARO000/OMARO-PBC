@@ -1,4 +1,4 @@
-// IRIS on the OMARO site: answers only from OMARO's public material (the rules are on /transparency#iris-on-this-site).
+// IRIS on the OMARO site: answers only from OMARO's public material, OMARO's policies included. The rules are in RULES below.
 // Needs OMARO_MODEL_KEY. Optional: KV_REST_API_URL and KV_REST_API_TOKEN (Upstash Redis from Vercel's Storage tab)
 // to keep the questions IRIS couldn't answer (text only, no IP or identifiers, 30 days) and a daily total cap.
 import KB, { type Chunk } from "@/lib/kb";
@@ -25,9 +25,10 @@ function pick(question: string): Chunk[] {
   const q = new Set(words(question));
   return KB.map((c, i) => {
     let score = 0;
-    for (const w of words(c.title + " " + c.text)) if (q.has(w)) score++;
+    for (const w of words(c.text)) if (q.has(w)) score++;
+    for (const w of new Set(words(c.title))) if (q.has(w)) score += 6;   // a question naming a heading ("cookies", "children") finds its section
     return { i, score: score / Math.sqrt(c.text.length / 400 + 1) + (c.always ? 100 : 0) };
-  }).sort((a, b) => b.score - a.score).slice(0, 8).map((x) => KB[x.i]);
+  }).sort((a, b) => b.score - a.score).slice(0, 10).map((x) => KB[x.i]);
 }
 
 // The store's address and token as pasted into Vercel, tidied: quotes and spaces dropped, https:// added when missing.
@@ -120,10 +121,10 @@ export async function POST(req: Request) {
     if (!/none/i.test(m[1])) used = [...new Set(m[1].split(/[,\s]+/).map(Number))].filter((n) => n >= 1 && n <= sources.length);
   }
   const seen = new Set<string>();
-  const cited = used.map((n) => sources[n - 1]).filter((s) => !seen.has(s.url) && !!seen.add(s.url)).map((s) => ({ title: s.page, url: s.url }));
+  const cited = used.map((n) => sources[n - 1]).filter((s) => !!s.url && !seen.has(s.url) && !!seen.add(s.url)).map((s) => ({ title: s.title.replace(/^Transparency: /, ""), url: s.url }));
 
   // The questions IRIS couldn't answer: the text alone, kept 30 days, read in OMARO's back office (decision S7).
-  if (!cited.length) {
+  if (!used.length) {
     const cutoff = now - KEEP_DAYS * 86400000;
     await store(["ZADD", "site:unanswered", now, JSON.stringify({ q: last.content, t: new Date(now).toISOString() })]);
     await store(["ZREMRANGEBYSCORE", "site:unanswered", 0, cutoff]);

@@ -28,7 +28,7 @@ def chunks(path, url, page):
     main = soup
     for bad in main.select("script, style, .checker, .hint, .term .copy"):
         bad.decompose()
-    out, title, buf, anchor = [], page, [], ""
+    out, title, buf, anchor, doc = [], page, [], "", None
     def flush():
         text = re.sub(r"\s+", " ", " ".join(buf)).strip()
         while text:
@@ -42,9 +42,18 @@ def chunks(path, url, page):
         if not t:
             continue
         if el.name in ("h1", "h2"):
-            flush(); buf.clear(); title = t
+            flush(); buf.clear(); title = t; doc = None
             sec = el.find_parent(lambda t: t.name == "section" and t.has_attr("id"))
             anchor = el.get("id") or (sec.get("id") if sec else "")
+        elif el.name == "h3" and el.find_parent(class_="doc"):
+            # OMARO's policies: one entry per policy section, named "Privacy policy: Children" and so on
+            flush(); buf.clear()
+            box = el.find_parent(class_="doc")
+            if el.find_parent(class_="doc-head"):
+                doc = t; title = t
+            else:
+                title = f"{doc}: {t}" if doc else t
+            anchor = box.get("id") or anchor
         else:
             buf.append(t + ("." if el.name in ("h3", "li", "td", "th") and not t.endswith((".", "?", ":", "!")) else ""))
     flush()
@@ -55,7 +64,7 @@ for f, url, page in PAGES:
     p = ROOT / "content" / "pages" / f
     if p.exists():
         kb.extend(chunks(p, url, page))
-kb.append({"page": "IRIS on this site", "title": "IRIS on this site", "url": "/transparency#iris-on-this-site", "always": True,
+kb.append({"page": "IRIS on this site", "title": "IRIS on this site", "url": "", "always": True,
            "text": "IRIS on OMARO's website answers only from OMARO's public material: this website, published documents, released features and OMARO's policies. "
                    "It doesn't discuss the founder beyond the founder page, finances, investors, internal tools, unreleased plans or security details. "
                    "When it can't answer, it says so and points to support@omaro.org. OMARO keeps only the questions IRIS couldn't answer, as text alone, "

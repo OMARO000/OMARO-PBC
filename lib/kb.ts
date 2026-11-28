@@ -41,7 +41,7 @@ const KB: Chunk[] = [
 "page": "Home",
 "title": "Home: Keep it independent.",
 "url": "/",
-"text": "OMARO takes no advertising and sells no data. Donations pay for servers, testing and the outside security audit IRIS gets before anyone pays for it. Donate"
+"text": "OMARO takes no advertising and sells no data. As a young company, it runs on support from the people who want IRIS to exist, and every donation helps keep it building. Donate"
 },
 {
 "page": "IRIS",
@@ -113,73 +113,217 @@ const KB: Chunk[] = [
 "page": "Transparency",
 "title": "Transparency: Nothing is removed quietly.",
 "url": "/transparency#corrections",
-"text": "0 correction requests received 0 corrections issued 0 API clients cut off for misuse A correction is reviewed when it comes with evidence that a published fact is wrong, and every correction is shown here. Write to legal@omaro.org . IRIS on this site"
-},
-{
-"page": "Transparency",
-"title": "Transparency: What IRIS may say here.",
-"url": "/transparency#iris-on-this-site",
-"text": "The <\u2022> at the bottom of every page opens IRIS. On this site it follows written rules: It answers only from OMARO's public material: this website, published documents, released features and OMARO's policies. It stays off the founder's private life, OMARO's finances and investors, internal tools, unreleased plans and security details. When it can't answer, it says so and points to support@omaro.org. It never guesses. Every answer names the pages it came from. It gives no legal, financial or medical advice. Your question goes to Anthropic's model to write the answer. OMARO keeps only the questions IRIS couldn't answer, as the text alone, with no address or other identifier, for 30 days, so the site can fill the gaps. Everything else is gone when the answer arrives."
+"text": "0 correction requests received 0 corrections issued 0 API clients cut off for misuse A correction is reviewed when it comes with evidence that a published fact is wrong, and every correction is shown here. Write to legal@omaro.org ."
 },
 {
 "page": "Transparency",
 "title": "Transparency: Company documents",
 "url": "/transparency#documents",
-"text": "OMARO's privacy policy, cookie policy and terms of use. They cover IRIS for Firefox, IRIS for Linux and this site. IRIS for Linux carries the same words inside the app; the Firefox add-on opens this page. These are drafts until an attorney has read them. Every change shows here the day it's made. Privacy policy. Download the PDF SHA-256 of the PDF: 1657769cd8bc54d2da8d776646e9c0e582ea47881472c6dc1a70df3ca5fc0f95 Draft 0.6, 2026-11-24 (0.6: the summary and Where data is kept name the account; 0.5: accounts, what an account sends and what our account server keeps; 0.4: in Firefox, the sentence that set each answer is kept with each policy's fingerprint; 0.3: problem reports sent with Send to OMARO). Kept up to date as IRIS is built; reviewed by an attorney before IRIS is listed anywhere. Applies to IRIS for Firefox, IRIS for Linux, IRIS for GrapheneOS when it ships, OMARO's website and OMARO's code server. In short: IRIS runs on your device and keeps what it learns there. Without an account, OMARO collects no personal data about you. We never sell your data, never share it for advertising, and never use it to train any AI model. Four things leave your device, and only when you press a button for them: the address of a code repository you ask IRIS to read, a website's address when you ask for its public code, your network address when you ask IRIS to check your connection from outside, and a problem report you choose to send. If you make an account, which is optional, it holds a number with no email, name or phone, and anything it syncs is locked on your device so OMARO can't "
+"text": "OMARO's privacy policy, cookie policy and terms of use. They cover IRIS for Firefox, IRIS for Linux and this site. IRIS for Linux carries the same words inside the app; the Firefox add-on opens this page. These are drafts until an attorney has read them. Every change shows here the day it's made."
 },
 {
 "page": "Transparency",
-"title": "Transparency: Company documents",
-"url": "/transparency#documents",
-"text": "read it. Who we are. OMARO PBC is a public benefit corporation. Its public benefit is technology that returns authority to people. IRIS is its product: IRIS, the co-operating system for the internet. In this policy, \"we\" and \"OMARO\" mean OMARO PBC, and \"you\" means the person using IRIS or visiting our website. What IRIS keeps on your device. In Firefox: your settings, a fingerprint of each policy you checked, with the sentence that set each answer (so IRIS can tell you when it changes and show what it said before), your history of readings, the names of companies each site's pages contacted, counts of what IRIS blocked for you, and your monthly summary. Firefox keeps them in the add-on's own storage. On Linux: the apps on your computer, the sites and companies each one talked to, the readings of makers' policies, an inbox of what changed on your computer, the old value of any system setting you changed with Fix it (so you can put it back), and your settings. IRIS reads your system's and desktop's own settings on your computer to tell you which ones send data; it changes one only when you press Fix it. They are kept in an encrypted file in your home folder. The key to that file is kept in your system's keyring, which only your account can open. On GrapheneOS (when it ships): the same kinds of things as on Linux, kept in the app's own encrypted storage on your phone. None of this is sent to OMARO. We can't see it, and we can't hand it to anyone. You can delete all of it at any time with Forget everything in IRIS's settings, and removing IRIS deletes it too. What IRIS reads fr"
+"title": "Transparency: Privacy policy",
+"url": "/transparency#privacy",
+"text": "Download the PDF SHA-256 of the PDF: 1657769cd8bc54d2da8d776646e9c0e582ea47881472c6dc1a70df3ca5fc0f95 Draft 0.6, 2026-11-24 (0.6: the summary and Where data is kept name the account; 0.5: accounts, what an account sends and what our account server keeps; 0.4: in Firefox, the sentence that set each answer is kept with each policy's fingerprint; 0.3: problem reports sent with Send to OMARO). Kept up to date as IRIS is built; reviewed by an attorney before IRIS is listed anywhere. Applies to IRIS for Firefox, IRIS for Linux, IRIS for GrapheneOS when it ships, OMARO's website and OMARO's code server. In short: IRIS runs on your device and keeps what it learns there. Without an account, OMARO collects no personal data about you. We never sell your data, never share it for advertising, and never use it to train any AI model. Four things leave your device, and only when you press a button for them: the address of a code repository you ask IRIS to read, a website's address when you ask for its public code, your network address when you ask IRIS to check your connection from outside, and a problem report you choose to send. If you make an account, which is optional, it holds a number with no email, name or phone, and anything it syncs is locked on your device so OMARO can't read it."
 },
 {
 "page": "Transparency",
-"title": "Transparency: Company documents",
-"url": "/transparency#documents",
-"text": "om websites. When you turn on reading, IRIS fetches privacy policies and terms straight from the websites that publish them. On Linux and GrapheneOS it reads the policies of the companies that make your apps. These requests go from your device to that website and nowhere else. They carry no cookies, no sign-in and no referrer. The website sees an ordinary request from your network address and may log it under its own policy. OMARO never sees these requests. What leaves your device, and only when you ask. Read the code. When you press Read the code, IRIS sends the repository's address to OMARO's code server. The server reads that repository's public code, asks an AI model to describe what the code does, and sends the reading back. Nothing about you or your device is sent, and the model sees only public code. A company's public code. For a website that isn't on the list IRIS ships, pressing Look for its public code sends that website's address to OMARO's code server. Check from outside. When you press Check from outside, IRIS asks OMARO's code server which company owns the address the internet sees for you. The server sees your current network address to answer. It keeps no record of it. Your account, if you make one. An account is optional in the Firefox add-on and in IRIS Lite. It is a 16-digit number with no email, name or phone. Making one or signing in sends OMARO's account server your number, a name for the device (such as \"Firefox on Linux\"), a code made from your number and that device so a reinstall takes its old place, and a public key made from your 12 words. The 1"
+"title": "Transparency: Privacy policy: Who we are",
+"url": "/transparency#privacy",
+"text": "OMARO PBC is a public benefit corporation. Its public benefit is technology that returns authority to people. IRIS is its product: IRIS, the co-operating system for the internet. In this policy, \"we\" and \"OMARO\" mean OMARO PBC, and \"you\" means the person using IRIS or visiting our website."
 },
 {
 "page": "Transparency",
-"title": "Transparency: Company documents",
-"url": "/transparency#documents",
-"text": "2 words never leave your device. With sync on, IRIS sends what it keeps and your look and comfort choices, each locked on your device with a key made from your 12 words, so OMARO can't read them. Report a problem. When you press Send to OMARO, IRIS sends the report you just read in full to OMARO's code server: the kind of problem, what you wrote and, only if you ticked the box, the version of IRIS, your system, your language and the view you were on. The code server locks each report on arrival with a key only OMARO holds, so the server itself can't read it, and keeps nothing about who sent it. OMARO's own review desk collects the locked reports, opens them, and deletes them from the code server. Security problems are never sent this way. Your browser or your computer sends your network address with every request to any server, ours included. Our code server uses it for one thing: it counts how many new readings each network address started in the last hour, so that one network can't use up the day's readings for everyone. That count is deleted after one hour. What our servers keep. Readings of public code, by repository and by commit, so the next person who asks gets the same reading at once. A reading describes public code. It holds nothing about who asked for it. The hourly count described above, deleted after one hour. Problem reports you send, locked until OMARO collects them, then kept by OMARO to fix IRIS. The code server also counts how many reports each network address sent in the last hour (five at most), in memory only; that count is gone within the hour. Account"
+"title": "Transparency: Privacy policy: What IRIS keeps on your device",
+"url": "/transparency#privacy",
+"text": "In Firefox: your settings, a fingerprint of each policy you checked, with the sentence that set each answer (so IRIS can tell you when it changes and show what it said before), your history of readings, the names of companies each site's pages contacted, counts of what IRIS blocked for you, and your monthly summary. Firefox keeps them in the add-on's own storage. On Linux: the apps on your computer, the sites and companies each one talked to, the readings of makers' policies, an inbox of what changed on your computer, the old value of any system setting you changed with Fix it (so you can put it back), and your settings. IRIS reads your system's and desktop's own settings on your computer to tell you which ones send data; it changes one only when you press Fix it. They are kept in an encrypted file in your home folder. The key to that file is kept in your system's keyring, which only your account can open. On GrapheneOS (when it ships): the same kinds of things as on Linux, kept in the app's own encrypted storage on your phone. None of this is sent to OMARO. We can't see it, and we can't hand it to anyone. You can delete all of it at any time with Forget everything in IRIS's settings, and removing IRIS deletes it too."
 },
 {
 "page": "Transparency",
-"title": "Transparency: Company documents",
-"url": "/transparency#documents",
-"text": "s, if you make one: a keyed fingerprint of your number (never the number itself), the public key made from your 12 words, your two-step key if you turn it on, each device's name, kind and dates, a fingerprint of each device's sign-in, your plan and its end date, the codes you redeemed, and your synced copies, which are locked and can't be read by OMARO. No IP addresses and no logs of who asked. Close my account deletes all of it. We keep no browsing history, no analytics and no logs that name you. The companies we rely on to run the server keep their own records under their own policies: Render hosts the code server and its database in the United States, Anthropic runs the AI model that reads public code, and Vercel hosts our website. We send them only what this policy describes. We have asked none of them to keep anything about you, and we will tell you here if that changes. Our website. Our website sets no cookies and runs no analytics, advertising or tracking scripts. See our cookie policy. What we never do. We never sell your data, and we never share it with advertisers, data brokers or anyone else. We never use your data to train AI models, ours or anyone else's. Nothing you do in IRIS becomes training data. We never show you advertising. We never ask for an email, a name or a phone number, and the Firefox add-on never needs an account. Your rights. You can see, export and delete everything IRIS keeps, from IRIS's own settings, without asking us. Outside an account, we hold no personal data about you, so a request to us under any privacy law will find nothing to delete"
+"title": "Transparency: Privacy policy: What IRIS reads from websites",
+"url": "/transparency#privacy",
+"text": "When you turn on reading, IRIS fetches privacy policies and terms straight from the websites that publish them. On Linux and GrapheneOS it reads the policies of the companies that make your apps. These requests go from your device to that website and nowhere else. They carry no cookies, no sign-in and no referrer. The website sees an ordinary request from your network address and may log it under its own policy. OMARO never sees these requests."
 },
 {
 "page": "Transparency",
-"title": "Transparency: Company documents",
-"url": "/transparency#documents",
-"text": "; an account you can close yourself in IRIS, which deletes it from our server. Write to us anyway and we will answer in writing within a month. You can also complain to your data protection authority. How long things are kept. Outside an account, we store no personal data about you. You can delete an account and its synced copies at any time with Close my account in IRIS. On your device: until you delete them. On Linux, the record of which companies each app talked to covers the last 30 days, the record of each policy fetch covers the last 90 days, and the inbox keeps its last 1,000 entries from the last 400 days; older entries are deleted on their own. On our servers: readings of public code are kept until the code changes or until we remove them. The hourly count is deleted automatically after one hour. A problem report waits, locked, on the code server until OMARO collects it (within the hour), and is then deleted there; OMARO keeps the report itself until the problem is fixed, and deletes it when you ask. Where data is kept. What IRIS learns is kept only within your device, wherever you are. Our code server is in the United States and holds only readings of public code, the hourly count and locked problem reports waiting to be collected. OMARO's account server, once it opens, holds only what the account section above lists, locked where it says so. Children. IRIS is for everyone and collects no data from anyone, including children under 13. We do not collect personal information from children. Security. Code readings travel over HTTPS. On Linux, IRIS's own records are e"
+"title": "Transparency: Privacy policy: What leaves your device, and only when you ask",
+"url": "/transparency#privacy",
+"text": "Read the code. When you press Read the code, IRIS sends the repository's address to OMARO's code server. The server reads that repository's public code, asks an AI model to describe what the code does, and sends the reading back. Nothing about you or your device is sent, and the model sees only public code. A company's public code. For a website that isn't on the list IRIS ships, pressing Look for its public code sends that website's address to OMARO's code server. Check from outside. When you press Check from outside, IRIS asks OMARO's code server which company owns the address the internet sees for you. The server sees your current network address to answer. It keeps no record of it. Your account, if you make one. An account is optional in the Firefox add-on and in IRIS Lite. It is a 16-digit number with no email, name or phone. Making one or signing in sends OMARO's account server your number, a name for the device (such as \"Firefox on Linux\"), a code made from your number and that device so a reinstall takes its old place, and a public key made from your 12 words. The 12 words never leave your device. With sync on, IRIS sends what it keeps and your look and comfort choices, each locked on your device with a key made from your 12 words, so OMARO can't read them. Report a problem. When you press Send to OMARO, IRIS sends the report you just read in full to OMARO's code server: the kind of problem, what you wrote and, only if you ticked the box, the version of IRIS, your system, your language and the view you were on. The code server locks each report on arrival with a key"
 },
 {
 "page": "Transparency",
-"title": "Transparency: Company documents",
-"url": "/transparency#documents",
-"text": "ncrypted on your disk, and the network helper that blocks addresses runs with only the rights it needs and asks for an administrator's password before it changes anything. Our security posture is published and describes how IRIS is built and tested. Changes to this policy. We will tell you about changes at least 30 days before they take effect, in IRIS itself and on our website. A change that would collect more about you will never apply to what IRIS kept before the change, and you can turn off the feature it concerns. Disputes. If you have a problem with how we handle your data, write to us first. If we can't put it right, you can bring a claim in court where you live, under the laws that protect you there. Contact. governance@omaro.org Cookie policy. Download the PDF SHA-256 of the PDF: 5af01049c64f95b3863b52029da0f31ef8a157d1253c5f6e6db84b19c6e4e541 Draft 0.1, 2026-11-19. Kept up to date as IRIS is built; reviewed by an attorney before IRIS is listed anywhere. In short: OMARO's website sets no cookies. IRIS sets none either, and it sends none of yours when it reads a policy for you. Our website. OMARO's website sets no cookies, and it uses no local storage, tracking pixels, fingerprinting, analytics or advertising scripts. It loads no fonts, scripts or images from other companies. You will never see a cookie banner on it, because there is nothing to ask you about. Vercel hosts the website. Like every web host, it receives your network address with each page request, under its own policy. We read none of it and keep none of it. IRIS. In Firefox, IRIS keeps its settings an"
+"title": "Transparency: Privacy policy: What leaves your device, and only when you ask",
+"url": "/transparency#privacy",
+"text": " only OMARO holds, so the server itself can't read it, and keeps nothing about who sent it. OMARO's own review desk collects the locked reports, opens them, and deletes them from the code server. Security problems are never sent this way. Your browser or your computer sends your network address with every request to any server, ours included. Our code server uses it for one thing: it counts how many new readings each network address started in the last hour, so that one network can't use up the day's readings for everyone. That count is deleted after one hour."
 },
 {
 "page": "Transparency",
-"title": "Transparency: Company documents",
-"url": "/transparency#documents",
-"text": "d readings in the add-on's own storage on your device. It sets no cookies on any website. When IRIS reads a policy for you, on any platform, it sends the request without your cookies, your sign-in or a referrer, so the website can't connect the reading to your account. On cookie banners, IRIS for Firefox presses \"reject\" on common banners for you, while that switch is on. It never presses \"accept\". Our code server sets no cookies, and IRIS sends it none. Changes. We will tell you about changes at least 30 days before they take effect, in IRIS itself and on our website. Contact. governance@omaro.org Terms of use. Download the PDF SHA-256 of the PDF: 8b6972bf08db9e14b7d21b8eeada862b2decb82b79f339ecff804d062ce22f19 Draft 0.1, 2026-11-19. Kept up to date as IRIS is built; reviewed by an attorney before IRIS is listed anywhere. These terms cover IRIS for Firefox, IRIS for Linux, IRIS for GrapheneOS when it ships, OMARO's website and OMARO's code server. In short: IRIS is free. Its code is licensed under the Mozilla Public License 2.0 and is published when IRIS is listed. You own what you make with it. We will tell you before these terms change, and you can take us to court where you live. Who these terms are between. These terms are between you and OMARO PBC, a public benefit corporation (\"OMARO\", \"we\"). By installing IRIS or using our code server you agree to them. If you don't agree, you can remove IRIS at any time. What IRIS is. IRIS, the co-operating system for the internet, reads privacy policies, terms, code and network activity for you and explains them in plain words. It"
+"title": "Transparency: Privacy policy: What our servers keep",
+"url": "/transparency#privacy",
+"text": "Readings of public code, by repository and by commit, so the next person who asks gets the same reading at once. A reading describes public code. It holds nothing about who asked for it. The hourly count described above, deleted after one hour. Problem reports you send, locked until OMARO collects them, then kept by OMARO to fix IRIS. The code server also counts how many reports each network address sent in the last hour (five at most), in memory only; that count is gone within the hour. Accounts, if you make one: a keyed fingerprint of your number (never the number itself), the public key made from your 12 words, your two-step key if you turn it on, each device's name, kind and dates, a fingerprint of each device's sign-in, your plan and its end date, the codes you redeemed, and your synced copies, which are locked and can't be read by OMARO. No IP addresses and no logs of who asked. Close my account deletes all of it. We keep no browsing history, no analytics and no logs that name you. The companies we rely on to run the server keep their own records under their own policies: Render hosts the code server and its database in the United States, Anthropic runs the AI model that reads public code, and Vercel hosts our website. We send them only what this policy describes. We have asked none of them to keep anything about you, and we will tell you here if that changes."
 },
 {
 "page": "Transparency",
-"title": "Transparency: Company documents",
-"url": "/transparency#documents",
-"text": " is software that runs on your device. Our privacy policy says what it keeps and what it sends. IRIS can make mistakes. IRIS reads documents and code with rules and, for code, with an AI model. It can misread them. A reading is IRIS's best account of what a document or repository says, and the document itself is always the last word. IRIS gives no legal advice. If a decision matters to you, read the source IRIS quotes, and ask a lawyer when you need one. The licence to the code. IRIS's code is licensed under the Mozilla Public License 2.0, and OMARO publishes it when IRIS is listed. You may read it, run it, change it and share it under that licence. The names OMARO and IRIS and the IRIS eye belong to OMARO PBC; the licence covers the code and leaves the names with us. What you make stays yours. You own the reports, notes and exports you make with IRIS. You keep ownership of all rights in your content. We claim no licence to it, because it stays on your device and never reaches us. When you send us a problem report or a message, we use it only to answer you and fix IRIS, and you can ask us to delete it. Using the code server fairly. The code server reads public code for everyone, so each network has a limit on new readings per hour and the server has a limit per day. You agree not to work around those limits, attack the server or use it to read code you have no right to read. If you break these rules, we may suspend your access to the code server from the network address involved, and you can appeal the decision by writing to governance@omaro.org. We will tell you why when y"
+"title": "Transparency: Privacy policy: Our website",
+"url": "/transparency#privacy",
+"text": "Our website sets no cookies and runs no analytics, advertising or tracking scripts. See our cookie policy."
 },
 {
 "page": "Transparency",
-"title": "Transparency: Company documents",
-"url": "/transparency#documents",
-"text": "ou write, and we answer every appeal within 30 days. No accounts and no payment. IRIS needs no account, so there is no account for us to close. IRIS is free. It has no subscription, it does not automatically renew, and there is nothing to cancel. If we ever offer a paid plan, it will have its own terms, you will be able to cancel it at any time from within IRIS, and it will never take away what the free version does today. Changes to these terms. We will tell you about changes to these terms at least 30 days before they take effect, in IRIS itself and on our website. If you don't accept a change, you can stop using IRIS before it takes effect; what you already have keeps working under the terms you agreed to. If something goes wrong. We are responsible to you for foreseeable loss and damage caused by our breach of these terms or our failure to use reasonable care and skill. We are not responsible for loss that nobody could have foreseen. Nothing in these terms limits what the law where you live does not allow us to limit, including liability for death, personal injury or fraud. Disputes. If you have a problem with IRIS, write to governance@omaro.org first and we will try to put it right. If we can't, you can bring a claim in court where you live, under the laws that protect you there. We don't use forced arbitration, and nothing in these terms stops you from joining a class action. Contact. governance@omaro.org Benefit reports"
+"title": "Transparency: Privacy policy: What we never do",
+"url": "/transparency#privacy",
+"text": "We never sell your data, and we never share it with advertisers, data brokers or anyone else. We never use your data to train AI models, ours or anyone else's. Nothing you do in IRIS becomes training data. We never show you advertising. We never ask for an email, a name or a phone number, and the Firefox add-on never needs an account."
+},
+{
+"page": "Transparency",
+"title": "Transparency: Privacy policy: Your rights",
+"url": "/transparency#privacy",
+"text": "You can see, export and delete everything IRIS keeps, from IRIS's own settings, without asking us. Outside an account, we hold no personal data about you, so a request to us under any privacy law will find nothing to delete; an account you can close yourself in IRIS, which deletes it from our server. Write to us anyway and we will answer in writing within a month. You can also complain to your data protection authority."
+},
+{
+"page": "Transparency",
+"title": "Transparency: Privacy policy: How long things are kept",
+"url": "/transparency#privacy",
+"text": "Outside an account, we store no personal data about you. You can delete an account and its synced copies at any time with Close my account in IRIS. On your device: until you delete them. On Linux, the record of which companies each app talked to covers the last 30 days, the record of each policy fetch covers the last 90 days, and the inbox keeps its last 1,000 entries from the last 400 days; older entries are deleted on their own. On our servers: readings of public code are kept until the code changes or until we remove them. The hourly count is deleted automatically after one hour. A problem report waits, locked, on the code server until OMARO collects it (within the hour), and is then deleted there; OMARO keeps the report itself until the problem is fixed, and deletes it when you ask."
+},
+{
+"page": "Transparency",
+"title": "Transparency: Privacy policy: Where data is kept",
+"url": "/transparency#privacy",
+"text": "What IRIS learns is kept only within your device, wherever you are. Our code server is in the United States and holds only readings of public code, the hourly count and locked problem reports waiting to be collected. OMARO's account server, once it opens, holds only what the account section above lists, locked where it says so."
+},
+{
+"page": "Transparency",
+"title": "Transparency: Privacy policy: Children",
+"url": "/transparency#privacy",
+"text": "IRIS is for everyone and collects no data from anyone, including children under 13. We do not collect personal information from children."
+},
+{
+"page": "Transparency",
+"title": "Transparency: Privacy policy: Security",
+"url": "/transparency#privacy",
+"text": "Code readings travel over HTTPS. On Linux, IRIS's own records are encrypted on your disk, and the network helper that blocks addresses runs with only the rights it needs and asks for an administrator's password before it changes anything. Our security posture is published and describes how IRIS is built and tested."
+},
+{
+"page": "Transparency",
+"title": "Transparency: Privacy policy: Changes to this policy",
+"url": "/transparency#privacy",
+"text": "We will tell you about changes at least 30 days before they take effect, in IRIS itself and on our website. A change that would collect more about you will never apply to what IRIS kept before the change, and you can turn off the feature it concerns."
+},
+{
+"page": "Transparency",
+"title": "Transparency: Privacy policy: Disputes",
+"url": "/transparency#privacy",
+"text": "If you have a problem with how we handle your data, write to us first. If we can't put it right, you can bring a claim in court where you live, under the laws that protect you there."
+},
+{
+"page": "Transparency",
+"title": "Transparency: Privacy policy: Contact",
+"url": "/transparency#privacy",
+"text": "governance@omaro.org"
+},
+{
+"page": "Transparency",
+"title": "Transparency: Cookie policy",
+"url": "/transparency#cookies",
+"text": "Download the PDF SHA-256 of the PDF: 5af01049c64f95b3863b52029da0f31ef8a157d1253c5f6e6db84b19c6e4e541 Draft 0.1, 2026-11-19. Kept up to date as IRIS is built; reviewed by an attorney before IRIS is listed anywhere. In short: OMARO's website sets no cookies. IRIS sets none either, and it sends none of yours when it reads a policy for you."
+},
+{
+"page": "Transparency",
+"title": "Transparency: Cookie policy: Our website",
+"url": "/transparency#cookies",
+"text": "OMARO's website sets no cookies, and it uses no local storage, tracking pixels, fingerprinting, analytics or advertising scripts. It loads no fonts, scripts or images from other companies. You will never see a cookie banner on it, because there is nothing to ask you about. Vercel hosts the website. Like every web host, it receives your network address with each page request, under its own policy. We read none of it and keep none of it."
+},
+{
+"page": "Transparency",
+"title": "Transparency: Cookie policy: IRIS",
+"url": "/transparency#cookies",
+"text": "In Firefox, IRIS keeps its settings and readings in the add-on's own storage on your device. It sets no cookies on any website. When IRIS reads a policy for you, on any platform, it sends the request without your cookies, your sign-in or a referrer, so the website can't connect the reading to your account. On cookie banners, IRIS for Firefox presses \"reject\" on common banners for you, while that switch is on. It never presses \"accept\". Our code server sets no cookies, and IRIS sends it none."
+},
+{
+"page": "Transparency",
+"title": "Transparency: Cookie policy: Changes",
+"url": "/transparency#cookies",
+"text": "We will tell you about changes at least 30 days before they take effect, in IRIS itself and on our website."
+},
+{
+"page": "Transparency",
+"title": "Transparency: Cookie policy: Contact",
+"url": "/transparency#cookies",
+"text": "governance@omaro.org"
+},
+{
+"page": "Transparency",
+"title": "Transparency: Terms of use",
+"url": "/transparency#terms",
+"text": "Download the PDF SHA-256 of the PDF: 8b6972bf08db9e14b7d21b8eeada862b2decb82b79f339ecff804d062ce22f19 Draft 0.1, 2026-11-19. Kept up to date as IRIS is built; reviewed by an attorney before IRIS is listed anywhere. These terms cover IRIS for Firefox, IRIS for Linux, IRIS for GrapheneOS when it ships, OMARO's website and OMARO's code server. In short: IRIS is free. Its code is licensed under the Mozilla Public License 2.0 and is published when IRIS is listed. You own what you make with it. We will tell you before these terms change, and you can take us to court where you live."
+},
+{
+"page": "Transparency",
+"title": "Transparency: Terms of use: Who these terms are between",
+"url": "/transparency#terms",
+"text": "These terms are between you and OMARO PBC, a public benefit corporation (\"OMARO\", \"we\"). By installing IRIS or using our code server you agree to them. If you don't agree, you can remove IRIS at any time."
+},
+{
+"page": "Transparency",
+"title": "Transparency: Terms of use: What IRIS is",
+"url": "/transparency#terms",
+"text": "IRIS, the co-operating system for the internet, reads privacy policies, terms, code and network activity for you and explains them in plain words. It is software that runs on your device. Our privacy policy says what it keeps and what it sends."
+},
+{
+"page": "Transparency",
+"title": "Transparency: Terms of use: IRIS can make mistakes",
+"url": "/transparency#terms",
+"text": "IRIS reads documents and code with rules and, for code, with an AI model. It can misread them. A reading is IRIS's best account of what a document or repository says, and the document itself is always the last word. IRIS gives no legal advice. If a decision matters to you, read the source IRIS quotes, and ask a lawyer when you need one."
+},
+{
+"page": "Transparency",
+"title": "Transparency: Terms of use: The licence to the code",
+"url": "/transparency#terms",
+"text": "IRIS's code is licensed under the Mozilla Public License 2.0, and OMARO publishes it when IRIS is listed. You may read it, run it, change it and share it under that licence. The names OMARO and IRIS and the IRIS eye belong to OMARO PBC; the licence covers the code and leaves the names with us."
+},
+{
+"page": "Transparency",
+"title": "Transparency: Terms of use: What you make stays yours",
+"url": "/transparency#terms",
+"text": "You own the reports, notes and exports you make with IRIS. You keep ownership of all rights in your content. We claim no licence to it, because it stays on your device and never reaches us. When you send us a problem report or a message, we use it only to answer you and fix IRIS, and you can ask us to delete it."
+},
+{
+"page": "Transparency",
+"title": "Transparency: Terms of use: Using the code server fairly",
+"url": "/transparency#terms",
+"text": "The code server reads public code for everyone, so each network has a limit on new readings per hour and the server has a limit per day. You agree not to work around those limits, attack the server or use it to read code you have no right to read. If you break these rules, we may suspend your access to the code server from the network address involved, and you can appeal the decision by writing to governance@omaro.org. We will tell you why when you write, and we answer every appeal within 30 days."
+},
+{
+"page": "Transparency",
+"title": "Transparency: Terms of use: No accounts and no payment",
+"url": "/transparency#terms",
+"text": "IRIS needs no account, so there is no account for us to close. IRIS is free. It has no subscription, it does not automatically renew, and there is nothing to cancel. If we ever offer a paid plan, it will have its own terms, you will be able to cancel it at any time from within IRIS, and it will never take away what the free version does today."
+},
+{
+"page": "Transparency",
+"title": "Transparency: Terms of use: Changes to these terms",
+"url": "/transparency#terms",
+"text": "We will tell you about changes to these terms at least 30 days before they take effect, in IRIS itself and on our website. If you don't accept a change, you can stop using IRIS before it takes effect; what you already have keeps working under the terms you agreed to."
+},
+{
+"page": "Transparency",
+"title": "Transparency: Terms of use: If something goes wrong",
+"url": "/transparency#terms",
+"text": "We are responsible to you for foreseeable loss and damage caused by our breach of these terms or our failure to use reasonable care and skill. We are not responsible for loss that nobody could have foreseen. Nothing in these terms limits what the law where you live does not allow us to limit, including liability for death, personal injury or fraud."
+},
+{
+"page": "Transparency",
+"title": "Transparency: Terms of use: Disputes",
+"url": "/transparency#terms",
+"text": "If you have a problem with IRIS, write to governance@omaro.org first and we will try to put it right. If we can't, you can bring a claim in court where you live, under the laws that protect you there. We don't use forced arbitration, and nothing in these terms stops you from joining a class action."
+},
+{
+"page": "Transparency",
+"title": "Transparency: Terms of use: Contact",
+"url": "/transparency#terms",
+"text": "governance@omaro.org Benefit reports"
 },
 {
 "page": "Transparency",
@@ -239,7 +383,7 @@ const KB: Chunk[] = [
 "page": "Donate",
 "title": "Donate: Keep it independent.",
 "url": "/donate",
-"text": "OMARO takes no advertising and sells no data. Donations pay for the servers, the testing and the outside security audit IRIS gets before anyone pays for it. Card. Any amount, once or monthly, processed by Stripe. OMARO never sees or stores your card number. Bitcoin. On-chain, to an address published here with its QR code. Monero. The most private way to give. The address will be published here with its QR code. OMARO is a public benefit corporation, so donations aren't tax-deductible. Every donation total will be reported on the Transparency page."
+"text": "OMARO takes no advertising and sells no data. As a young company, it runs on support from the people who want IRIS to exist, and every donation helps keep it building. Card. Any amount, once or monthly, processed by Stripe. OMARO never sees or stores your card number. Bitcoin. On-chain, to an address published here with its QR code. Monero. The most private way to give. The address will be published here with its QR code. OMARO is a public benefit corporation, so donations aren't tax-deductible. Every donation total will be reported on the Transparency page."
 },
 {
 "page": "Founder",
@@ -334,7 +478,7 @@ const KB: Chunk[] = [
 {
 "page": "IRIS on this site",
 "title": "IRIS on this site",
-"url": "/transparency#iris-on-this-site",
+"url": "",
 "always": true,
 "text": "IRIS on OMARO's website answers only from OMARO's public material: this website, published documents, released features and OMARO's policies. It doesn't discuss the founder beyond the founder page, finances, investors, internal tools, unreleased plans or security details. When it can't answer, it says so and points to support@omaro.org. OMARO keeps only the questions IRIS couldn't answer, as text alone, with no address or other identifier, for 30 days, to improve the site. Questions go to Anthropic's model to write the answer."
 }
